@@ -1,4 +1,4 @@
-package yosumo.yosumo;
+package yosumo.src;
 
 import org.junit.Test;
 
