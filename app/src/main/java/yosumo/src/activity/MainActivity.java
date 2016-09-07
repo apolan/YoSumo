@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Método que llama a la actividad ImgProcessing
+     * Método que llama a la actividad home, donde están todas las funcionalidades
      * @param v sds
      */
     public void goUserHome(View v){
-        Intent intent = new Intent(this, ImgProcessingActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }
