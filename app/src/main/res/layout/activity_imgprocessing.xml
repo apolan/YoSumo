@@ -13,15 +13,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tomar Foto"
-        android:id="@+id/btnFoto"
+        android:text="Registrar Factura"
+        android:id="@+id/btnAction"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="takePhoto" />
+        android:onClick="action" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView"
+        android:layout_above="@+id/btnAction"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

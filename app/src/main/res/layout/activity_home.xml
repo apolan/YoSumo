@@ -37,9 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:text="otra funcionalidad"
-            android:id="@+id/btnOtro"
-            android:layout_marginTop="10dp" />
+            android:text="Borrar facuras fisicas"
+            android:id="@+id/btnBorrarFacturas"
+            android:layout_marginTop="10dp"
+            android:onClick="borrarFacturas"/>
 
     </LinearLayout>
 </RelativeLayout>

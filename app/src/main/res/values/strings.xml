@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">YoSumo</string>
+    <string name="folder_app">/YoSumo</string>
+    <string name="folder_tessdata">/tessdata</string>
+    <string name="file_tessdata">eng.traineddata</string>
+    <string name="sufijo_factura">factura</string>
 </resources>

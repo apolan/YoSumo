@@ -1,0 +1,15 @@
+<!-- Paramentriza los errores que se registran -->
+<resources>
+    <!-- Lista de estados OK -->
+    <string name="OK_CODE_LIB_100">Libreria openCV.....load</string>
+    <string name="OK_CODE_IMG_100">Libreria openCV.....load</string>
+    <string name="OK_CODE_DEBUG_100">Clase debbug .....load</string>
+    <string name="OK_CODE_PERMISSON_100">Permisos.....load</string>
+    <string name="OK_CODE_DB_100">Base de datos.....load</string>
+
+    <!-- Lista de estados ERROR-->
+    <string name="ERROR_CODE_LIB_100">Libreria openCV.....error</string>
+    <string name="ERROR_CODE_IMG_100">Error en la escritura de archivo, por favor verificar los permisos de la aplicación</string>
+    <string name="ERROR_CODE_DEBUG_100">Clase debbug .....error</string>
+    <string name="ERROR_DB_100">Base de datos.....error</string>
+</resources>
