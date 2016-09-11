@@ -57,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         }else{
             fileOrDirectory.delete();
-            Debugger.getInstance().debugConsole("Deletefacturas",fileOrDirectory.getName());
+            //Debugger.getInstance().debugConsole("Deletefacturas",fileOrDirectory.getName());
         }
     }
 

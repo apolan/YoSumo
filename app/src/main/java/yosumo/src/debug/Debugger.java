@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import yosumo.src.R;
@@ -11,11 +12,13 @@ import yosumo.src.R;
 /**
  * Created by a-pol_000 on 9/7/2016.
  * Clase encargada de manejar ciertos debbugers de la aplicación simplificando su llamado
+ * MOD 20160909 - AFP - Adición funcionalidad resultados.
  */
 public  class Debugger {
 
     private Context context;
     private static Debugger instance;
+    List<String> resultados = new ArrayList<String>();
 
     /**
      *
@@ -46,6 +49,15 @@ public  class Debugger {
         }
     }
 
+    public void addResultado(String resultado){
+        resultados.add(resultados.size()+"_"+resultado+" ");
+    }
+
+    public void showResultado(){
+        if(context.getResources().getBoolean(R.bool.debugger)) {
+            System.out.println("debuger_Resultados: " + resultados.toString());
+        }
+    }
     /**
      *
      * @return
@@ -60,5 +72,20 @@ public  class Debugger {
      */
     public static Debugger getInstance() {
         return instance;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public List<String> getResultados() {
+        return resultados;
+    }
+
+    /**
+     *
+     */
+    public void clearResultados() {
+        this.resultados.clear();
     }
 }
