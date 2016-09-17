@@ -16,6 +16,7 @@ import yosumo.src.debug.Debugger;
  * Clase encargada de manejar las funcionalidades del usuario
  * MOD 20160907 - AFP - Inicialización actividad
  * MOD 20160910 - AFP - Adicion borrar facturas-se crean muchos archivos en cada test
+ * MOD 20160917 - DM - Adición del botón mostrar base de datos
  */
 public class HomeActivity extends AppCompatActivity {
 
@@ -42,6 +43,16 @@ public class HomeActivity extends AppCompatActivity {
         String path_base= Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getPath();
         String directory_app=this.getResources().getString(R.string.folder_app);
         deleteRecursive(new File(path_base+directory_app));
+    }
+
+
+    /**
+     * Método que llama a la actividad MostrarFacturas. Carga unos valores a la base de datos para mostrarlos
+     * @param v sds
+     */
+    public void mostrarUsuarios(View v){
+        Intent intent = new Intent(this, MostrarFacturasActivity.class);
+        startActivity(intent);
     }
 
     /**
