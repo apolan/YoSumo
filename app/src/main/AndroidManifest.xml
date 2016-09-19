@@ -32,6 +32,15 @@
             android:name=".activity.ImgProcessingActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.HomeActivity" />
+        <!-- 20160917_DM -->
+        <activity android:name=".activity.MostrarFacturasActivity">
+
+
+        </activity>
+        <activity
+            android:name=".activity.ImgProcessingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HomeActivity" />
     </application>
 
 </manifest>
