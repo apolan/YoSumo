@@ -70,7 +70,7 @@ public class FacturaVirtual {
         }else {
             Log.d("setValo.No se encontro:",valor);
         }
-        Log.d("setValorFactura: ",this.valor);
+        //Log.d("setValorFactura: ",this.valor);
     }
 
 
