@@ -1,6 +1,7 @@
 package yosumo.src.logic;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +13,10 @@ import java.util.List;
  *     insertado el formato de las fechas
  *     agegados atributos tipo_impuesto y valor_impuesto
  * </170916>
+ * <180916 Editado por DM>
+ *     nit cambiado a tipo int. FK del comercio
+ *     agregado atributo valor factura
+ *     </180916>
  *
  */
 public class Factura {
@@ -25,7 +30,7 @@ public class Factura {
     private String path ;
     private String nombre;
 
-    private String nit;
+    private int nit;
 
     //<20120914> David M: cambia de Sring a Comercio, el cual tiene NIT
     private Comercio lugar;
@@ -34,8 +39,25 @@ public class Factura {
     private String tipoImpuesto;
     private double valorImpuesto;
 
+
+    private double valorFactura;
+
     public Factura (){
     }
+
+    public Factura(String impuestoTipo, String impuestoValor, String ruta, int nit){
+        this.tipoImpuesto = impuestoTipo;
+        this.valorImpuesto = Double.parseDouble(impuestoValor);
+        this.nit = nit;
+        this.path = ruta;
+        Calendar cal = Calendar.getInstance();
+
+        fechaCompra = cal.getTime();
+        fechaCaptura = cal.getTime();
+
+
+    }
+
 
     public Date getFechaCaptura() {
         return fechaCaptura;
@@ -101,11 +123,11 @@ public class Factura {
         this.nombre = name;
     }
 
-    public String getNit() {
+    public int getNit() {
         return nit;
     }
 
-    public void setNit(String nit) {
+    public void setNit(int nit) {
         this.nit = nit;
     }
 
@@ -139,6 +161,15 @@ public class Factura {
 
     public void setValorImpuesto(double valorImpuesto) {
         this.valorImpuesto = valorImpuesto;
+    }
+
+
+    public double getValorFactura() {
+        return valorFactura;
+    }
+
+    public void setValorFactura(double valorFactura) {
+        this.valorFactura = valorFactura;
     }
 
     public String toString()

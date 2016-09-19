@@ -25,23 +25,29 @@ public class ConstructorComercios {
     {
 
         BaseDatos bd = new BaseDatos(context);
-        insertarDosComercios(bd);
+        insertarTresComercios(bd);
         return bd.obtenerTodosLosComercios();
     }
 
 
-    public void insertarDosComercios(BaseDatos bd)
+    public void insertarTresComercios(BaseDatos bd)
     {
         ContentValues contentValues = new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NOMBRE,"Hotel V");
-        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NIT,"800.212.4224");
+        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NIT,800212422);
         //contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_LOCATION,"4.645218, -74.063961");
 
         bd.insertarComercio(contentValues);
 
         contentValues= new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NOMBRE,"Cascabel");
-        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NIT,"901.212.4224");
+        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NIT,102079367);
+        //contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_LOCATION,"4.602659, -74.064833");
+        bd.insertarComercio(contentValues);
+
+        contentValues= new ContentValues();
+        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NOMBRE,"Exito");
+        contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_NIT,899124122);
         //contentValues.put(ConstantesBaseDatos.TABLE_COMERCIOS_LOCATION,"4.602659, -74.064833");
         bd.insertarComercio(contentValues);
 

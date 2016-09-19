@@ -2,12 +2,18 @@ package yosumo.src.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import yosumo.src.db.BaseDatos;
 import yosumo.src.db.ConstantesBaseDatos;
+import yosumo.src.logic.Comercio;
 import yosumo.src.logic.Factura;
+import yosumo.src.logic.Usuario;
 
 /**
  * Created by David Ricardo on 17/09/2016.
@@ -39,7 +45,7 @@ public class ConstructorFacturas {
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, "data/facturas/factura1.png");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,"12:01 AM 17-12-15");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,"12:13 AM 17-12-15");
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,"8600013354");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,1005212422); //puedo agregar una FK que no exista en comercio?
 
         bd.insertarFactura(contentValues);
 
@@ -50,7 +56,7 @@ public class ConstructorFacturas {
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, "data/facturas/factura3.png");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,"6:01 PM 16-12-15");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,"7:13 PM 16-12-15");
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,"1020.79367-5");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,1020793657);
         bd.insertarFactura(contentValues);
 
         contentValues= new ContentValues();
@@ -60,9 +66,87 @@ public class ConstructorFacturas {
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, "data/facturas/factura3.png");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,"8:01 PM 18-12-15");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,"11:13 PM 18-12-15");
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,"1020.79367-5");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,1991246122);
 
         bd.insertarFactura(contentValues);
     }
+
+
+    /**
+     * Inserta una Factura cuyo NIT y usuario ya estan definidos en la clase Factura.
+     * @param factura
+     * exception, que el NIT o el usuario existan
+     */
+    public void addFactura(Factura factura)//params. nit?
+    {
+        BaseDatos bd = new BaseDatos(context);
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,factura.getNombre());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,factura.getTipoImpuesto());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,factura.getValorImpuesto());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, factura.getPath());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,factura.getStringFechaCompra());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,factura.getStringFechaCaptura());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,factura.getNit());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID,factura.getContribuyente().getId());
+        bd.insertarFactura(contentValues);
+    }
+
+
+    public void addFactura(Factura factura, Comercio comercio, Usuario contribuyente)//params. nit?
+    {
+        BaseDatos bd = new BaseDatos(context);
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,factura.getNombre());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,factura.getTipoImpuesto());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,factura.getValorImpuesto());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, factura.getPath());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,factura.getStringFechaCompra());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,factura.getStringFechaCaptura());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,comercio.getNIT());
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID,contribuyente.getId());
+        bd.insertarFactura(contentValues);
+    }
+
+    public void addFactura(String impuestoTipo, String impuestoValor, String ruta, int nit)
+    {
+        BaseDatos bd = new BaseDatos(context);
+        ContentValues contentValues = new ContentValues();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Factura.DATE_FORMAT);
+        Calendar cal = Calendar.getInstance();
+        String fechaActual= dateFormat.format(cal.getTime());
+
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,"");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,impuestoTipo);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,impuestoValor);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, ruta);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,nit);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID,123);
+        bd.insertarFactura(contentValues);
+
+    }
+
+    public double obtenerTotalImpuestosPorTipo(String tipo)
+    {
+        BaseDatos db = new BaseDatos(context);
+        return db.obtenerTotalImpuestosPorTipo(tipo);
+
+    }
+
+
+    public double obtenerTotalImpuestosPorTipo(Usuario user)
+    {
+        BaseDatos db = new BaseDatos(context);
+        return db.obtenerTotalImpuestos(user);
+
+    }
+
+
+
 
 }
