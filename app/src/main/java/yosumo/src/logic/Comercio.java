@@ -3,14 +3,18 @@ package yosumo.src.logic;
 /**
  * Clase que representa la entidad comercio
  * Created by a-pol_000 on 9/10/2016.
- * <20160917 Modified by DRM - agregados constructor, y llave entera, getters y setters.
+ * <20160917 Mod DRM - agregados constructor, y llave entera, getters y setters.
+ * <20160918 mod DRM -  NIT cambiado a Integer y usado como la PK Natural Key
  */
 public class Comercio {
 
-    private int id;
-    private String nit;
+
+    private int nit;
     private String nombre_Legal;
     private String label_nombre;
+
+
+    private String nitString;
 
     //No necesarios por ahora
     private double latitud;
@@ -21,19 +25,19 @@ public class Comercio {
 
     }
 
-    public int getId() {
-        return id;
+    public String getNitString() {
+        return nitString;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNitString(String sNit) {
+        this.nitString = sNit;
     }
 
-    public String getNIT() {
+    public int getNIT() {
         return nit;
     }
 
-    public void setNIT(String NIT) {
+    public void setNIT(int NIT) {
         this.nit = NIT;
     }
 

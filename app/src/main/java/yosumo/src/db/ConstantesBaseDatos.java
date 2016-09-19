@@ -31,7 +31,7 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_USUARIO_CONTADOR_IMPUESTOS = "total_impuestos";
 
     public static final String TABLE_COMERCIOS = "comercio";
-    public static final String TABLE_COMERCIOS_ID = "id_comercio";
+    //public static final String TABLE_COMERCIOS_ID = "id_comercio";
     public static final String TABLE_COMERCIOS_NIT = "nit";
     public static final String TABLE_COMERCIOS_NOMBRE = "nombre";
     public static final String TABLE_COMERCIOS_NOMBRE_LEGAL = "nombre_legal";

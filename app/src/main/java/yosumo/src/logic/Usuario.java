@@ -5,9 +5,10 @@ import java.util.List;
 /**
  * Entidad que representa la información de un usuario
  * Created by a-pol_000 on 9/7/2016.
- * Edited <170916> agregados setter y getters
+ * <170916> agregados setter y getters
  * atributo id, integer key
- *</170916>
+ *<180916 - DM> Agregados atributos mail y contraseña
+ *
  */
 public class Usuario {
 
@@ -17,6 +18,11 @@ public class Usuario {
     int id;
     double contadorImpuestos;
     String nombre;
+
+    String mail;
+
+
+    String password;
 
     public Usuario(String nombre)
     {
@@ -71,6 +77,31 @@ public class Usuario {
     public String toString()
     {
         return this.nombre;
+    }
+
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public double getContadorImpuestos() {
+        return contadorImpuestos;
+    }
+
+    public void setContadorImpuestos(double contadorImpuestos) {
+        this.contadorImpuestos = contadorImpuestos;
     }
 
 }

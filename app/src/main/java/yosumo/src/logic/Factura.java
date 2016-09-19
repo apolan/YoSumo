@@ -12,6 +12,9 @@ import java.util.List;
  *     insertado el formato de las fechas
  *     agegados atributos tipo_impuesto y valor_impuesto
  * </170916>
+ * <180916 Editado por DM>
+ *     nit cambiado a tipo int. FK del comercio
+ *     </180916>
  *
  */
 public class Factura {
@@ -25,7 +28,7 @@ public class Factura {
     private String path ;
     private String nombre;
 
-    private String nit;
+    private int nit;
 
     //<20120914> David M: cambia de Sring a Comercio, el cual tiene NIT
     private Comercio lugar;
@@ -101,11 +104,11 @@ public class Factura {
         this.nombre = name;
     }
 
-    public String getNit() {
+    public int getNit() {
         return nit;
     }
 
-    public void setNit(String nit) {
+    public void setNit(int nit) {
         this.nit = nit;
     }
 

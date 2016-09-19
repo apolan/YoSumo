@@ -16,6 +16,7 @@ import yosumo.src.logic.Usuario;
 /**
  * Clase que representa la base de datos y maneja sus operaciones
  * Created by David Ricardo on 14/09/2016.
+ * <180916 Mod DRM> CCOMERCIO_ID es ahora el NIT, integer NK
  */
 public class BaseDatos extends SQLiteOpenHelper {
 
@@ -35,15 +36,15 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA    +" TEXT," +
                 ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA     +" TEXT," +
                 ConstantesBaseDatos.TABLE_FACTURAS_PATH             +" TEXT," +
-                ConstantesBaseDatos.TABLE_FACTURAS_NIT              +" TEXT," +
+                ConstantesBaseDatos.TABLE_FACTURAS_NIT              +" INTEGER," +
                 ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO    +" TEXT,"+
                 ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR   +" FLOAT,"+
-                ConstantesBaseDatos.TABLE_FACTURAS_COMERCIO_ID      +" INTEGER," +
+                //ConstantesBaseDatos.TABLE_FACTURAS_COMERCIO_ID      +" INTEGER," +
                 ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID       +" INTEGER, " +
                 "FOREIGN KEY ( "+ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID+ " ) "+
                 "REFERENCES "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+ConstantesBaseDatos.TABLE_USUARIO_ID+" ), " +
-                "FOREIGN KEY ( "+ConstantesBaseDatos.TABLE_FACTURAS_COMERCIO_ID+ " ) "+
-                "REFERENCES "+ConstantesBaseDatos.TABLE_COMERCIOS + " ( "+ConstantesBaseDatos.TABLE_COMERCIOS_ID+" )"+
+                "FOREIGN KEY ( "+ConstantesBaseDatos.TABLE_FACTURAS_NIT+ " ) "+
+                "REFERENCES "+ConstantesBaseDatos.TABLE_COMERCIOS + " ( "+ConstantesBaseDatos.TABLE_COMERCIOS_NIT+" )"+
                 ")";
 
         String queryCrearTablaUsuario = "CREATE TABLE "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+
@@ -51,8 +52,8 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT )";
 
         String queryCrearTablaComercios = "CREATE TABLE "+ConstantesBaseDatos.TABLE_COMERCIOS + "("+
-                ConstantesBaseDatos.TABLE_COMERCIOS_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ConstantesBaseDatos.TABLE_COMERCIOS_NIT  + " TEXT, "+
+                //ConstantesBaseDatos.TABLE_COMERCIOS_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                ConstantesBaseDatos.TABLE_COMERCIOS_NIT  + " INTEGER PRIMARY KEY, "+
                 ConstantesBaseDatos.TABLE_COMERCIOS_NOMBRE  + " TEXT )" ;
                 //ConstantesBaseDatos.TABLE_COMERCIOS_LOCATION  + " TEXT )";
 
@@ -86,7 +87,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             facturaActual.setNombre(registros.getString(1));
             facturaActual.setFechaCompra(registros.getString(3));
             facturaActual.setFechaCaptura(registros.getString(2));
-            facturaActual.setNit(registros.getString(5));
+            facturaActual.setNit(registros.getInt(5));
             facturaActual.setPath(registros.getString(4));
             facturaActual.setTipoImpuesto(registros.getString(5));
             facturaActual.setValorImpuesto(registros.getFloat(6));
@@ -136,8 +137,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         while(registros.moveToNext())
         {
             Comercio comercioActual = new Comercio();
-            comercioActual.setId(registros.getInt(0));
-            comercioActual.setNIT(registros.getString(1));
+            comercioActual.setNIT(registros.getInt(1));
             comercioActual.setLabel_nombre(registros.getString(2));
 
             comercios.add(comercioActual);
