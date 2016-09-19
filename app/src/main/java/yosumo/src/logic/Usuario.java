@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Usuario {
 
-    List<Factura> listaFacturas;
+    List<FacturaVirtual> listaFacturaVirtuals;
     List<Impuesto> listaImpuestos;
 
     double contadorImpuestos;
@@ -26,7 +26,7 @@ public class Usuario {
      *
      * @return
      */
-    public boolean registrarFactura(Factura factura){
+    public boolean registrarFactura(FacturaVirtual facturaVirtual){
         boolean resultado=false;
 
         return resultado;

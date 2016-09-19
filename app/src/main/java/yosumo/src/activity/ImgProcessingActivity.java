@@ -1,38 +1,54 @@
 package yosumo.src.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Debug;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.googlecode.tesseract.android.TessBaseAPI;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import yosumo.src.R;
 import yosumo.src.debug.Debugger;
+import yosumo.src.logic.FacturaVirtual;
+import yosumo.src.logic.Impuesto;
 
 /**
  * Created by a-pol_000 on 9/7/2016.
  * QR1. Procesamiento de facturas
  * Clase encargada de manejar el procesamiento de facturas de la aplicaión
  * MOD 20160907 - AFP - Adición principales funcionalidades
- * MOD 20160909 - AFP - Implementación de persistencia de la factura.
- * MOD 20160909 - AFP - Implementación de tess data reconocimiento de factura.
+ * MOD 20160909 - AFP - Implementación de persistencia de la facturaVirtual.
+ * MOD 20160909 - AFP - Implementación de tess data reconocimiento de facturaVirtual.
  * MOD 20160911 - AFP - Limpieza del codigo.
- *                      Adicion AsyncTASK
+ * MOD 20160914 - AFP - Adicion AsyncTASK
  *                      Convert bitmap en Blanco y negro
+ *                      Reformulacion de problema. Lectura de facturaVirtual por partes
+ *                          1. Capturar cabecera
+ *                          2. Capturar impuesto
  *
  */
 public class ImgProcessingActivity extends AppCompatActivity {
@@ -43,15 +59,26 @@ public class ImgProcessingActivity extends AppCompatActivity {
     private Uri file;
 
     private TessBaseAPI tessBaseApi;
-    private String ACTION;
-    private Debugger debug;
-    private Bitmap factura = null;
+    private String ACTION           = null;
+    private Debugger debug          = null;
+    private Bitmap bmpFacturaHead   = null;
+    private Bitmap bmpFacturaBody   = null;
 
+    private FacturaVirtual factura = null;
     // Componentes de interfaz
-    private Button btnAction;
-    private ImageView imageView;
-    private TextView textView;
+    private Button btnAction    = null;
+    private ImageView imageView = null;
+    private TextView textView   = null;
+    private double rateProportion = 0.4;
 
+    // Elementos de animacion
+    private ImageView animationDraw = null;
+    private Bitmap bitmapAnimation  = null;
+    private Canvas canvas           = null;
+    private String status_process   = null;
+    String extractedTextHead = "";
+    String extractedTextBody = "";
+    private String modoPick = "bmp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,26 +91,65 @@ public class ImgProcessingActivity extends AppCompatActivity {
 
         debug = new Debugger(this.getBaseContext());
         debug.debugConsole(TAG+":",folder_path.getAbsolutePath());
-        ACTION="TOMAR_FOTO";
+        ACTION="INIT";
+        btnAction.setText("Empezar");
+
+        debug.addResultado(initModuleAnimation());
     }
 
     /**
-     *  Método que se llama una vez se ha tomado la fotografia
+     * Metodo que inicializa el modulo de animacion
+     * @return
+     */
+    public String initModuleAnimation (){
+
+        RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.relative);
+        View  itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.activity_imgprocessing,null, false);
+
+        animationDraw = new ImageView(this);
+        bitmapAnimation = Bitmap.createBitmap((int) getWindowManager()
+                .getDefaultDisplay().getWidth(), (int) getWindowManager()
+                .getDefaultDisplay().getHeight(), Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmapAnimation);
+        animationDraw.setBackgroundColor(255);
+        animationDraw.setImageBitmap(bitmapAnimation);
+        myLayout.addView(animationDraw);
+
+        return this.getResources().getString(R.string.OK_CODE_MODANIM_100);
+    }
+
+    /**
+     *
      * @param requestCode
      * @param resultCode
      * @param data
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(ACTION.equalsIgnoreCase("TOMAR_FOTO")){
+        if(ACTION.contains("TOMAR_FOTO")){
             if (requestCode == 100 && file!=null) {
                 if (resultCode == RESULT_OK) {
                     //Se reduce el tamano de la imagen porque no es posible hacerle render
                     BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-                    factura = BitmapFactory.decodeFile(file.getPath() ,bmOptions);
-                    factura = Bitmap.createScaledBitmap(factura,(int)(factura.getWidth()*0.4),(int)(factura.getHeight()*0.4),true);
-                    imageView.setImageBitmap(factura);
-                    debug.addResultado("SizePic:"+factura.getByteCount());
+                    if(ACTION.contains("head")){
+                        bmpFacturaHead = BitmapFactory.decodeFile(file.getPath() , bmOptions);
+                        bmpFacturaHead = Bitmap.createScaledBitmap(bmpFacturaHead,
+                                                                    (int)(bmpFacturaHead.getWidth() * rateProportion),
+                                                                    (int)(bmpFacturaHead.getHeight() * rateProportion),
+                                                                     true);
+
+                        debug.addResultado("SizePicHead:"+bmpFacturaHead.getByteCount());
+                        imageView.setImageBitmap(bmpFacturaHead);
+                    }else if(ACTION.contains("body")){
+                        bmpFacturaBody = BitmapFactory.decodeFile(file.getPath() , bmOptions);
+                        bmpFacturaBody = Bitmap.createScaledBitmap(bmpFacturaBody,
+                                                                    (int)(bmpFacturaBody.getWidth() * rateProportion),
+                                                                    (int)(bmpFacturaBody.getHeight() * rateProportion),
+                                                                     true);
+
+                        debug.addResultado("SizePicBody:" + bmpFacturaBody.getByteCount());
+                        imageView.setImageBitmap(bmpFacturaBody);
+                    }
 
                     controladorProcesoFactura("NEXT");
                 }
@@ -91,23 +157,61 @@ public class ImgProcessingActivity extends AppCompatActivity {
         }
     }
 
-
     /**
-     * Metodo que registra la factura
-     * @param view
+     * Metodo que registra la facturaVirtual
      */
-    public void tomarFoto(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    public void tomarFoto(String fotoParte) {
         File mediaStorageDir = new File(folder_path , this.getResources().getString(R.string.folder_app));
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        mediaStorageDir = new File(mediaStorageDir.getPath() + File.separator + this.getResources().getString(R.string.sufijo_factura)+ timeStamp + ".jpg");
-        debug.addResultado("PicFolder:"+mediaStorageDir.getAbsolutePath());
-        debug.debugConsole(TAG+":folder media",mediaStorageDir.getAbsolutePath());
 
-        file = Uri.fromFile(mediaStorageDir);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
-        startActivityForResult(intent, 100);
-    }
+        if(modoPick=="bmp"){
+            File head = new  File(mediaStorageDir.getPath()+"/fct20160918_182041.jpg");
+            File body = new  File(mediaStorageDir.getPath()+"/fct20160918_182134.jpg");
+            factura = new FacturaVirtual(" "," ");
+            mediaStorageDir = new File(head.getAbsolutePath());
+            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+            file = Uri.fromFile(mediaStorageDir);
+            bmpFacturaHead = BitmapFactory.decodeFile(file.getPath() , bmOptions);
+            bmpFacturaHead = Bitmap.createScaledBitmap(
+                    bmpFacturaHead,
+                    (int)(bmpFacturaHead.getWidth() * rateProportion),
+                    (int)(bmpFacturaHead.getHeight() * rateProportion),
+                    true);
+
+            mediaStorageDir = new File(body.getAbsolutePath());
+            bmOptions = new BitmapFactory.Options();
+            file = Uri.fromFile(mediaStorageDir);
+            bmpFacturaBody = BitmapFactory.decodeFile(file.getPath() , bmOptions);
+            bmpFacturaBody = Bitmap.createScaledBitmap(
+                    bmpFacturaBody,
+                    (int)(bmpFacturaBody.getWidth() * rateProportion),
+                    (int)(bmpFacturaBody.getHeight() * rateProportion),
+                    true);
+
+                ImageView myImage = (ImageView) findViewById(R.id.imageView);
+                myImage.setImageBitmap(bmpFacturaHead);
+
+            controladorProcesoFactura("PROCESAR_FOTO");
+
+        }else{
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+            if(fotoParte.equalsIgnoreCase("head")){
+                factura = new FacturaVirtual(mediaStorageDir.getPath(), this.getResources().getString(R.string.sufijo_factura)+ timeStamp + ".jpg");
+                debug.addResultado("Head PicFolder:" + mediaStorageDir.getAbsolutePath());
+                status_process = "head";
+            } else if(fotoParte.equalsIgnoreCase("body"))  {
+                debug.addResultado("Body PicFolder:" + mediaStorageDir.getAbsolutePath());
+            }
+
+            debug.debugConsole(TAG + ":Folder_media", mediaStorageDir.getAbsolutePath());
+            mediaStorageDir = new File(factura.path);
+            file = Uri.fromFile(mediaStorageDir);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
+            startActivityForResult(intent, 100);
+            }
+        }
 
 
     /**
@@ -115,42 +219,191 @@ public class ImgProcessingActivity extends AppCompatActivity {
      */
     public String procesarImagen(View view) throws Exception {
         controladorProcesoFactura("NEXT");
+        btnAction.setVisibility(View.INVISIBLE);
 
         // Nueva async task
-        new ProcessImage().execute(" ");
-        findViewById(R.id.btnAction).setVisibility(View.INVISIBLE);
+        AsyncTask task = new ProcessImage().execute();
+
         return " ";
     }
 
-
-
     /**
-     *
+     * Metodo que sirve de controlador de cada paso de usuario al procesar una información
      * @param estado
      */
     void controladorProcesoFactura(String estado){
         // Cunado viene vacio hace next
+        Log.d(TAG, "Estado: " + estado + " Action IN: " + ACTION);
         if(estado.equalsIgnoreCase("NEXT")){
-            if(ACTION.equalsIgnoreCase("TOMAR_FOTO")){
-                ACTION = "PROCESAR_FOTO";
+            if(ACTION.contains("INIT")){
+                ACTION = "TOMAR_FOTO:head";
                 textView.setText("");
-                btnAction.setText("Procesar Factura");
+                btnAction.setText("Captura encabezado");
 
-            }else if(ACTION.equalsIgnoreCase("PROCESAR_FOTO")){
+            } else if(ACTION.contains("TOMAR_FOTO")){
+                if(ACTION.contains("head")){
+                    ACTION = "TOMAR_FOTO:body";
+                    btnAction.setText("Captura Impuesto");
+
+                }else if(ACTION.contains("body")){
+                    ACTION = "PROCESAR_FOTO";
+                    textView.setText("");
+                    btnAction.setText("Procesar Factura");
+                }
+            }else if(ACTION.contains("PROCESAR_FOTO")){
                 ACTION = "EXTRACT_TEXTO";
 
-
-            }else if(ACTION.equalsIgnoreCase("EXTRACT_TEXTO")){
-                ACTION = "TOMAR_FOTO";
-
-                btnAction.setText("Procesar Nueva Factura");
-
+            }else if(ACTION.contains("EXTRACT_TEXTO")){
+                //ACTION = "INIT";
+                btnAction.setText("Edit");
+                ACTION = "EDIT_CONFIRM";
+                formFactura();
+            }else if(ACTION.contains("EDIT_CONFIRM")){
+                ACTION = "TOMAR_FOTO:head";
+                textView.setText("");
+                btnAction.setText("Captura encabezado");
             }
-        }else if(estado.equalsIgnoreCase("")){
-            // not implemented
+        }else if(estado == "PROCESAR_FOTO" ){
+            ACTION = "TOMAR_FOTO:body";
+            controladorProcesoFactura("NEXT");
+        }
+        Log.d(TAG, " Action OUT: " + ACTION);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String formFactura () {
+        processFactura("head");
+        processFactura("body");
+
+        imageView = null;
+        textView.setText("FacturaVirtual: </br>" + "Nit: " + factura.NIT +
+                        "</br> Valor:" + factura.valor +
+                        "</br>" + " Impuesto: " +
+                        "</br>" + factura.getlistaImpuestosToString());
+
+        return "";
+    }
+
+    /**
+     * Es el metodo que le pone la logica a la facturaVirtual
+     * @param part
+     */
+    public void processFactura(String part){
+        Log.d(TAG,"Init search part:" + part);
+
+        if(part.equalsIgnoreCase("head")){
+            String[] lines = extractedTextHead.split(System.getProperty("line.separator"));
+            String nitPattern = "(NIT|nit|N.I.T|n.i.t|Nit)";
+            String nitNumPattern = "(\\d{3}(\\s)*?(.|-|,|—|)(\\s)*\\d{3}(\\s)*?(.|-|,|)(\\s)*\\d{3}(\\s)*?(-|--|- -|—|»)(\\s)*\\d{1})";
+
+            Pattern p1 = Pattern.compile(nitPattern);
+            Pattern p2 = Pattern.compile(nitNumPattern);
+            Matcher matcher ;
+
+            for(String line : lines){
+                Log.d("PRINT LINES HEAD", line);
+                matcher  = p2.matcher(line);
+                if(matcher .find()) {
+                    factura.setNITFactura(matcher.group(1));
+                    break;
+                }
+            }
+            Log.d(TAG,"End search part:" + "FACTURA:" + factura.NIT );
+
+        }else if(part.equalsIgnoreCase("body")){
+            String[] lines = extractedTextBody.split(System.getProperty("line.separator"));
+            String impuestoPattern = "(%|IVA|I.V.A|iva|i.v.a)";
+            String pagoPattern = "(TOTAL|VENTA|PAGAR)";
+
+            Impuesto impuesto = null;
+            impuesto = new Impuesto();
+
+            Pattern p1 = Pattern.compile(impuestoPattern);
+            Pattern p2 = Pattern.compile(pagoPattern);
+            Matcher matcher1 ;
+            Matcher matcher2 ;
+
+            for(String line : lines){
+                Log.d("PRINT LINES BODY", line );
+
+                matcher1 = p1.matcher(line);
+                if(matcher1.find()){
+                    impuesto.setTipoImpuesto(line);
+                }
+
+                matcher2 = p2.matcher(line);
+                if(matcher2.find()){
+                    factura.setValorFactura(line);
+                }
+            }
+
+            factura.addImpuesto(impuesto);
+            Log.d(TAG,"End search part:" );
         }
     }
 
+
+    /**
+     * Metodo que convierte una foto a blanco y negro. para limipiar el ruido de la foto
+     * @param src
+     * @return Bitman Que representa la facturaVirtual en blanco y negro
+     */
+    private Bitmap convertBW(Bitmap src){
+
+        Bitmap dest = Bitmap.createBitmap( src.getWidth(),
+                                            src.getHeight(),
+                                            src.getConfig());
+
+        for(int x = 0; x < src.getWidth(); x++){
+            for(int y = 0; y < src.getHeight(); y++){
+                int pixelColor = src.getPixel(x, y);
+                int pixelAlpha = Color.alpha(pixelColor);
+                int pixelRed = Color.red(pixelColor);
+                int pixelGreen = Color.green(pixelColor);
+                int pixelBlue = Color.blue(pixelColor);
+
+                int pixelBW = (pixelRed + pixelGreen + pixelBlue)/3;
+                int newPixel = Color.argb(pixelAlpha,
+                                            pixelBW,
+                                            pixelBW,
+                                            pixelBW);
+
+                dest.setPixel(x, y, newPixel);
+            }
+        }
+
+        return dest;
+    }
+
+    /**
+     * Metodo que guarde un snap del bitmap que se tiene
+     * @param img
+     * @param filename
+     * @return
+     */
+    public String saveFacturaSnapchot(Bitmap img, String filename) {
+        String resultado = "";
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(folder_path +"/" +  this.getResources().getString(R.string.folder_app) +"/" + "snap_"+filename);
+            img.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+            // PNG is a lossless format, the compression factor (100) is ignored
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return resultado;
+    }
 
     /**
      * Metodo que se ejecuta en la interfaz. Cambia el estado de
@@ -158,51 +411,120 @@ public class ImgProcessingActivity extends AppCompatActivity {
      */
     public void action(View view){
         Log.d("action",ACTION);
-        if(ACTION.equalsIgnoreCase("TOMAR_FOTO")){
-            debug.clearResultados();
-            tomarFoto(view);
-        }else if(ACTION.equalsIgnoreCase("PROCESAR_FOTO")){
+        if(ACTION.contains("INIT")) {
+            controladorProcesoFactura("NEXT");
+
+        } else if(ACTION.contains("TOMAR_FOTO:head")) {
+
+            tomarFoto("head");
+        }else if(ACTION.contains("TOMAR_FOTO:body")){
+            tomarFoto("body");
+
+        }else if(ACTION.contains("PROCESAR_FOTO")){
             try{
-                findViewById(R.id.btnAction).setVisibility(View.INVISIBLE);
                 procesarImagen(view);
                 debug.showResultado();
-                findViewById(R.id.btnAction).setVisibility(View.VISIBLE);
             }
             catch(Exception e){
                 Log.d("Error procesando",e.getMessage());
             }
+        }else if(ACTION.contains("EDIT_CONFIRM")){
+            controladorProcesoFactura("NEXT");
+            debug.clearResultados();
         }
     }
 
 
+    public boolean onTouchEvent(MotionEvent event) {
+        //canvas.restore();
+        /*
+        initModuleAnimation();
+        canvas.save();
+        int x = (int)event.getX();
+        int y = (int)event.getY();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_MOVE:
+            case MotionEvent.ACTION_UP:
+        }
+        canvas.restore();
+        Log.d("Mousex ", x + " Mousey " + y);
 
+        // Line
+        Paint paint = new Paint();
+        paint.setColor(Color.argb(40,255, 153, 51));
+        paint.setStrokeWidth(10);
+        int startx = 50;
+        int starty = 90;
+        int endx = 150;
+        int endy = 360;
+        canvas.drawRect(0, y, 300, 500, paint );
+
+        */
+        return false;
+    }
+
+    /**
+     * Clase encargada de manejar de forma asincronica el procesamiento de facturas
+     */
     // Async Task Class
-    class ProcessImage extends AsyncTask<String, String, String> {
-        String extractedText;
+    class ProcessImage extends AsyncTask<String, Integer, String> {
+
+        boolean  inicio;
+        Paint paint;
+
+        int increase=5;
+        private ProgressDialog dialog;
 
 
+        public ProcessImage(){
+            dialog = new ProgressDialog(ImgProcessingActivity.this);
+        }
         @Override
-        protected String doInBackground(String... param) {
-            TessBaseAPI tessBaseApi = new TessBaseAPI();
-            tessBaseApi.init(folder_path.getPath()+"/YoSumo/", "eng");
-            tessBaseApi.setImage(factura);
+        protected void onPreExecute() {
+            inicio = true;
+            this.dialog.setMessage("Inicio de procesamiento");
+            this.dialog.show();
 
-            String extractedText = tessBaseApi.getUTF8Text();
-            tessBaseApi.end();
-            Log.d("processing"," de");
-            return extractedText;
         }
 
         @Override
-        protected void onProgressUpdate(String... params) {
-            Log.d("processing"," 1");
+        protected String doInBackground(String... param) {
+            if(inicio){
+                TessBaseAPI tessBaseApi = new TessBaseAPI();
+                tessBaseApi.init(folder_path.getPath()+"/YoSumo/", "spa");
+
+                //bmpFacturaHead = convertBW(bmpFacturaHead);
+                tessBaseApi.setImage(bmpFacturaHead);
+                tessBaseApi.setDebug(true);
+                extractedTextHead = tessBaseApi.getUTF8Text();
+
+                bmpFacturaBody = convertBW(bmpFacturaBody);
+                tessBaseApi.setImage(bmpFacturaBody);
+                extractedTextBody = tessBaseApi.getUTF8Text();
+
+                tessBaseApi.end();
+                inicio = false;
+            }
+
+            return "";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... params) {
+
         }
 
         @Override
         protected void onPostExecute(String params) {
-            textView.setText(extractedText);
-            debug.addResultado("tess-extract:"+extractedText);
+            textView.setText(" Head: " +  extractedTextHead + "<br/> Body: " + extractedTextBody );
+            debug.addResultado("tess-extract:" + extractedTextHead + extractedTextBody );
+            btnAction.setVisibility(View.VISIBLE);
+            debug.showResultado();
             controladorProcesoFactura("NEXT");
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
         }
     }
 
