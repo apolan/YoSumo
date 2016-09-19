@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import java.util.ArrayList;
-
 import yosumo.src.R;
 import yosumo.src.db.ConstructorFacturas;
 import yosumo.src.logic.Factura;

@@ -11,11 +11,12 @@ import java.util.regex.Pattern;
  */
 public class Impuesto {
 
-    private double valor;
-    private String tipo;
-    public String tipo = "";
-    public String valor = "";
+    public double valor;
 
+    public String tipo = "";
+    // AFP 20160918 - I
+    public String valorVirtual = "";
+    // AFP 20160918 - F
     public Impuesto(){
 
     }
@@ -43,8 +44,8 @@ public class Impuesto {
         Pattern p = Pattern.compile("\\d{1,2}%");
         Matcher matcher = p.matcher(tipo);
         if(matcher.find()){
-            this.valor =  matcher.group().replace("%","");
-            if(this.valor.equalsIgnoreCase("16")){
+            this.valorVirtual =  matcher.group().replace("%","");
+            if(this.valorVirtual.equalsIgnoreCase("16")){
                 this.tipo="IVA";
             }
 

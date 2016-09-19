@@ -109,8 +109,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase(); //no sería readable?
         Cursor registros = db.rawQuery(query,null);
 
-        while(registros.moveToNext())
-        {
+        while(registros.moveToNext()){
             Usuario usuarioActual = new Usuario();
             usuarioActual.setId(registros.getInt(0));
             usuarioActual.setNombre(registros.getString(1));

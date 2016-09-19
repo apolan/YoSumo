@@ -40,7 +40,7 @@ public class ConstructorFacturas {
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, "data/facturas/factura1.png");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,"12:01 AM 17-12-15");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,"12:13 AM 17-12-15");
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,"860.001335-4");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,"8600013354");
 
         bd.insertarFactura(contentValues);
 

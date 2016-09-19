@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by a-pol_000 on 9/7/2016.
+ * Created by a-pol_000 on 9/18/2016.
  * Entidad encargada de manejar la lógica de factura
  */
 public class FacturaVirtual {
@@ -42,7 +42,7 @@ public class FacturaVirtual {
         String resultado =  "";
 
         for(Impuesto impuesto : listaImpuestos){
-            resultado = "valor: " + impuesto.valor + " tipo: " + impuesto.tipo;
+            resultado = "valor: " + impuesto.valorVirtual + " tipo: " + impuesto.tipo;
         }
 
         return resultado;

@@ -49,7 +49,8 @@ import yosumo.src.logic.Impuesto;
  *                      Reformulacion de problema. Lectura de facturaVirtual por partes
  *                          1. Capturar cabecera
  *                          2. Capturar impuesto
- *
+ *  MOD 20160918 - AFP - Implementación expresiones regular
+ *                       Adicion modo load from bmp: para probar mas rapido
  */
 public class ImgProcessingActivity extends AppCompatActivity {
 
