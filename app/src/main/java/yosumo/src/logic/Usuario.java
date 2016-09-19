@@ -34,6 +34,12 @@ public class Usuario {
 
     }
 
+    public Usuario(String nombre, String correo, String password){
+        this.nombre = nombre;
+        this.mail = correo;
+        this.password = password;
+    }
+
     public void calcularImpuestos(){
 
     }

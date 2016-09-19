@@ -47,15 +47,16 @@ public class BaseDatos extends SQLiteOpenHelper {
                 "FOREIGN KEY ( " + ConstantesBaseDatos.TABLE_FACTURAS_NIT + " ) "+
                 "REFERENCES " + ConstantesBaseDatos.TABLE_COMERCIOS + " ( " + ConstantesBaseDatos.TABLE_COMERCIOS_NIT+" )"+
                 ")";
-        // AFP - 20160919 - F
-        String queryCrearTablaUsuario = "CREATE TABLE "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+
+
+        String queryCrearTablaUsuario = "CREATE TABLE IF NOT EXISTS " + ConstantesBaseDatos.TABLE_USUARIO + " ( "+
                 ConstantesBaseDatos.TABLE_USUARIO_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT "+
-                ConstantesBaseDatos.TABLE_USUARIO_MAIL  + " TEXT "+
+                ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT, "+
+                ConstantesBaseDatos.TABLE_USUARIO_MAIL  + " TEXT, "+
                 ConstantesBaseDatos.TABLE_USUARIO_PASSWORD  + " TEXT "+
                 ")";
+        // AFP - 20160919 - F
 
-        String queryCrearTablaComercios = "CREATE TABLE "+ConstantesBaseDatos.TABLE_COMERCIOS + "("+
+        String queryCrearTablaComercios = "CREATE TABLE " + ConstantesBaseDatos.TABLE_COMERCIOS + "("+
                 //ConstantesBaseDatos.TABLE_COMERCIOS_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ConstantesBaseDatos.TABLE_COMERCIOS_NIT  + " INTEGER PRIMARY KEY, "+
                 ConstantesBaseDatos.TABLE_COMERCIOS_NOMBRE  + " TEXT )" ;
@@ -65,9 +66,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(queryCrearTablaUsuario);
         db.execSQL(queryCrearTablaComercios);
         db.execSQL(queryCrearTablaFacturas);
-
-        String delete = "DELETE FROM table_name "+ConstantesBaseDatos.TABLE_FACTURAS;
-        db.execSQL(delete);
 
     }
 
@@ -111,8 +109,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     }
 
-    public ArrayList<Usuario> obtenerTodosLosUsuarios()
-    {
+    public ArrayList<Usuario> obtenerTodosLosUsuarios()    {
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 
         String query =  "SELECT * FROM " +ConstantesBaseDatos.TABLE_USUARIO;
@@ -176,7 +173,11 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void delete()
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(ConstantesBaseDatos.TABLE_FACTURAS,"",null);
+        //db.delete (ConstantesBaseDatos.TABLE_FACTURAS,"",null);
+
+        String query =  "DELETE FROM " + ConstantesBaseDatos.TABLE_FACTURAS;
+
+        db.execSQL(query);
         db.close();
     }
 
@@ -217,6 +218,13 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         db.close();
         return monto;
+    }
+
+
+    public void registrarUsuario(ContentValues contentValues){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert(ConstantesBaseDatos.TABLE_USUARIO, null, contentValues);
+        db.close();
     }
     // AFP - 20160919 - F
 

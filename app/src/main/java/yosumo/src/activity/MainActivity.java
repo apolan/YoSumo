@@ -1,16 +1,20 @@
 package yosumo.src.activity;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,6 +25,7 @@ import java.util.List;
 import yosumo.src.R;
 import yosumo.src.db.BaseDatos;
 import yosumo.src.db.ConstructorFacturas;
+import yosumo.src.db.ConstructorUsuarios;
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Usuario;
 
@@ -34,6 +39,7 @@ import yosumo.src.logic.Usuario;
  * MOD 20160910 - AFP - Adición módulo tess
  *                      Checker de archivos y carpetas
  * MOD 20160918 - AFP - Adición revision base de datos
+ *                      Check user
  *
  */
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
     private Debugger debugger;
     private BaseDatos db;
     ConstructorFacturas constructorFacturas;
+    boolean check = true;
+    TextView tv_Password ;
+    TextView tv_user ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
             //constructorFacturas.insertarTresFacturas(db);
             constructorFacturas.addFactura(15000,"IVA","16000","RUTA", 1234567890);
             // AFP 20160918 - F
-            constructorFacturas.deleteAll();
+            //constructorFacturas.deleteAll();
             resultado  =  this.getResources().getString(R.string.OK_CODE_DB_100);
         }catch(Exception e){
             resultado  =  this.getResources().getString(R.string.ERROR_DB_100) + e.getMessage();
@@ -228,9 +237,56 @@ public class MainActivity extends AppCompatActivity {
      * @param v sds
      */
     public void goUserHome(View v){
-        Intent intent = new Intent(this, HomeActivity.class);
-        //intent.set
-        startActivity(intent);
+        tv_user = (TextView) findViewById(R.id.editTextUsuario);
+        tv_Password = (TextView) findViewById(R.id.editTextPassword);
+
+        if(!check){
+            Intent intent = new Intent(this, HomeActivity.class);
+            //intent.set
+            startActivity(intent);
+        }else {
+            if(tv_user.getText().equals("") || tv_Password.getText().equals("")){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Por favor ingresa tus datos. Si eres nuevo registrate.")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }else{
+                ConstructorUsuarios usuarios = new ConstructorUsuarios(getBaseContext());
+                try{
+                    if(tv_user.getText() == usuarios.obtenerDatos().get(0).getNombre() &&
+                            tv_Password.getText() == usuarios.obtenerDatos().get(0).getPassword()) {
+                        //Es correcto
+
+                        Intent intent = new Intent(this, HomeActivity.class);
+                        startActivity(intent);
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                        builder.setMessage("Información incorrecta por registrate")
+                                .setCancelable(false)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+
+                }catch(Exception a){
+                    return;
+                }
+
+            }
+
+
+        }
+
     }
 
 

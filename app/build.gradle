@@ -17,12 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+/*
     productFlavors {
         defaultFlavor {
             proguardFile 'proguard-rules.txt'
         }
-    }
+    }*/
 
     dependencies {
         compile fileTree(include: ['*.jar'], dir: 'libs')

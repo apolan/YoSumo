@@ -2,6 +2,7 @@ package yosumo.src.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class ConstructorUsuarios {
     {
 
         BaseDatos bd = new BaseDatos(context);
-        insertarTresUsuarios(bd);
+        //insertarTresUsuarios(bd);
         return bd.obtenerTodosLosUsuarios();
     }
 
@@ -53,4 +54,21 @@ public class ConstructorUsuarios {
         bd.insertarUsuario(contentValues);
     }
 
+
+    // AFP - 20160919 - I
+
+    /**
+     *
+     */
+    public void registrarUsuario(String nombre, String mail, String pass ){
+        ContentValues contentValues = new ContentValues();
+        BaseDatos db = new BaseDatos(context);
+        contentValues= new ContentValues();
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_NAME, nombre);
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_MAIL, mail );
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_PASSWORD,pass);
+        db.registrarUsuario(contentValues);
+        Log.d("se agrego db","");
+    }
+    // AFP - 20160919 - F
 }

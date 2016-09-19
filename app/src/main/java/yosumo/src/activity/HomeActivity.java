@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     boolean IVA = true;
     boolean ICO = true;
 
+
     private static char[] c = new char[]{'k', 'm', 'b', 't'};
 
     @Override

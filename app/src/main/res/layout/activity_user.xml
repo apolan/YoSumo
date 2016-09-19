@@ -1,12 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.UserActivity">
+    android:background="@color/palette1_white"
+    android:orientation="vertical"
+    android:weightSum="1">
 
-</RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/yosumo_original_600_100"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nuevo Usuarioz"
+        android:id="@+id/textView4"
+        android:textColor="@color/palette1_black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:typeface="monospace"
+        android:capitalize="none"
+        android:clickable="false"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienveindo"
+        android:id="@+id/textView8"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/palette1_blue" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Nombre"
+                android:id="@+id/textView3"
+                android:textStyle="normal"
+                android:textColor="@color/palette1_black"
+                android:textSize="18dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginTop="0dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_NIT"
+                android:layout_column="16"
+                android:textColor="@color/palette1_blue"
+                android:editable="true" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="textEnd">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Correo:"
+                android:id="@+id/textView5"
+                android:textStyle="normal"
+                android:textColor="@color/palette1_black"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_column="0"
+                android:textAlignment="viewEnd"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_Compra"
+                android:textColor="@color/palette1_blue"
+                android:layout_column="16" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Contraseña"
+                android:id="@+id/textView6"
+                android:textStyle="normal"
+                android:textColor="@color/palette1_black"
+                android:textSize="18dp"
+                android:layout_marginLeft="40dp"
+                android:layout_column="0"
+                android:typeface="monospace"
+                android:textAlignment="viewEnd" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_Impuesto"
+                android:textColor="@color/palette1_blue"
+                android:layout_column="16" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:id="@+id/button2"
+            android:onClick="goCreate"/>
+    </LinearLayout>
+
+</LinearLayout>
