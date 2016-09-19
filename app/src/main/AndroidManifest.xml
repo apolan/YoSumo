@@ -37,6 +37,10 @@
 
 
         </activity>
+        <activity
+            android:name=".activity.ImgProcessingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HomeActivity" />
     </application>
 
 </manifest>

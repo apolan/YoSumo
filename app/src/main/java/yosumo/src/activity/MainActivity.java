@@ -1,13 +1,8 @@
 package yosumo.src.activity;
 
 import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-import android.os.Debug;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -17,19 +12,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import java.io.File;
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.channels.FileChannel;
-import java.security.Permission;
 import java.util.ArrayList;
 import java.util.List;
 import yosumo.src.R;
 import yosumo.src.debug.Debugger;
-import yosumo.src.logic.ManagerDB;
 import yosumo.src.logic.Usuario;
 
 /**
@@ -45,7 +35,7 @@ import yosumo.src.logic.Usuario;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private ManagerDB database;
+
     private Usuario usario;
     private Debugger debugger;
 
@@ -210,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
         String resultado;
         try{
             // Se inicia la base de datos
-            database = new ManagerDB(this,this.getResources().getString(R.string.DATABASE_NAME));
+            //database = new ManagerDB(this,this.getResources().getString(R.string.DATABASE_NAME));
             // Carga informacion
             resultado  =  this.getResources().getString(R.string.OK_CODE_DB_100);
         }catch(Exception e){

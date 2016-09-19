@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Usuario {
 
-    List<Factura> listaFacturas;
+    List<FacturaVirtual> listaFacturaVirtuals;
     List<Impuesto> listaImpuestos;
 
     int id;
@@ -42,7 +42,7 @@ public class Usuario {
      *
      * @return
      */
-    public boolean registrarFactura(Factura factura){
+    public boolean registrarFactura(FacturaVirtual facturaVirtual){
         boolean resultado=false;
 
         return resultado;
