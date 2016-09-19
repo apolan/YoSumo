@@ -119,7 +119,7 @@ public class ConstructorFacturas {
      * @param ruta
      * @param nit
      */
-    public void addFactura(int valorFactura ,String impuestoTipo, String impuestoValor, String ruta, int nit)
+    public void addFactura(String nombre, int valorFactura ,String impuestoTipo, String impuestoValor, String ruta, double nit)
     {
         BaseDatos bd = new BaseDatos(context);
         ContentValues contentValues = new ContentValues();
@@ -129,7 +129,7 @@ public class ConstructorFacturas {
         String fechaActual= dateFormat.format(cal.getTime());
 
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_VALOR, valorFactura);
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME, "");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME, nombre);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,impuestoTipo);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,impuestoValor);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, ruta);

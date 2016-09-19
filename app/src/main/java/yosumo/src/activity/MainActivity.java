@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             resultados.add(launchDebbuger());
-            //resultados.add(checkPermissions());
+            resultados.add(checkPermissions());
             resultados.add(checkFilesAndFolder());
             resultados.add(initdb());
 
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
             db  = new BaseDatos(getBaseContext());
             constructorFacturas = new ConstructorFacturas(getApplicationContext());
             //constructorFacturas.insertarTresFacturas(db);
-            constructorFacturas.addFactura(15000,"IVA","16000","RUTA", 1234567890);
+            //constructorFacturas.addFactura("nombreFact",15000,"IVA","16000","RUTA", 1234567890);
             // AFP 20160918 - F
             //constructorFacturas.deleteAll();
             resultado  =  this.getResources().getString(R.string.OK_CODE_DB_100);
@@ -237,15 +237,19 @@ public class MainActivity extends AppCompatActivity {
      * @param v sds
      */
     public void goUserHome(View v){
+        ConstructorUsuarios usuarios = new ConstructorUsuarios(getBaseContext());
         tv_user = (TextView) findViewById(R.id.editTextUsuario);
         tv_Password = (TextView) findViewById(R.id.editTextPassword);
+        String nombre = tv_user.getText() + "" ;
+        String pass = tv_Password.getText() + "";
 
         if(!check){
             Intent intent = new Intent(this, HomeActivity.class);
             //intent.set
             startActivity(intent);
         }else {
-            if(tv_user.getText().equals("") || tv_Password.getText().equals("")){
+
+            if(nombre.isEmpty() || pass.isEmpty()){
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("Por favor ingresa tus datos. Si eres nuevo registrate.")
                         .setCancelable(false)
@@ -257,17 +261,20 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             }else{
-                ConstructorUsuarios usuarios = new ConstructorUsuarios(getBaseContext());
+
+                 nombre = usuarios.obtenerDatos().get(0).getNombre();
+                 pass = usuarios.obtenerDatos().get(0).getPassword();
+
                 try{
-                    if(tv_user.getText() == usuarios.obtenerDatos().get(0).getNombre() &&
-                            tv_Password.getText() == usuarios.obtenerDatos().get(0).getPassword()) {
+                    if(nombre.equalsIgnoreCase(nombre)  &&
+                            pass.equalsIgnoreCase(pass)) {
                         //Es correcto
 
                         Intent intent = new Intent(this, HomeActivity.class);
                         startActivity(intent);
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                        builder.setMessage("Información incorrecta por registrate")
+                        builder.setMessage("Información incorrecta por favor registrate")
                                 .setCancelable(false)
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
@@ -295,8 +302,30 @@ public class MainActivity extends AppCompatActivity {
      * @param v sds
      */
     public void goUserNew(View v){
-        Intent intent = new Intent(this, UserActivity.class);
-        //intent.set
-        startActivity(intent);
+        ConstructorUsuarios usuarios = new ConstructorUsuarios(getBaseContext());
+        String nombre = "";
+        try {
+            nombre = usuarios.obtenerDatos().get(0).getNombre();
+            String pass = usuarios.obtenerDatos().get(0).getPassword();
+            if(!nombre.isEmpty()){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("No es posible registrar más de un usuario.")
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }else{
+                Intent intent = new Intent(this, UserActivity.class);
+                startActivity(intent);
+            }
+
+        } catch (Exception e) {
+            Intent intent = new Intent(this, UserActivity.class);
+            startActivity(intent);
+        }
     }
 }

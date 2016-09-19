@@ -40,7 +40,8 @@
         android:layout_alignStart="@+id/txtUsuario"
         android:layout_alignEnd="@+id/imageView"
         android:layout_below="@+id/txtUsuario"
-        android:textSize="8dp" />
+        android:textSize="15dp"
+        android:textColor="@color/palette1_blue" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -52,7 +53,8 @@
         android:layout_alignLeft="@+id/txtPass"
         android:layout_alignStart="@+id/txtPass"
         android:layout_alignEnd="@+id/editTextUsuario"
-        android:textSize="8dp" />
+        android:textSize="15dp"
+        android:textColor="@color/palette1_blue" />
 
     <TextView
         android:layout_width="wrap_content"

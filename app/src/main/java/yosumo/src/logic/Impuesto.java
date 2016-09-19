@@ -52,7 +52,7 @@ public class Impuesto {
         }else {
             Log.d("setTipoImpuesto. No :",this.tipo);
         }
-        Log.d("setTipoImpuesto: ",this.valor + " - "+ this.tipo);
+        Log.d("setTipoImpuesto: ",this.valorVirtual + " - "+ this.tipo);
     }
 
     public void setValorImpuesto(String valor){

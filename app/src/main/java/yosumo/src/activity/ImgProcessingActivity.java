@@ -1,6 +1,7 @@
 package yosumo.src.activity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -82,7 +84,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
     private String status_process   = null;
     String extractedTextHead = "";
     String extractedTextBody = "";
-    private String modoPick = "bmp";
+    private String modoPick = "bmp-none";
     ConstructorFacturas constructorFacturas;
 
     TextView tv_NIT ;
@@ -90,6 +92,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
     TextView tv_IMPUESTO ;
     TextView tv_TAG ;
     TextView tv_PORCENTAJE ;
+    TextView tv_NOMBRE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +137,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
 
     public String initModuleEditFactura (){
         setContentView(R.layout.activity_editfactura);
+        tv_NOMBRE =  (TextView) findViewById(R.id.edit_nombre);
         tv_NIT = (TextView) findViewById(R.id.edit_NIT);
         tv_VALOR = (TextView) findViewById(R.id.edit_Compra);
         tv_IMPUESTO = (TextView) findViewById(R.id.edit_Impuesto);
@@ -141,10 +145,11 @@ public class ImgProcessingActivity extends AppCompatActivity {
         tv_PORCENTAJE = (TextView) findViewById(R.id.edit_Porcentaje);
 
         try {
+            tv_NOMBRE.setText("");
             tv_NIT.setText(factura.NIT);
             tv_VALOR.setText(factura.valor);
             tv_IMPUESTO.setText(factura.listaImpuestos.get(0).tipo);
-            tv_PORCENTAJE.setText(factura.listaImpuestos.get(0).valor+"");
+            tv_PORCENTAJE.setText(factura.listaImpuestos.get(0).valorVirtual+"");
             tv_TAG.setText("");
         } catch (Exception e) {
             e.printStackTrace();
@@ -293,10 +298,15 @@ public class ImgProcessingActivity extends AppCompatActivity {
                 ACTION = "EDIT_CONFIRM";
                 formFactura();
             }else if(ACTION.contains("EDIT_CONFIRM")){
-                /*ACTION = "TOMAR_FOTO:head";
-                textView.setText("");
+                ACTION = "TOMAR_FOTO:head";
+                /*textView.setText("");
                 btnAction.setText("Captura encabezado");*/
                 initModuleEditFactura();
+                ACTION = "CONFIRM";
+            }else if(ACTION.contains("CONFIRM")){
+                ACTION = "TOMAR_FOTO:head";
+                textView.setText("");
+                btnAction.setText("Captura encabezado");
             }
         }else if(estado == "PROCESAR_FOTO" ){
             ACTION = "TOMAR_FOTO:body";
@@ -475,15 +485,36 @@ public class ImgProcessingActivity extends AppCompatActivity {
      */
     public void goCreate(View view){
         // Crea la factura en la base de datos
-        Log.d("create factura", "algo");
+
         constructorFacturas = new ConstructorFacturas(getApplicationContext());
 
-        constructorFacturas.addFactura(Integer.parseInt(tv_VALOR.getText()+""), // VALOR DE FACTURA
+        double nit = Double.parseDouble(tv_NIT.getText()+"");
+        float valor = Integer.parseInt(tv_VALOR.getText()+"") * (Float.parseFloat(tv_PORCENTAJE.getText()+"")/100);
+        Log.d("Valor impuemultip", valor+"");
+
+        constructorFacturas.addFactura( tv_NOMBRE.getText()+"",
+                                        Integer.parseInt(tv_VALOR.getText()+""), // VALOR DE FACTURA
                                         tv_IMPUESTO.getText()+"",                   // TIPO DE IMPUESTO
-                                        (Integer.parseInt(tv_PORCENTAJE.getText()+"")*Integer.parseInt(tv_VALOR.getText()+""))+"",// VALOR DE IMPUESTO ?
+                                        valor+"",// VALOR DE IMPUESTO ?
                                         factura.path,                               // PATH
-                                        (int)Integer.parseInt(tv_NIT.getText()+"")  // NIT
+                                        nit  // NIT
                                         );
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Factura registrada")
+                .setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        setContentView(R.layout.activity_imgprocessing);
+                        controladorProcesoFactura("NEXT");
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+
+
+
+
       //  constructorFacturas.addFactura("ICO","25000","RUTA", 1234567890);
     }
 

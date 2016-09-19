@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         window.setStatusBarColor(this.getResources().getColor(R.color.Bar_Black));
 
         counter = (TextView) findViewById(R.id.txtCounter);
-        sizeCounter = (int)counter.getTextSize();
+        sizeCounter = (int)(counter.getTextSize()*0.5);
         constructorFacturas = new ConstructorFacturas(getApplicationContext());
 
         updateCounter();
@@ -72,11 +72,11 @@ public class HomeActivity extends AppCompatActivity {
     public void updateCounterImpuestos ( double max) {
         ValueAnimator valueAnimator = ValueAnimator.ofInt(0, (int)max);
         valueAnimator.setDuration(2000);
-        if(max > 1000){
+        /*if(max > 1000){
             counter.setTextSize((int)(counter.getTextSize()*0.5));
         }else if(max > 10000){
             counter.setTextSize((int)(counter.getTextSize()*0.5)); // depende
-        }
+        }*/
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             NumberFormat format = NumberFormat.getCurrencyInstance();
 

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -115,17 +116,22 @@ public class BaseDatos extends SQLiteOpenHelper {
         String query =  "SELECT * FROM " +ConstantesBaseDatos.TABLE_USUARIO;
         SQLiteDatabase db = this.getWritableDatabase(); //no sería readable?
         Cursor registros = db.rawQuery(query,null);
-
+        String result = "";
         while(registros.moveToNext()){
             Usuario usuarioActual = new Usuario();
             usuarioActual.setId(registros.getInt(0));
+            result += " " + usuarioActual.getId();
             usuarioActual.setNombre(registros.getString(1));
+            result += " " + usuarioActual.getNombre();
             usuarioActual.setMail(registros.getString(2));
+            result += " " + usuarioActual.getMail();
             usuarioActual.setPassword(registros.getString(3));
+            result += " " + usuarioActual.getPassword();
 
             usuarios.add(usuarioActual);
         }
 
+        Log.d("Usurio consulta" , result);
         db.close();
 
         return usuarios;
@@ -163,12 +169,18 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void insertarFactura(ContentValues contentValues)
-    {
+    // AFP 20160918 - I
+    /**
+     *
+     * @param contentValues
+     */
+    public void insertarFactura(ContentValues contentValues) {
+        Log.d("SE CREA LA FACTURA","SE INSERTO");
         SQLiteDatabase db = this.getWritableDatabase();
         db.insert(ConstantesBaseDatos.TABLE_FACTURAS, null, contentValues);
         db.close();
     }
+    // AFP 20160918 - F
 
     public void delete()
     {
