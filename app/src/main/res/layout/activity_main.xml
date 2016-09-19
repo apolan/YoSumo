@@ -7,14 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.MainActivity"
+    android:background="@color/palette1_white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a YoSumo"
+        android:text="Bienvenido"
         android:id="@+id/textView"
-        android:layout_marginTop="37dp"
+        android:textColor="@color/palette1_black"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
 
@@ -24,16 +27,20 @@
         android:text="Ingresar"
         android:id="@+id/btnIngresar"
         android:onClick="goUserHome"
+        android:textSize="15dp"
+        android:typeface="sans"
         android:layout_below="@+id/editTextPassword"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/txtUsuario" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextUsuario"
-        android:layout_below="@+id/txtUsuario"
         android:layout_alignLeft="@+id/txtUsuario"
-        android:layout_alignStart="@+id/txtUsuario" />
+        android:layout_alignStart="@+id/txtUsuario"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_below="@+id/txtUsuario"
+        android:textSize="8dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,33 +50,50 @@
         android:id="@+id/editTextPassword"
         android:layout_below="@+id/txtPass"
         android:layout_alignLeft="@+id/txtPass"
-        android:layout_alignStart="@+id/txtPass" />
+        android:layout_alignStart="@+id/txtPass"
+        android:layout_alignEnd="@+id/editTextUsuario"
+        android:textSize="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuario"
+        android:text="Usuario:"
         android:id="@+id/txtUsuario"
         android:layout_marginTop="39dp"
         android:layout_below="@+id/textView"
         android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_toStartOf="@+id/textView"
+        android:textColor="@color/palette1_black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña"
+        android:text="Contraseña:"
         android:id="@+id/txtPass"
         android:layout_below="@+id/editTextUsuario"
         android:layout_alignLeft="@+id/editTextUsuario"
-        android:layout_alignStart="@+id/editTextUsuario" />
+        android:layout_alignStart="@+id/editTextUsuario"
+        android:textColor="@color/palette1_black" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:layout_marginTop="59dp"
+        android:src="@mipmap/yosumo_original_600_100"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No te has registrado?"
+        android:id="@+id/textView2"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/palette1_blue"
+        android:layout_below="@+id/btnIngresar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:src="@mipmap/yosumo_original_600_100" />
+        android:textStyle="normal|italic"
+        android:onClick="goUserNew"/>
+
 </RelativeLayout>

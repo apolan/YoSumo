@@ -3,6 +3,7 @@ package yosumo.src.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,6 +22,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import yosumo.src.R;
+import yosumo.src.db.BaseDatos;
+import yosumo.src.db.ConstructorFacturas;
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Usuario;
 
@@ -31,6 +36,8 @@ import yosumo.src.logic.Usuario;
  *                      Init Lógica base de datos
  * MOD 20160910 - AFP - Adición módulo tess
  *                      Checker de archivos y carpetas
+ * MOD 20160918 - AFP - Adición revision base de datos
+ *
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -38,12 +45,18 @@ public class MainActivity extends AppCompatActivity {
 
     private Usuario usario;
     private Debugger debugger;
+    private BaseDatos db;
+    ConstructorFacturas constructorFacturas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.Bar_Black));
 
         setContentView(R.layout.activity_main);
         List<String> resultados = new ArrayList<String>();;
@@ -51,9 +64,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             resultados.add(launchDebbuger());
             //resultados.add(checkPermissions());
-
             resultados.add(checkFilesAndFolder());
-            //resultados.add(initdb());
+            resultados.add(initdb());
 
             }catch(Exception e){
 
@@ -199,9 +211,11 @@ public class MainActivity extends AppCompatActivity {
     public String initdb(){
         String resultado;
         try{
-            // Se inicia la base de datos
-            //database = new ManagerDB(this,this.getResources().getString(R.string.DATABASE_NAME));
-            // Carga informacion
+            // AFP 20160918 - I
+            db  = new BaseDatos(getBaseContext());
+            constructorFacturas.insertarTresFacturas(db);
+            // AFP 20160918 - F
+
             resultado  =  this.getResources().getString(R.string.OK_CODE_DB_100);
         }catch(Exception e){
             resultado  =  this.getResources().getString(R.string.ERROR_DB_100);
@@ -216,6 +230,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public void goUserHome(View v){
         Intent intent = new Intent(this, HomeActivity.class);
+        //intent.set
+        startActivity(intent);
+    }
+
+
+    /**
+     * Método que llama a la actividad home, para registrar los datos del usuario
+     * @param v sds
+     */
+    public void goUserNew(View v){
+        Intent intent = new Intent(this, UserActivity.class);
         //intent.set
         startActivity(intent);
     }

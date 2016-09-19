@@ -22,14 +22,13 @@ public class BaseDatos extends SQLiteOpenHelper {
     private Context context;
 
     public BaseDatos(Context context) {
-        super(context, ConstantesBaseDatos.DATABASE_NAME,
-                    null,ConstantesBaseDatos.DATABASE_VERSION);
+        super(context, ConstantesBaseDatos.DATABASE_NAME, null, ConstantesBaseDatos.DATABASE_VERSION);
         this.context = context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String queryCrearTablaFacturas = "CREATE TABLE " + ConstantesBaseDatos.TABLE_FACTURAS + " ( "+
+        String queryCrearTablaFacturas = "CREATE TABLE IF NOT EXISTS" + ConstantesBaseDatos.TABLE_FACTURAS + " ( "+
                 ConstantesBaseDatos.TABLE_FACTURAS_ID               +" INTEGER PRIMARY KEY AUTOINCREMENT," +
                 ConstantesBaseDatos.TABLE_FACTURAS_NAME             +" TEXT,"+
                 ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA    +" TEXT," +
@@ -61,7 +60,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(queryCrearTablaComercios);
         db.execSQL(queryCrearTablaFacturas);
 
-
     }
 
     @Override
@@ -75,7 +73,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         ArrayList<Factura> facturas = new ArrayList<Factura>();
 
-        String query =  "SELECT * FROM " +ConstantesBaseDatos.TABLE_FACTURAS;
+        String query =  "SELECT * FROM " + ConstantesBaseDatos.TABLE_FACTURAS;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query,null);
 

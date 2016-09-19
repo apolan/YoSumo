@@ -17,6 +17,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -85,6 +87,10 @@ public class ImgProcessingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imgprocessing);
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.Bar_Black));
 
         btnAction = (Button) findViewById(R.id.btnAction);
         imageView = (ImageView) findViewById(R.id.imageView);
@@ -103,9 +109,8 @@ public class ImgProcessingActivity extends AppCompatActivity {
      * @return
      */
     public String initModuleAnimation (){
-
         RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.relative);
-        View  itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.activity_imgprocessing,null, false);
+        View itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.activity_imgprocessing,null, false);
 
         animationDraw = new ImageView(this);
         bitmapAnimation = Bitmap.createBitmap((int) getWindowManager()
@@ -119,6 +124,11 @@ public class ImgProcessingActivity extends AppCompatActivity {
         return this.getResources().getString(R.string.OK_CODE_MODANIM_100);
     }
 
+    public String initModuleEditFactura (){
+        setContentView(R.layout.activity_editfactura);
+
+        return "";
+    }
     /**
      *
      * @param requestCode
@@ -260,9 +270,10 @@ public class ImgProcessingActivity extends AppCompatActivity {
                 ACTION = "EDIT_CONFIRM";
                 formFactura();
             }else if(ACTION.contains("EDIT_CONFIRM")){
-                ACTION = "TOMAR_FOTO:head";
+                /*ACTION = "TOMAR_FOTO:head";
                 textView.setText("");
-                btnAction.setText("Captura encabezado");
+                btnAction.setText("Captura encabezado");*/
+                initModuleEditFactura();
             }
         }else if(estado == "PROCESAR_FOTO" ){
             ACTION = "TOMAR_FOTO:body";
@@ -435,6 +446,22 @@ public class ImgProcessingActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param view
+     */
+    public void goCreate(View view){
+        // Crea la factura en la base de datos
+    }
+
+    /**
+     *
+     * @param view
+     */
+    public void goInit(View view){
+
+    }
+
 
     public boolean onTouchEvent(MotionEvent event) {
         //canvas.restore();
@@ -492,6 +519,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... param) {
             if(inicio){
+
                 TessBaseAPI tessBaseApi = new TessBaseAPI();
                 tessBaseApi.init(folder_path.getPath()+"/YoSumo/", "spa");
 

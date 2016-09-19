@@ -24,7 +24,6 @@ public class ConstructorFacturas {
 
     public ArrayList<Factura> obtenerDatos()
     {
-
         BaseDatos bd = new BaseDatos(context);
         insertarTresFacturas(bd);
         return bd.obtenerTodasLasFacturas();
