@@ -35,15 +35,21 @@ public class ConstructorUsuarios {
     {
         ContentValues contentValues = new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_NAME,"David Hernandez");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_MAIL,"droS@g.com");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_PASSWORD,"hrez");
 
         bd.insertarUsuario(contentValues);
 
         contentValues= new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_NAME,"Daniel Alvarez");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_MAIL,"droaS@g.com");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_PASSWORD,"dgeahez");
         bd.insertarUsuario(contentValues);
 
         contentValues= new ContentValues();
         contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_NAME,"Pedro Sanchez");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_MAIL,"PedroS@g.com");
+        contentValues.put(ConstantesBaseDatos.TABLE_USUARIO_PASSWORD,"Peahez");
         bd.insertarUsuario(contentValues);
     }
 

@@ -18,17 +18,18 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_FACTURAS_PATH = "path";
     public static final String TABLE_FACTURAS_NAME = "name";
     public static final String TABLE_FACTURAS_NIT = "nit";
-    public static final String TABLE_FACTURAS_COMERCIO_ID = "comercio"; //FK
+    //public static final String TABLE_FACTURAS_COMERCIO_ID = "comercio"; //FK
     public static final String TABLE_FACTURAS_USUARIO_ID = "usuario"; //FK
     public static final String TABLE_FACTURAS_IMPUESTO_TIPO = "impuestoTipo";
     public static final String TABLE_FACTURAS_IMPUESTO_VALOR = "impuestoValor";
+    public static final String TABLE_FACTURAS_VALOR = "valor";
 
     public static final String TABLE_USUARIO = "usuario";
     public static final String TABLE_USUARIO_NAME = "name";
     public static final String TABLE_USUARIO_ID = "id_usuario";
-    //public static final String TABLE_USUARIO_FACTURAS = "usuario_factura";
-    //public static final String TABLE_USUARIO_IMPUESTOS = "usuario_impuesto";
-    public static final String TABLE_USUARIO_CONTADOR_IMPUESTOS = "total_impuestos";
+    public static final String TABLE_USUARIO_MAIL = "mail";
+    public static final String TABLE_USUARIO_PASSWORD = "password";
+
 
     public static final String TABLE_COMERCIOS = "comercio";
     //public static final String TABLE_COMERCIOS_ID = "id_comercio";

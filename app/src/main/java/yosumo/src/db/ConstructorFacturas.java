@@ -2,8 +2,11 @@ package yosumo.src.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import yosumo.src.db.BaseDatos;
@@ -113,18 +116,38 @@ public class ConstructorFacturas {
         BaseDatos bd = new BaseDatos(context);
         ContentValues contentValues = new ContentValues();
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat(Factura.DATE_FORMAT);
+        Calendar cal = Calendar.getInstance();
+        String fechaActual= dateFormat.format(cal.getTime());
 
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,"");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,impuestoTipo);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,impuestoValor);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, ruta);
-        //contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,fechaActual);
-        //contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,fechaActual);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,nit);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID,123);
         bd.insertarFactura(contentValues);
 
     }
+
+    public double obtenerTotalImpuestosPorTipo(String tipo)
+    {
+        BaseDatos db = new BaseDatos(context);
+        return db.obtenerTotalImpuestosPorTipo(tipo);
+
+    }
+
+
+    public double obtenerTotalImpuestosPorTipo(Usuario user)
+    {
+        BaseDatos db = new BaseDatos(context);
+        return db.obtenerTotalImpuestos(user);
+
+    }
+
+
 
 
 }

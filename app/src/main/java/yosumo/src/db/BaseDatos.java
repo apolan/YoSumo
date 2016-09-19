@@ -49,7 +49,10 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         String queryCrearTablaUsuario = "CREATE TABLE "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+
                 ConstantesBaseDatos.TABLE_USUARIO_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT )";
+                ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT "+
+                ConstantesBaseDatos.TABLE_USUARIO_MAIL  + " TEXT "+
+                ConstantesBaseDatos.TABLE_USUARIO_PASSWORD  + " TEXT "+
+                ")";
 
         String queryCrearTablaComercios = "CREATE TABLE "+ConstantesBaseDatos.TABLE_COMERCIOS + "("+
                 //ConstantesBaseDatos.TABLE_COMERCIOS_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -114,6 +117,8 @@ public class BaseDatos extends SQLiteOpenHelper {
             Usuario usuarioActual = new Usuario();
             usuarioActual.setId(registros.getInt(0));
             usuarioActual.setNombre(registros.getString(1));
+            usuarioActual.setMail(registros.getString(2));
+            usuarioActual.setPassword(registros.getString(3));
 
             usuarios.add(usuarioActual);
         }
@@ -170,5 +175,46 @@ public class BaseDatos extends SQLiteOpenHelper {
     }
 
 
+    public double obtenerTotalImpuestosPorTipo(String tipoImpuesto)
+    {
 
+        double monto = 0;
+        String query = "SELECT SUM ( "+ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR+" )"+
+                " FROM "+ConstantesBaseDatos.TABLE_FACTURAS+
+                " WHERE "+ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO+"="+tipoImpuesto;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor registros = db.rawQuery(query, null);
+
+        while(registros.moveToNext())
+        {
+            monto= registros.getDouble(0); //Si retornará double?
+        }
+
+        db.close();
+
+        return monto;
+    }
+
+
+    public double obtenerTotalImpuestos(Usuario user)
+    {
+
+        double monto = 0;
+        String query = "SELECT SUM ( "+ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR+" )"+
+                " FROM "+ConstantesBaseDatos.TABLE_FACTURAS;
+                //+" WHERE "+ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID+"="+user.getId();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor registros = db.rawQuery(query, null);
+
+        while(registros.moveToNext())
+        {
+            monto= registros.getDouble(0); //Si retornará double?
+        }
+
+        db.close();
+
+        return monto;
+    }
 }
