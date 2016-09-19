@@ -3,7 +3,6 @@ package yosumo.src.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -213,12 +210,14 @@ public class MainActivity extends AppCompatActivity {
         try{
             // AFP 20160918 - I
             db  = new BaseDatos(getBaseContext());
-            constructorFacturas.insertarTresFacturas(db);
+            constructorFacturas = new ConstructorFacturas(getApplicationContext());
+            //constructorFacturas.insertarTresFacturas(db);
+            constructorFacturas.addFactura(15000,"IVA","16000","RUTA", 1234567890);
             // AFP 20160918 - F
-
+            constructorFacturas.deleteAll();
             resultado  =  this.getResources().getString(R.string.OK_CODE_DB_100);
         }catch(Exception e){
-            resultado  =  this.getResources().getString(R.string.ERROR_DB_100);
+            resultado  =  this.getResources().getString(R.string.ERROR_DB_100) + e.getMessage();
         }
         return resultado;
     }

@@ -29,7 +29,8 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String queryCrearTablaFacturas = "CREATE TABLE IF NOT EXISTS" + ConstantesBaseDatos.TABLE_FACTURAS + " ( "+
+        // AFP - 20160919 - I : Adicion campo valor
+        String queryCrearTablaFacturas = "CREATE TABLE IF NOT EXISTS " + ConstantesBaseDatos.TABLE_FACTURAS + " ( "+
                 ConstantesBaseDatos.TABLE_FACTURAS_ID               +" INTEGER PRIMARY KEY AUTOINCREMENT," +
                 ConstantesBaseDatos.TABLE_FACTURAS_NAME             +" TEXT,"+
                 ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA    +" TEXT," +
@@ -40,12 +41,13 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR   +" FLOAT,"+
                 //ConstantesBaseDatos.TABLE_FACTURAS_COMERCIO_ID      +" INTEGER," +
                 ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID       +" INTEGER, " +
-                "FOREIGN KEY ( "+ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID+ " ) "+
-                "REFERENCES "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+ConstantesBaseDatos.TABLE_USUARIO_ID+" ), " +
-                "FOREIGN KEY ( "+ConstantesBaseDatos.TABLE_FACTURAS_NIT+ " ) "+
-                "REFERENCES "+ConstantesBaseDatos.TABLE_COMERCIOS + " ( "+ConstantesBaseDatos.TABLE_COMERCIOS_NIT+" )"+
+                ConstantesBaseDatos.TABLE_FACTURAS_VALOR            +" INTEGER, " +
+                "FOREIGN KEY ( " + ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID + " ) "+
+                "REFERENCES " + ConstantesBaseDatos.TABLE_USUARIO + " ( " + ConstantesBaseDatos.TABLE_USUARIO_ID+" ), " +
+                "FOREIGN KEY ( " + ConstantesBaseDatos.TABLE_FACTURAS_NIT + " ) "+
+                "REFERENCES " + ConstantesBaseDatos.TABLE_COMERCIOS + " ( " + ConstantesBaseDatos.TABLE_COMERCIOS_NIT+" )"+
                 ")";
-
+        // AFP - 20160919 - F
         String queryCrearTablaUsuario = "CREATE TABLE "+ConstantesBaseDatos.TABLE_USUARIO + " ( "+
                 ConstantesBaseDatos.TABLE_USUARIO_ID    + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ConstantesBaseDatos.TABLE_USUARIO_NAME  + " TEXT "+
@@ -64,6 +66,9 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(queryCrearTablaComercios);
         db.execSQL(queryCrearTablaFacturas);
 
+        String delete = "DELETE FROM table_name "+ConstantesBaseDatos.TABLE_FACTURAS;
+        db.execSQL(delete);
+
     }
 
     @Override
@@ -77,28 +82,31 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         ArrayList<Factura> facturas = new ArrayList<Factura>();
 
-        String query =  "SELECT * FROM " + ConstantesBaseDatos.TABLE_FACTURAS;
+        String query =  "SELECT " +
+                        ConstantesBaseDatos.TABLE_FACTURAS_NIT + " , " +            // 0
+                        ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA + " , " +   // 1
+                        ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO + " , " +  // 2
+                        ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR +  // 3
+                        " FROM " + ConstantesBaseDatos.TABLE_FACTURAS;
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor registros = db.rawQuery(query,null);
+        Cursor registros = db.rawQuery(query, null);
 
-        while(registros.moveToNext())
-        {
+        while(registros.moveToNext()){
             Factura facturaActual = new Factura();
-            facturaActual.setId(registros.getInt(0));
-            facturaActual.setNombre(registros.getString(1));
-            facturaActual.setFechaCompra(registros.getString(3));
-            facturaActual.setFechaCaptura(registros.getString(2));
-            facturaActual.setNit(registros.getInt(5));
-            facturaActual.setPath(registros.getString(4));
-            facturaActual.setTipoImpuesto(registros.getString(5));
-            facturaActual.setValorImpuesto(registros.getFloat(6));
+            //facturaActual.setId(registros.getInt(0));
+            //facturaActual.setNombre(registros.getString(1));
+            facturaActual.setFechaCompra(registros.getString(1));
+            //facturaActual.setFechaCaptura(registros.getString(2));
+            facturaActual.setNit(registros.getInt(0));
+            //facturaActual.setPath(registros.getString(4));
+            facturaActual.setTipoImpuesto(registros.getString(2));
+            facturaActual.setValorImpuesto(registros.getFloat(3));
             //todo obtener el nombre del comercio por medio de la FK
 
             facturas.add(facturaActual);
         }
 
         db.close();
-
         return facturas;
 
     }
@@ -161,9 +169,17 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void insertarFactura(ContentValues contentValues)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.insert(ConstantesBaseDatos.TABLE_FACTURAS,null,contentValues);
+        db.insert(ConstantesBaseDatos.TABLE_FACTURAS, null, contentValues);
         db.close();
     }
+
+    public void delete()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(ConstantesBaseDatos.TABLE_FACTURAS,"",null);
+        db.close();
+    }
+
 
     public void insertarComercio(ContentValues contentValues)
     {
@@ -172,28 +188,37 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.close();
     }
 
-
-    public double obtenerTotalImpuestosPorTipo(String tipoImpuesto)
-    {
+    // AFP - 20160919 - I
+    /***
+     *
+     * @param tipoImpuesto
+     * @return
+     */
+    public double obtenerTotalImpuestosPorTipo(String tipoImpuesto)    {
 
         double monto = 0;
         String query = "SELECT SUM ( "+ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR+" )"+
-                " FROM "+ConstantesBaseDatos.TABLE_FACTURAS+
-                " WHERE "+ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO+"="+tipoImpuesto;
+                        " FROM " + ConstantesBaseDatos.TABLE_FACTURAS;
+        if(tipoImpuesto.equalsIgnoreCase("ALL")){
+            // no hace nada to do se suma
+        } else if(tipoImpuesto.equalsIgnoreCase("ICO") || tipoImpuesto.equalsIgnoreCase("IVA")){
+            query += " WHERE " + ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO + "= \"" + tipoImpuesto + "\"";
+
+        } else if(tipoImpuesto.equalsIgnoreCase("NONE")){
+            return monto = 0;
+        }
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
-        while(registros.moveToNext())
-        {
+        while(registros.moveToNext()) {
             monto= registros.getDouble(0); //Si retornará double?
         }
 
         db.close();
-
         return monto;
     }
-
+    // AFP - 20160919 - F
 
     public double obtenerTotalImpuestos(Usuario user)
     {
@@ -215,4 +240,6 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         return monto;
     }
+
+
 }

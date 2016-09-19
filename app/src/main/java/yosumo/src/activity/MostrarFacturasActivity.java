@@ -31,6 +31,7 @@ public class MostrarFacturasActivity extends Activity {
         constructorFacturass = new ConstructorFacturas(getApplicationContext());
 
         lista = constructorFacturass.obtenerDatos();
+        //constructorFacturass.
 
         ArrayAdapter<Factura> adap = new ArrayAdapter<Factura>(getApplicationContext(),android.R.layout.simple_list_item_1,lista);
         listView.setAdapter(adap);

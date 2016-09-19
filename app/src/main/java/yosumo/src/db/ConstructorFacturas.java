@@ -3,6 +3,7 @@ package yosumo.src.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class ConstructorFacturas {
     public ArrayList<Factura> obtenerDatos()
     {
         BaseDatos bd = new BaseDatos(context);
-        insertarTresFacturas(bd);
+        //insertarTresFacturas(bd);
         return bd.obtenerTodasLasFacturas();
     }
 
@@ -39,7 +40,7 @@ public class ConstructorFacturas {
     public void insertarTresFacturas(BaseDatos bd)
     {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,"Comida");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,"Comida1");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,"IVA");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,"4100");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, "data/facturas/factura1.png");
@@ -110,7 +111,15 @@ public class ConstructorFacturas {
         bd.insertarFactura(contentValues);
     }
 
-    public void addFactura(String impuestoTipo, String impuestoValor, String ruta, int nit)
+    // AFP - 20160919 - I Adicion del valor de la factura
+    /**
+     *
+     * @param impuestoTipo
+     * @param impuestoValor
+     * @param ruta
+     * @param nit
+     */
+    public void addFactura(int valorFactura ,String impuestoTipo, String impuestoValor, String ruta, int nit)
     {
         BaseDatos bd = new BaseDatos(context);
         ContentValues contentValues = new ContentValues();
@@ -119,17 +128,19 @@ public class ConstructorFacturas {
         Calendar cal = Calendar.getInstance();
         String fechaActual= dateFormat.format(cal.getTime());
 
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME,"");
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_VALOR, valorFactura);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NAME, "");
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_TIPO,impuestoTipo);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_IMPUESTO_VALOR,impuestoValor);
         contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_PATH, ruta);
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA,fechaActual);
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA,fechaActual);
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT,nit);
-        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID,123);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_COMPRA, fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_FECHA_CAPTURA, fechaActual);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_NIT, nit);
+        contentValues.put(ConstantesBaseDatos.TABLE_FACTURAS_USUARIO_ID, 123);
         bd.insertarFactura(contentValues);
 
     }
+    // AFP - 20160919 - F
 
     public double obtenerTotalImpuestosPorTipo(String tipo)
     {
@@ -138,6 +149,29 @@ public class ConstructorFacturas {
 
     }
 
+    // AFP - 20160919 - I
+
+    /**
+     * Metodo multi-proposito
+     * @param tipo
+     * @return
+     */
+    public double obtenerTotalImpuestos(String tipo) {
+        BaseDatos db = new BaseDatos(context);
+        double resultado = 0;
+        if(tipo.equalsIgnoreCase("ALL")){
+            resultado = db.obtenerTotalImpuestosPorTipo(tipo);
+        } else if(tipo.equalsIgnoreCase("IVA")){
+            resultado = db.obtenerTotalImpuestosPorTipo(tipo);
+        } else if(tipo.equalsIgnoreCase("ICO")){
+            resultado = db.obtenerTotalImpuestosPorTipo(tipo);
+        } else if(tipo.equalsIgnoreCase("NONE")){
+            resultado = db.obtenerTotalImpuestosPorTipo(tipo);
+        }
+
+        return resultado;
+    }
+    // AFP - 20160919 - F
 
     public double obtenerTotalImpuestosPorTipo(Usuario user)
     {
@@ -146,7 +180,11 @@ public class ConstructorFacturas {
 
     }
 
-
+    public void deleteAll(){
+        BaseDatos db = new BaseDatos(context);
+        db.delete();
+        Log.d("se borro db","");
+    }
 
 
 }

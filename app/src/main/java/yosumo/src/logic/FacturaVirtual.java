@@ -25,7 +25,7 @@ public class FacturaVirtual {
     public Bitmap encabezado;
     public Bitmap cuerpo;
 
-    private List<Impuesto> listaImpuestos;
+    public List<Impuesto> listaImpuestos;
 
     public FacturaVirtual(String path, String filename){
         this.path = path+"/"+filename;
@@ -65,7 +65,7 @@ public class FacturaVirtual {
         Pattern p = Pattern.compile("(([1-9]\\d{0,2}(,\\d{3})*)|(([1-9]\\d*)?\\d))(\\.\\d{2,3})");
         Matcher matcher = p.matcher(valor);
         if(matcher.find()){
-            this.valor = matcher.group();
+            this.valor = matcher.group().replaceAll("\\.","");
             Log.d(valor, matcher.toString());
         }else {
             Log.d("setValo.No se encontro:",valor);

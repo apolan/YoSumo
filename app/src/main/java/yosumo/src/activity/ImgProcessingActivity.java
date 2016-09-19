@@ -34,6 +34,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import yosumo.src.R;
+import yosumo.src.db.ConstructorFacturas;
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.FacturaVirtual;
 import yosumo.src.logic.Impuesto;
@@ -82,6 +83,13 @@ public class ImgProcessingActivity extends AppCompatActivity {
     String extractedTextHead = "";
     String extractedTextBody = "";
     private String modoPick = "bmp";
+    ConstructorFacturas constructorFacturas;
+
+    TextView tv_NIT ;
+    TextView tv_VALOR ;
+    TextView tv_IMPUESTO ;
+    TextView tv_TAG ;
+    TextView tv_PORCENTAJE ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +134,22 @@ public class ImgProcessingActivity extends AppCompatActivity {
 
     public String initModuleEditFactura (){
         setContentView(R.layout.activity_editfactura);
+        tv_NIT = (TextView) findViewById(R.id.edit_NIT);
+        tv_VALOR = (TextView) findViewById(R.id.edit_Compra);
+        tv_IMPUESTO = (TextView) findViewById(R.id.edit_Impuesto);
+        tv_TAG = (TextView) findViewById(R.id.edit_Tag);
+        tv_PORCENTAJE = (TextView) findViewById(R.id.edit_Porcentaje);
 
+        try {
+            tv_NIT.setText(factura.NIT);
+            tv_VALOR.setText(factura.valor);
+            tv_IMPUESTO.setText(factura.listaImpuestos.get(0).tipo);
+            tv_PORCENTAJE.setText(factura.listaImpuestos.get(0).valor+"");
+            tv_TAG.setText("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+        }
         return "";
     }
     /**
@@ -447,11 +470,21 @@ public class ImgProcessingActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Metodo que crea la factura en la base de datos
      * @param view
      */
     public void goCreate(View view){
         // Crea la factura en la base de datos
+        Log.d("create factura", "algo");
+        constructorFacturas = new ConstructorFacturas(getApplicationContext());
+
+        constructorFacturas.addFactura(Integer.parseInt(tv_VALOR.getText()+""), // VALOR DE FACTURA
+                                        tv_IMPUESTO.getText()+"",                   // TIPO DE IMPUESTO
+                                        (Integer.parseInt(tv_PORCENTAJE.getText()+"")*Integer.parseInt(tv_VALOR.getText()+""))+"",// VALOR DE IMPUESTO ?
+                                        factura.path,                               // PATH
+                                        (int)Integer.parseInt(tv_NIT.getText()+"")  // NIT
+                                        );
+      //  constructorFacturas.addFactura("ICO","25000","RUTA", 1234567890);
     }
 
     /**
@@ -459,7 +492,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
      * @param view
      */
     public void goInit(View view){
-
+        Log.d("go back", "algo");
     }
 
 

@@ -1,4 +1,6 @@
 package yosumo.src.logic;
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,7 +24,7 @@ import java.util.List;
 public class Factura {
 
 
-    public static final String DATE_FORMAT = "h:mm a dd-MM-yy";
+    public static final String DATE_FORMAT = "h:mm a yyyy-MM-dd";
 
     private int id;
     private Date fechaCaptura;
@@ -160,6 +162,7 @@ public class Factura {
     }
 
     public void setValorImpuesto(double valorImpuesto) {
+        Log.d("setValorImpuesto", valorImpuesto + "");
         this.valorImpuesto = valorImpuesto;
     }
 
@@ -172,8 +175,13 @@ public class Factura {
         this.valorFactura = valorFactura;
     }
 
-    public String toString()
-    {
-        return nombre+"-"+getStringFechaCompra();
+    // AFP - 20160919 - I
+    /**
+     * Metodo llamado por las diferntes listas Este es importatne!!
+     * @return
+     */
+    public String toString(){
+        return "Valor imp.: "+ this.valorImpuesto + " - " + this.tipoImpuesto + " - " + getStringFechaCompra();
     }
+    // AFP - 20160919 - F
 }
