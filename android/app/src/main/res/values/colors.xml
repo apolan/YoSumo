@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="Bk_white">#ffffff</color>
+    <color name="Bar_Black">#383838</color>
+
+    <color name="palette1_white">#edf0f1</color>
+    <color name="palette1_blue">#1e2833</color>
+    <color name="palette1_black">#414042</color>
+    <color name="palette1_gray">#a1a1a1</color>
+</resources>

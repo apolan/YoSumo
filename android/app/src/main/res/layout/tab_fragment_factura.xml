@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/palette1_white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/palette1_blue"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar:"
+                android:id="@+id/textView13"
+                android:textColor="@color/palette1_white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:text="Buscar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:id="@+id/lst_facturas"
+            android:background="@color/palette1_gray" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="horizontal"></TableRow>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom|center" >
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:id="@+id/button5"
+                android:onClick="goUserHome"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:typeface="sans"
+                android:background="@color/palette1_gray"
+                android:layout_below="@+id/editTextPassword"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:id="@+id/button6"
+                android:onClick="goUserHome"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:typeface="sans"
+                android:background="@color/palette1_blue"
+                android:layout_below="@+id/editTextPassword"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

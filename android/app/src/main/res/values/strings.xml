@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">YoSumo</string>
+    <string name="folder_app">/YoSumo</string>
+    <string name="folder_tessdata">/tessdata</string>
+    <string name="file_tessdata">spa.traineddata</string>
+    <string name="file_log">/log.txt</string>
+    <string name="sufijo_factura_encabezado">fct_head</string>
+    <string name="sufijo_factura_impuesto">fct_body</string>
+    <string name="sufijo_factura">fct</string>
+
+    <string name="tab_factura">Mis Facturas</string>
+    <string name="tab_contador">Contador</string>
+    <string name="tab_denuncias">Denuncias</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

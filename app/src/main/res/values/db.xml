@@ -1,6 +1,0 @@
-<resources>
-    <string name="DATABASE_NAME">db_yosumo</string>
-    <string name="USER_DEFAULT">invitado</string>
-    <string name="CREATE_TABLE_DB"></string>
-    <string name="DROPE_TABLE_DB"></string>
-</resources>
