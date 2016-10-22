@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -82,9 +83,19 @@ public class HomeActivity extends AppCompatActivity {
         txtUser.setText(user.getNombre());
     }
 
+    /**
+     *
+     * @param usario
+     * @return
+     */
     public Usuario getUser(String usario){
         ManagerDB db = new ManagerDB(getBaseContext());
-        return db.getUserByUser(usario);
+        if(db.getUserByUser(usario)!= null){
+         return db.getUserByUser(usario);
+        }
+
+        return new Usuario("apolan", "Andres", "apolan89@gmail.com", "123");
+
     }
 
     @Override
@@ -99,4 +110,13 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    /**
+     *
+     * @param v
+     */
+    public void goImgProcessing(View v){
+        Intent intent = new Intent(this, ImgProcessingActivity.class);
+        startActivity(intent);
+    }
 }

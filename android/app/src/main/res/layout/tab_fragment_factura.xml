@@ -14,6 +14,30 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/palette1_white"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="Capturar"
+                android:id="@+id/btn"
+                android:onClick="goImgProcessing"
+                android:textSize="15dp"
+                android:textAllCaps="false"
+                android:typeface="sans"
+                android:background="@color/palette1_orange"
+                android:layout_below="@+id/editTextPassword"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/palette1_blue"
             android:layout_marginTop="20dp"
             android:elevation="5dp">
@@ -43,14 +67,9 @@
             android:id="@+id/lst_facturas"
             android:background="@color/palette1_gray" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:orientation="horizontal"></TableRow>
-
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="bottom|center" >
@@ -83,6 +102,7 @@
                 android:layout_alignEnd="@+id/textView2"
                 android:layout_alignStart="@+id/textView2" />
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

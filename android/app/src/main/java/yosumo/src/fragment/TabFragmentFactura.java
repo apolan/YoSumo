@@ -34,4 +34,7 @@ public class TabFragmentFactura extends Fragment {
         listView.setAdapter(adap);
         return rootView;
     }
+
+
+
 }

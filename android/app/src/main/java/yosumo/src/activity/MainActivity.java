@@ -37,6 +37,7 @@ import yosumo.src.logic.Usuario;
  *                      Checker de archivos y carpetas
  * MOD 20160924 - AFP - Adición revision base de datos
  *                      Check user adicion de usuario
+ * MOD 20161022 - AFP - Arreglo de la conexion con el modulo img processing
  *
  */
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private Debugger debugger;
     private ManagerDB db;
 
-    boolean check = true;
+    boolean check = false;
     TextView tv_Password ;
     TextView tv_user ;
 
@@ -326,4 +327,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
 }
