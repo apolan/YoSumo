@@ -26,6 +26,7 @@ import yosumo.src.db.ManagerDB;
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Usuario;
 
+
 /**
  * Created by a-pol_000 on 9/7/2016.
  * Clase main de la aplicación

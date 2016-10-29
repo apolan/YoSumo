@@ -17,6 +17,8 @@ public class FacturaVirtual {
     public Date fechaCaptura;
     public Date fechaCompra;
     public String path;
+    public String path_body;
+    public String path_head;
     public String Nombre;
     public String NIT = "none";
     public String lugar;
@@ -73,8 +75,21 @@ public class FacturaVirtual {
         //Log.d("setValorFactura: ",this.valor);
     }
 
+    public String getPath_head() {
+        return path_head;
+    }
 
+    public void setPath_head(String path_head) {
+        this.path_head = path_head;
+    }
 
+    public String getPath_body() {
+        return path_body;
+    }
 
-    // AFP - 20160918  - F
+    public void setPath_body(String path_body) {
+        this.path_body = path_body;
+    }
+
+// AFP - 20160918  - F
 }

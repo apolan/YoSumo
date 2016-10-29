@@ -31,7 +31,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ImgProcessingActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:persistent="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
 
     </application>
 </manifest>
