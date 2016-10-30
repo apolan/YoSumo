@@ -4,6 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+/**
+ *  MOD 20161029 - AFP - Adicion  tab debuug
+ *  MOD 20161029 - AFP - Adicion  tab facebook
+ */
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
@@ -17,13 +21,16 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                TabFragmentContador tab1 = new TabFragmentContador();
-                return tab1;
+                TabFragmentContador tab0 = new TabFragmentContador();
+                return tab0;
             case 1:
-                TabFragmentFactura tab2 = new TabFragmentFactura();
-                return tab2;
+                TabFragmentFactura tab1 = new TabFragmentFactura();
+                return tab1;
             case 2:
-                TabFragmentDenuncia tab3 = new TabFragmentDenuncia();
+                TabFragmentDenuncia tab2 = new TabFragmentDenuncia();
+                return tab2;
+            case 3:
+                TabFragmentDebug tab3 = new TabFragmentDebug();
                 return tab3;
             default:
                 return null;

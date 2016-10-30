@@ -8,10 +8,13 @@
     <string name="sufijo_factura_impuesto">fct_body</string>
     <string name="sufijo_factura">fct</string>
 
-    <string name="tab_factura">Mis Facturas</string>
+    <string name="tab_factura">Facturas</string>
     <string name="tab_contador">Contador</string>
     <string name="tab_denuncias">Denuncias</string>
+    <string name="tab_facebook">Mi Info</string>
+    <string name="tab_debug">Debug</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="portSocket">12111</string>
+    <string name="ipServerSocket">192.168.0.5</string>
+
 </resources>

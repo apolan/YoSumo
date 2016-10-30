@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertDialogOrange" >
+        <item name="android:background">@color/palette1_white</item>
+        <item name="android:colorPrimary">@color/palette1_black</item>
+        <item name="android:colorAccent">@color/palette1_orange</item>
+        <item name="android:textColor">@color/palette1_black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

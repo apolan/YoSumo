@@ -12,6 +12,8 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 import yosumo.src.R;
+import yosumo.src.animation.Circle;
+import yosumo.src.animation.CircleAngleAnimation;
 import yosumo.src.db.ManagerDB;
 import yosumo.src.logic.ManagerFormat;
 
@@ -39,6 +41,11 @@ public class TabFragmentContador extends Fragment {
 
         db = new ManagerDB(rootView.getContext());
         updateCounter();
+
+        Circle circle = (Circle)rootView.findViewById(R.id.circle);
+        CircleAngleAnimation animation = new CircleAngleAnimation(circle, 300);
+        animation.setDuration(1000);
+        circle.startAnimation(animation);
 
         return rootView;
     }

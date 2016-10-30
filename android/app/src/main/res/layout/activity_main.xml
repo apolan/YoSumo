@@ -112,7 +112,7 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="180dp"
+            android:layout_width="300dp"
             android:layout_height="40dp"
             android:text="Ingresar"
             android:id="@+id/btnIngresar"
@@ -120,7 +120,7 @@
             android:textSize="15dp"
             android:textAllCaps="false"
             android:typeface="sans"
-            android:background="@color/palette1_blue"
+            android:background="@drawable/btn"
             android:layout_below="@+id/editTextPassword"
             android:layout_alignEnd="@+id/textView2"
             android:layout_alignStart="@+id/textView2"

@@ -12,6 +12,8 @@ public class TabFragmentDenuncia extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.tab_fragment_denuncia, container, false);
+
         return inflater.inflate(R.layout.tab_fragment_denuncia, container, false);
     }
 }

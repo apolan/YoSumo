@@ -10,6 +10,7 @@ import java.util.Random;
 
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Comercio;
+import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Factura;
 import yosumo.src.logic.Impuesto;
 import yosumo.src.logic.ManagerFormat;
@@ -24,6 +25,7 @@ import yosumo.src.logic.Usuario;
  *                  Unificacion de nombres y eliminacion de raw queries
  *                  Cambio de nombres y revalidación de tipos
  *                  Cambio de Convenciones
+ // AFP 20161030    Adicion de multas
  */
 public class ManagerDB extends SQLiteOpenHelper {
 
@@ -63,6 +65,9 @@ public class ManagerDB extends SQLiteOpenHelper {
         db.execSQL(ConstantesDB.CREATE_TABLE_IMPUESTO);
         db.execSQL(ConstantesDB.CREATE_TABLE_COMERCIO);
         db.execSQL(ConstantesDB.CREATE_TABLE_FACTURA);
+        // 20161030 AFP - I
+        db.execSQL(ConstantesDB.CREATE_TABLE_DENUNCIA);
+        // 20161030 AFP - F
         debug.debugConsole(TAG,"Created DB");
     }
 
@@ -197,6 +202,19 @@ public class ManagerDB extends SQLiteOpenHelper {
         return id+1;
     }
 
+    /**
+     * Metodo que es llamado por cliente socket
+     * @param
+     * @return
+     */
+    public String getDenunciasPendientesToString(){
+
+        String denuncias = "";
+
+
+        return denuncias;
+    }
+
 
     /***
      *
@@ -257,6 +275,28 @@ public class ManagerDB extends SQLiteOpenHelper {
 
         return comercio;
     }
+
+    /**
+     * Inserta una nueva denuncia
+     * @param denuncia
+     * @return
+     */
+    public int insertDenuncia(Denuncia denuncia){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_FK_USUARIO, denuncia.getFk_usuario());
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_NOMBRECOMERCIO, denuncia.getNombre_comercio());
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DIRECCIONCOMERCIO, denuncia.getDireccion_comercio());
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTDENUNCIA, ManagerFormat.formatDate(denuncia.getFechaDenuncia()));
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTCREACION, ManagerFormat.formatDate(denuncia.getFechaCaptura()));
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_ESTADO, denuncia.getEstado());
+
+        db.insert(ConstantesDB.TABLE_DENUNCIA, null, contentValues);
+        db.close();
+        return 0;
+    }
+
 
     /**
      *
@@ -320,6 +360,25 @@ public class ManagerDB extends SQLiteOpenHelper {
 
         db.insert(ConstantesDB.TABLE_COMERCIO, null, contentValues);
         db.close();
+        return 0;
+    }
+
+    /**
+     * Es lo que el servidor manda para que el cliente actualice
+     * @param
+     * @return
+     */
+    public int insertComercioBulk(String comercios){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+/*        ContentValues contentValues = new ContentValues();
+        contentValues.put(ConstantesDB.TABLE_COMERCIO_NIT, comercio.nit);
+        contentValues.put(ConstantesDB.TABLE_COMERCIO_DIRECCION, comercio.direccion);
+        contentValues.put(ConstantesDB.TABLE_COMERCIO_REGIMEN, comercio.regimen);
+        contentValues.put(ConstantesDB.TABLE_COMERCIO_ESTADO, comercio.estado);
+
+        db.insert(ConstantesDB.TABLE_COMERCIO, null, contentValues);
+        db.close();*/
         return 0;
     }
 

@@ -10,29 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/palette1_white"
-            android:layout_marginTop="20dp"
-            android:elevation="5dp"
-            android:gravity="center_vertical|center_horizontal">
-
-            <Button
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:text="Capturar"
-                android:id="@+id/btn"
-                android:onClick="goImgProcessing"
-                android:textSize="15dp"
-                android:textAllCaps="false"
-                android:typeface="sans"
-                android:background="@color/palette1_orange"
-                android:layout_below="@+id/editTextPassword"
-                android:layout_alignEnd="@+id/textView2"
-                android:layout_alignStart="@+id/textView2" />
-        </LinearLayout>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Capturar factura"
+            android:id="@+id/btn"
+            android:onClick="goImgProcessing"
+            android:textSize="15dp"
+            android:textAllCaps="false"
+            android:typeface="sans"
+            android:background="@drawable/btn"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -65,43 +57,8 @@
             android:layout_width="fill_parent"
             android:layout_height="250dp"
             android:id="@+id/lst_facturas"
-            android:background="@color/palette1_gray" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="bottom|center" >
-
-            <Button
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:text="-"
-                android:id="@+id/button5"
-                android:onClick="goUserHome"
-                android:textSize="15dp"
-                android:textAllCaps="false"
-                android:typeface="sans"
-                android:background="@color/palette1_gray"
-                android:layout_below="@+id/editTextPassword"
-                android:layout_alignEnd="@+id/textView2"
-                android:layout_alignStart="@+id/textView2" />
-
-            <Button
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:text="+"
-                android:id="@+id/button6"
-                android:onClick="goUserHome"
-                android:textSize="15dp"
-                android:textAllCaps="false"
-                android:typeface="sans"
-                android:background="@color/palette1_blue"
-                android:layout_below="@+id/editTextPassword"
-                android:layout_alignEnd="@+id/textView2"
-                android:layout_alignStart="@+id/textView2" />
-        </LinearLayout>
+            android:background="@color/palette1_white"
+            android:textColor="#000000"/>
 
     </LinearLayout>
 

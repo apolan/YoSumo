@@ -6,6 +6,7 @@
     <string name="OK_CODE_DEBUG_100">Clase debbug .....load</string>
     <string name="OK_CODE_PERMISSON_100">Permisos.....load</string>
     <string name="OK_CODE_DB_100">Base de datos.....load</string>
+    <string name="OK_CODE_FB_100">Facebook.....load</string>
     <string name="OK_CODE_MODANIM_100">Modulo animacion.....load</string>
 
     <!-- Lista de estados ERROR-->
@@ -14,4 +15,5 @@
     <string name="ERROR_CODE_DEBUG_100">Clase debbug .....error</string>
     <string name="ERROR_DB_100">Base de datos.....error</string>
     <string name="ERROR_MODANIM_100">Modulo animacion.....error</string>
+    <string name="ERROR_CODE_FB_100">Facebook.....error</string>
 </resources>
