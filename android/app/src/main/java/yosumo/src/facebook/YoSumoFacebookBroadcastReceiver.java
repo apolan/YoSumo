@@ -1,11 +1,13 @@
 package yosumo.src.facebook;
-
+/*
 import android.os.Bundle;
 import android.util.Log;
 import com.facebook.FacebookBroadcastReceiver;
 /**
  * Created by a-pol_000 on 10/29/2016.
  */
+
+/*
 public class YoSumoFacebookBroadcastReceiver extends FacebookBroadcastReceiver {
     @Override
     protected void onSuccessfulAppCall(String appCallId, String action, Bundle extras) {
@@ -20,3 +22,4 @@ public class YoSumoFacebookBroadcastReceiver extends FacebookBroadcastReceiver {
     }
 
 }
+*/

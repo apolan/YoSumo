@@ -9,9 +9,7 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <!-- // AFP -  20161029 -  I | TASK: Sensores-->
-    <uses-feature android:name="android.hardware.sensor.accelerometer"
-        android:required="true" />
-
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" android:required="true"/>
     <uses-permission android:name="android.permission.INTERNET" android:required="true" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"  android:required="true"/>

@@ -8,7 +8,7 @@ package yosumo.src.logic;
  */
 public class Comercio {
 
-    public double nit;
+    public String nit;
     public String nombre_Legal;
     public String nombre_Label;
     public String direccion;
@@ -21,7 +21,7 @@ public class Comercio {
     public Comercio(){
     }
 
-    public Comercio(double nit){
+    public Comercio(String nit){
         this.nit = nit;
         estado = "activo";
     }

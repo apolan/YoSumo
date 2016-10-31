@@ -21,6 +21,17 @@
             android:layout_marginTop="30dp"
             android:onClick="goCreateDenuncia"/>
 
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Actualizar"
+            android:id="@+id/button4"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn"
+            android:layout_marginTop="30dp"
+            android:onClick="pushDenuncia" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -54,6 +65,7 @@
             android:id="@+id/listView"
             android:background="@color/palette1_white"
             android:textColor="#000000" />
+
     </LinearLayout>
 
 </RelativeLayout>

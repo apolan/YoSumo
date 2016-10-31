@@ -33,24 +33,6 @@ import yosumo.src.db.ManagerDB;
 import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Usuario;
 
-import com.facebook.AccessToken;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookAuthorizationException;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.Profile;
-import com.facebook.ProfileTracker;
-import com.facebook.appevents.AppEventsLogger;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.ProfilePictureView;
-import com.facebook.share.ShareApi;
-import com.facebook.share.Sharer;
-import com.facebook.share.model.ShareLinkContent;
-import com.facebook.share.model.SharePhoto;
-import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.ShareDialog;
 
 /**
  * Created by a-pol_000 on 9/7/2016.
@@ -68,7 +50,6 @@ import com.facebook.share.widget.ShareDialog;
  * MOD 20161029 - AFP - facebook init
  */
 public class MainActivity extends AppCompatActivity {
-
 
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -109,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         }
         debugger.debugConsole(TAG, resultados);
     }
-
 
 
     /**
@@ -192,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
                     //, Manifest.permission.SEND_SMS
                     , Manifest.permission.READ_SMS
                     , Manifest.permission.CAMERA
+                    , Manifest.permission.ACCESS_FINE_LOCATION
+                    , Manifest.permission.ACCESS_COARSE_LOCATION
             };
 
             List<String> permissionsTo = new ArrayList();
@@ -238,7 +220,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return resultado;
     }
-
 
 
     /**
@@ -363,6 +344,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // AFP -  20161029 -  I | TASK: Facebook
+
     /**
      * Metodo qu realiza la validacion de facebook
      *
@@ -371,8 +353,8 @@ public class MainActivity extends AppCompatActivity {
     public String checkFacebook() {
         String resultado = "";
         try {
-            FacebookSdk.sdkInitialize(MainActivity.this.getApplicationContext());
-            AppEventsLogger.activateApp(this);
+            //       FacebookSdk.sdkInitialize(MainActivity.this.getApplicationContext());
+            //      AppEventsLogger.activateApp(this);
 
             resultado = this.getResources().getString(R.string.OK_CODE_DB_100);
         } catch (Exception e) {

@@ -1,5 +1,7 @@
 package yosumo.src.logic;
 
+import android.util.Log;
+
 import java.util.Date;
 
 /**
@@ -7,24 +9,79 @@ import java.util.Date;
  */
 public class Denuncia {
     int id;
-    int fk_usuario;
+   // int fk_usuario;
+    String username;
     String nombre_comercio;
     String direccion_comercio;
     String comentario;
+    double latitud;
+    double longitud;
     public Date fechaDenuncia;
     public Date fechaCaptura;
     String estado;
 
-    public Denuncia(int fk_usuario, String nombre_comercio, String direccion_comercio, String comentario) {
-        this.fk_usuario = fk_usuario;
+    public Denuncia(String username, String nombre_comercio, String direccion_comercio, String comentario, double latitud, double longitud) {
+        //this.fk_usuario = fk_usuario;
+        this.username = username;
         this.nombre_comercio = nombre_comercio;
         this.direccion_comercio = direccion_comercio;
         this.comentario = comentario;
         this.fechaDenuncia = new Date();
         this.fechaCaptura = new Date();
         this.estado = "pendiente";
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
 
+    /**
+     * La de la creacion nueva desde la aplicaicon
+     * @param nombre_comercio
+     * @param comentario
+     * @param latitud
+     * @param longitud
+     */
+    public Denuncia(String username, String nombre_comercio,  String comentario, double latitud, double longitud) {
+        this.username = username;
+        this.nombre_comercio = nombre_comercio;
+        this.direccion_comercio = direccion_comercio;
+        this.comentario = comentario;
+        this.fechaDenuncia = new Date();
+        this.fechaCaptura = new Date();
+        this.estado = "pendiente";
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
+    /**
+     * Es el metodo que llama la base de datos para represetntar una denunicai en el sisemte
+     *
+     * @param username
+     * @param nombre_comercio
+     * @param direccion_comercio
+     * @param comentario
+     * @param latitud
+     * @param longitud
+     * @param estado
+     * @param fechaDenuncia
+     * @param fechaCaptura
+     */
+    public Denuncia(String username, String nombre_comercio, String direccion_comercio, String comentario, double latitud, double longitud, String estado, Date fechaDenuncia, Date fechaCaptura) {
+        this.username = username;
+        this.nombre_comercio = nombre_comercio;
+        this.direccion_comercio = direccion_comercio;
+        this.comentario = comentario;
+        this.fechaDenuncia = fechaDenuncia;
+        this.fechaCaptura = fechaCaptura;
+        this.estado = estado;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
+    public String toSocket() {
+        String str = username+"|"+nombre_comercio+"|"+direccion_comercio+"|"+comentario+"|"+latitud+"|"+longitud+"|"+estado+"|"+ManagerFormat.formatDate(fechaDenuncia)+"|"+ManagerFormat.formatDate(fechaCaptura);
+        Log.d("to socket: ", str);
+        return str;
+    }
 
     public int getId() {
         return id;
@@ -34,13 +91,10 @@ public class Denuncia {
         this.id = id;
     }
 
-    public int getFk_usuario() {
-        return fk_usuario;
+    public String getUsername() {
+        return username;
     }
 
-    public void setFk_usuario(int fk_usuario) {
-        this.fk_usuario = fk_usuario;
-    }
 
     public String getNombre_comercio() {
         return nombre_comercio;
@@ -92,5 +146,21 @@ public class Denuncia {
 
     public void setFechaDenuncia(Date fechaDenuncia) {
         this.fechaDenuncia = fechaDenuncia;
+    }
+
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(float latitud) {
+        this.latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(float longitud) {
+        this.longitud = longitud;
     }
 }

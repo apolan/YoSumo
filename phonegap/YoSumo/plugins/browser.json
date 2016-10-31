@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "yosumo.src"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "yosumo.src"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "yosumo.src"
+        }
+    }
+}

@@ -1,5 +1,5 @@
 package yosumo.src.fragment;
-
+/*
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -298,3 +298,4 @@ public class TabFragmentFacebook extends FragmentActivity {
         }
     }
 }
+*/

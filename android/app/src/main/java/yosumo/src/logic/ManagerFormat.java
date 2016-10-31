@@ -15,6 +15,7 @@ import java.util.Locale;
 public final class ManagerFormat {
 
     public static final String DATE_FORMAT = "yyyyMMdd";
+    public static final String DATE_FORMAT_TIMESTAMP = "yyyy-MM-dd HH:mm:ss";
     private static char[] c = new char[]{'k', 'm', 'b', 't'};
 
     /**
@@ -58,6 +59,20 @@ public final class ManagerFormat {
 
     /**
      *
+     * @param timestamp
+     * @return
+     */
+    public static Date formatTimestamp(String timestamp){
+        try {
+            DateFormat formato = new SimpleDateFormat(DATE_FORMAT_TIMESTAMP, Locale.ENGLISH);
+            return formato.parse(timestamp);
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
+    /**
+     *
      * @param date
      * @return
      */
@@ -75,12 +90,12 @@ public final class ManagerFormat {
      * @param nit
      * @return
      */
-    public static String formatNIT(double nit){
+    public static String formatNIT(String nit){
         String resultado = "";
         DecimalFormat df = new DecimalFormat("#");
-
+        double tmp = Double.parseDouble(nit);
         int i =0;
-        for(char c : df.format(nit).toCharArray()) {
+        for(char c : df.format(tmp).toCharArray()) {
             resultado += c;
 
             if(i==2 || i==5  ){

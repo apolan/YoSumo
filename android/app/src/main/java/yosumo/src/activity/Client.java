@@ -9,14 +9,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 import android.os.AsyncTask;
-
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
 
 import yosumo.src.db.ManagerDB;
 import yosumo.src.logic.Usuario;
@@ -26,6 +21,8 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
     Usuario usuario;
     ManagerDB db;
+
+    String denuncia;
 
     String dstAddress;
     int dstPort;
@@ -38,6 +35,9 @@ public class Client extends AsyncTask<Void, Void, Void> {
     PrintWriter out;
     Socket socket = null;
 
+    void setDenuncia(String denuncia){
+        this.denuncia = denuncia;
+    }
 
     @Override
     protected void onPreExecute() {
@@ -51,12 +51,13 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
         this.usuario = usuario;
         this.db = db;
-
+        //Log.d("Listening", " ");
     }
 
     @Override
     protected Void doInBackground(Void... arg0) {
         try {
+           // Log.d("Listening 2", " ");
             String resultado = "";
             socket = new Socket(dstAddress, dstPort);
             out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
@@ -66,44 +67,43 @@ public class Client extends AsyncTask<Void, Void, Void> {
             if (tag.equalsIgnoreCase("update:comercio")
                     || tag.equalsIgnoreCase("update:denuncia")
                     || tag.equalsIgnoreCase("update:factura")
-                    || tag.equalsIgnoreCase("insert:denuncia")) {
+                    || tag.equalsIgnoreCase("public:denuncia")) {
 
-                out.println("INIT:" + usuario.getUsuario());
+                out.println("INIT_:_" + usuario.getUsuario());
             } else {
-                Log.d("Not find tag socket" , tag);
+                Log.d("Not find tag socket", tag);
                 return null; // Para el socket
             }
 
             boolean rta = false;
             while (true) {
                 try {
+                    Log.d("Listening 3", " ");
                     response = input.readLine();
                     Log.d("Response", response);
 
-                    if (response.equalsIgnoreCase("INIT:SERVER") && !rta) { // Estado server:OK esta bien y continuo
-                        if (tag.equalsIgnoreCase("update:denuncia")) {
-                            out.println("UPDATE:DENUNCIA");
+                    if (response.equalsIgnoreCase("INIT_:_SERVER") && !rta) { // Estado server:OK esta bien y continuo
+                        if (tag.equalsIgnoreCase("public:denuncia")) {
+                            out.println("PUBLIC_:_DENUNCIA_:_" + denuncia);
+                            out.println("PUBLIC_:_END");
 
-                        } else if (tag.equalsIgnoreCase("update:comercio")) {
-                            out.println("UPDATE:COMERCIO");
-
-                        } else if (tag.equalsIgnoreCase("update:factura")) {
-                            out.println("UPDATE:FACTURA");
-
-                        } else if (tag.equalsIgnoreCase("publicar:denuncia")) {
-                            out.println("TOUPDATE:" + db.getDenunciasPendientesToString());
-                            out.println("TOUPDATE:END");
                             break;
+                        }else if (tag.equalsIgnoreCase("update:comercio")) {
+                            out.println("UPDATE_:_COMERCIO");
+                        }else if (tag.equalsIgnoreCase("update:denuncia")) {
+                            out.println("UPDATE_:_DENUNCIA");
                         }
                         rta = true;
                     }
 
-                    if (response.split(":")[0].equalsIgnoreCase("TOUPDATE") && rta) {
+                    if (response.split("_:_")[0].equalsIgnoreCase("TOUPDATE") && rta) {
                         if (tag.equalsIgnoreCase("update:denuncia")) {
-                            // db.insertDenunciaBulk(response);
+                            db.insertDenunciaBulk(response);
+                            break;
 
                         } else if (tag.equalsIgnoreCase("update:comercio")) {
                             db.insertComercioBulk(response);
+                            break;
 
                         } else if (tag.equalsIgnoreCase("update:factura")) {
                             //out.println("UPDATE:FACTURA");
@@ -115,6 +115,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
                 } catch (Exception a) {
                     System.out.println("Error: " + a.getMessage());
+                    break;
                 } finally {
 
                 }
@@ -126,6 +127,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
             if (socket != null) {
                 try {
                     socket.close();
+                    Log.d("Cierr del socket ", " ");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -136,7 +138,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void result) {
-        Log.d("Response", response);
+
         //textResponse.setText(textResponse.getText() + response);
         super.onPostExecute(result);
     }

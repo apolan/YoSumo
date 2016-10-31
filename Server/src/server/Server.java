@@ -20,12 +20,13 @@ public class Server {
     public static void main(String[] args) throws Exception {
         ServerSocket m_ServerSocket = new ServerSocket(12111);
         int id = 0;
-        
-        Managerdb mn = new Managerdb();
+        Managerdb db = new Managerdb();
+       
                 
         while (true) {
             Socket clientSocket = m_ServerSocket.accept();
             ClientServiceThread cliThread = new ClientServiceThread(clientSocket, id++);
+            cliThread.setDb(db);
             cliThread.start();
         }
     }

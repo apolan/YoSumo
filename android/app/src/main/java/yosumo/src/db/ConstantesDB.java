@@ -42,6 +42,7 @@ public final class ConstantesDB {
 
     //  - - - - - - - - - - - ATTRIBUTES COMERCIO - - - - - - - - - - - - - - -
     public static final String TABLE_COMERCIO = "comercio";
+    public static final String TABLE_COMERCIO_ID = "id";
     public static final String TABLE_COMERCIO_NIT = "pk_nit";
     public static final String TABLE_COMERCIO_NOMBRE = "nombre";
     public static final String TABLE_COMERCIO_NOMBRE_LEGAL = "nombre_legal";
@@ -68,6 +69,8 @@ public final class ConstantesDB {
     public static final String TABLE_DENUNCIA_NOMBRECOMERCIO = "nombre_comercio";
     public static final String TABLE_DENUNCIA_DIRECCIONCOMERCIO = "direccion_comercio";
     public static final String TABLE_DENUNCIA_COMENTARIO = "comentario";
+    public static final String TABLE_DENUNCIA_LATITUD = "latitud";
+    public static final String TABLE_DENUNCIA_LONGITUD = "longitud";
     public static final String TABLE_DENUNCIA_DTDENUNCIA = "dt_denuncia";
     public static final String TABLE_DENUNCIA_DTCREACION = "dt_creacion";
     public static final String TABLE_DENUNCIA_ESTADO = "estado";
@@ -118,13 +121,14 @@ public final class ConstantesDB {
 
     // - - - - - - - - - - - TABLE COMERCIO - - - - - - - - - - - - - - -
     public static final String CREATE_TABLE_COMERCIO = "CREATE TABLE IF NOT EXISTS " + TABLE_COMERCIO + "( " +
-            TABLE_COMERCIO_NIT + " INTEGER NOT NULL," +
+          //  TABLE_COMERCIO_ID + " INTEGER AUTOINCREMENT," +
+            TABLE_COMERCIO_NIT + " TEXT," +
             TABLE_COMERCIO_NOMBRE + " TEXT," +
             TABLE_COMERCIO_NOMBRE_LEGAL + " TEXT," +
             TABLE_COMERCIO_REGIMEN + " TEXT," +
             TABLE_COMERCIO_DIRECCION + " TEXT," +
-            TABLE_COMERCIO_ESTADO + " TEXT" +
-            ")";
+            TABLE_COMERCIO_ESTADO + " TEXT," +
+            "  PRIMARY KEY ("+TABLE_COMERCIO_NIT+","+TABLE_COMERCIO_NOMBRE+","+TABLE_COMERCIO_DIRECCION+") )";
 
     public static final String DROP_TABLE_COMERCIO = "DROP TABLE " + TABLE_COMERCIO;
 
@@ -168,15 +172,16 @@ public final class ConstantesDB {
 
     // - - - - - - - - - - - TABLE DENUNCIA - - - - - - - - - - - - - - -
     public static final String CREATE_TABLE_DENUNCIA = "CREATE TABLE IF NOT EXISTS " + TABLE_DENUNCIA + "( " +
-            TABLE_DENUNCIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             TABLE_DENUNCIA_FK_USUARIO + " TEXT," +
             TABLE_DENUNCIA_NOMBRECOMERCIO + " TEXT," +
             TABLE_DENUNCIA_DIRECCIONCOMERCIO + " TEXT," +
             TABLE_DENUNCIA_COMENTARIO + " TEXT," +
+            TABLE_DENUNCIA_LATITUD + " TEXT," +
+            TABLE_DENUNCIA_LONGITUD + " TEXT," +
             TABLE_DENUNCIA_DTDENUNCIA + " TEXT," +
             TABLE_DENUNCIA_DTCREACION + " TEXT," +
-            TABLE_DENUNCIA_ESTADO + " TEXT" +
-            ")";
+            TABLE_DENUNCIA_ESTADO + " TEXT," +
+            "  PRIMARY KEY ("+TABLE_DENUNCIA_FK_USUARIO+","+TABLE_DENUNCIA_NOMBRECOMERCIO+","+TABLE_DENUNCIA_DTDENUNCIA+","+TABLE_DENUNCIA_DIRECCIONCOMERCIO+","+TABLE_DENUNCIA_LATITUD+","+TABLE_DENUNCIA_LONGITUD+") )";
 
     public static final String DROP_TABLE_DENUNCIA = "DROP TABLE " + TABLE_DENUNCIA;
 
