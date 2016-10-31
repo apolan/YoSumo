@@ -34,6 +34,12 @@ import yosumo.src.debug.Debugger;
 import yosumo.src.logic.Usuario;
 
 
+import com.facebook.FacebookSdk;
+
+import com.facebook.appevents.AppEventsLogger;
+
+import com.facebook.share.widget.ShareDialog;
+
 /**
  * Created by a-pol_000 on 9/7/2016.
  * Clase main de la aplicación
@@ -47,8 +53,11 @@ import yosumo.src.logic.Usuario;
  * Check user adicion de usuario
  * MOD 20161022 - AFP - Arreglo de la conexion con el modulo img processing
  * MOD 20161029 - AFP - Adicion  tab debuug
- * MOD 20161029 - AFP - facebook init
+ * MOD 20161029 - DRM - facebook init button
+ *
  */
+
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -62,9 +71,12 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_Password;
     TextView tv_user;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Window window = this.getWindow();
@@ -74,7 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         List<String> resultados = new ArrayList<String>();
-        ;
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+        initFacebookLogin();
 
         try {
             resultados.add(launchDebbuger());
@@ -89,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Error init ", e.getMessage());
         }
         debugger.debugConsole(TAG, resultados);
+
+
     }
 
 
@@ -362,7 +379,28 @@ public class MainActivity extends AppCompatActivity {
         }
         return resultado;
     }
-    // AFP -  20161029 -  F
+    // DRM -  20161029 -  F
+
+    /**
+     * Metodo que activa el boton para iniciar sesión en Facebook
+     */
+
+    private void initFacebookLogin() {
+
+        final Button fbLoginButton = (Button) findViewById(R.id.fb_login_button);
+        fbLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FacebookLoginActivity.class));
+
+            }
+        });
+    }
+
+
+
+
+
 
 
 }

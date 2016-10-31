@@ -44,5 +44,27 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             />
 
+        <!-- // DRM -  20161030 - FB -->
+        <activity
+            android:name=".activity.FacebookLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/facebook_app_name" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider920061328125924"
+            android:exported="true" />
+        <receiver android:name="yosumo.src.activity.HelloFacebookBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.platform.AppCallResultBroadcast" />
+            </intent-filter>
+        </receiver>
+
     </application>
 </manifest>
