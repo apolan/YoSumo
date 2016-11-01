@@ -1,0 +1,1617 @@
+[
+    {
+        "outputFile": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\res\\merged\\debug\\values-hr\\values-hr.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 238,
+                    "endColumn": 19,
+                    "endOffset": 9081
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 238,
+                        "endColumn": 19,
+                        "endOffset": 9081
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 9086,
+                    "endColumn": 104,
+                    "endOffset": 9186
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 104,
+                        "endOffset": 155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 9191,
+                    "endColumn": 107,
+                    "endOffset": 9294
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 107,
+                        "endOffset": 263
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 9299,
+                    "endColumn": 122,
+                    "endOffset": 9417
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 268,
+                        "endColumn": 122,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 9422,
+                    "endColumn": 96,
+                    "endOffset": 9514
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 391,
+                        "endColumn": 96,
+                        "endOffset": 483
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 9519,
+                    "endColumn": 109,
+                    "endOffset": 9624
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 488,
+                        "endColumn": 109,
+                        "endOffset": 593
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 9629,
+                    "endColumn": 85,
+                    "endOffset": 9710
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 598,
+                        "endColumn": 85,
+                        "endOffset": 679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 9715,
+                    "endColumn": 103,
+                    "endOffset": 9814
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 684,
+                        "endColumn": 103,
+                        "endOffset": 783
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 9819,
+                    "endColumn": 118,
+                    "endOffset": 9933
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 788,
+                        "endColumn": 118,
+                        "endOffset": 902
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 9938,
+                    "endColumn": 83,
+                    "endOffset": 10017
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 907,
+                        "endColumn": 83,
+                        "endOffset": 986
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 10022,
+                    "endColumn": 82,
+                    "endOffset": 10100
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 991,
+                        "endColumn": 82,
+                        "endOffset": 1069
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 10105,
+                    "endColumn": 85,
+                    "endOffset": 10186
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1074,
+                        "endColumn": 85,
+                        "endOffset": 1155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 10191,
+                    "endColumn": 103,
+                    "endOffset": 10290
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1160,
+                        "endColumn": 103,
+                        "endOffset": 1259
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 10295,
+                    "endColumn": 112,
+                    "endOffset": 10403
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1264,
+                        "endColumn": 112,
+                        "endOffset": 1372
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 10408,
+                    "endColumn": 105,
+                    "endOffset": 10509
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1377,
+                        "endColumn": 105,
+                        "endOffset": 1478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 10514,
+                    "endColumn": 104,
+                    "endOffset": 10614
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1483,
+                        "endColumn": 104,
+                        "endOffset": 1583
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 10619,
+                    "endColumn": 112,
+                    "endOffset": 10727
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1588,
+                        "endColumn": 112,
+                        "endOffset": 1696
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 10732,
+                    "endColumn": 106,
+                    "endOffset": 10834
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1701,
+                        "endColumn": 106,
+                        "endOffset": 1803
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 10839,
+                    "endColumn": 122,
+                    "endOffset": 10957
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1808,
+                        "endColumn": 122,
+                        "endOffset": 1926
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 10962,
+                    "endColumn": 96,
+                    "endOffset": 11054
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1931,
+                        "endColumn": 96,
+                        "endOffset": 2023
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 258,
+                    "startColumn": 4,
+                    "startOffset": 11059,
+                    "endColumn": 61,
+                    "endOffset": 11116
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 9086,
+                        "endColumn": 61,
+                        "endOffset": 9143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 11121,
+                    "endColumn": 65,
+                    "endOffset": 11182
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 240,
+                        "startColumn": 4,
+                        "startOffset": 9148,
+                        "endColumn": 65,
+                        "endOffset": 9209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 11187,
+                    "endColumn": 65,
+                    "endOffset": 11248
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 241,
+                        "startColumn": 4,
+                        "startOffset": 9214,
+                        "endColumn": 65,
+                        "endOffset": 9275
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 11253,
+                    "endColumn": 66,
+                    "endOffset": 11315
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 242,
+                        "startColumn": 4,
+                        "startOffset": 9280,
+                        "endColumn": 66,
+                        "endOffset": 9342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 11320,
+                    "endColumn": 60,
+                    "endOffset": 11376
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 243,
+                        "startColumn": 4,
+                        "startOffset": 9347,
+                        "endColumn": 60,
+                        "endOffset": 9403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 11381,
+                    "endColumn": 64,
+                    "endOffset": 11441
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 244,
+                        "startColumn": 4,
+                        "startOffset": 9408,
+                        "endColumn": 64,
+                        "endOffset": 9468
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 11446,
+                    "endColumn": 60,
+                    "endOffset": 11502
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 245,
+                        "startColumn": 4,
+                        "startOffset": 9473,
+                        "endColumn": 60,
+                        "endOffset": 9529
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 11507,
+                    "endColumn": 59,
+                    "endOffset": 11562
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 246,
+                        "startColumn": 4,
+                        "startOffset": 9534,
+                        "endColumn": 59,
+                        "endOffset": 9589
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 11567,
+                    "endColumn": 92,
+                    "endOffset": 11655
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 247,
+                        "startColumn": 4,
+                        "startOffset": 9594,
+                        "endColumn": 92,
+                        "endOffset": 9682
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 11660,
+                    "endColumn": 80,
+                    "endOffset": 11736
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 248,
+                        "startColumn": 4,
+                        "startOffset": 9687,
+                        "endColumn": 80,
+                        "endOffset": 9763
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 11741,
+                    "endColumn": 62,
+                    "endOffset": 11799
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 249,
+                        "startColumn": 4,
+                        "startOffset": 9768,
+                        "endColumn": 62,
+                        "endOffset": 9826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 11804,
+                    "endColumn": 90,
+                    "endOffset": 11890
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 250,
+                        "startColumn": 4,
+                        "startOffset": 9831,
+                        "endColumn": 90,
+                        "endOffset": 9917
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 11895,
+                    "endColumn": 205,
+                    "endOffset": 12096
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 251,
+                        "startColumn": 4,
+                        "startOffset": 9922,
+                        "endColumn": 205,
+                        "endOffset": 10123
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 12101,
+                    "endColumn": 63,
+                    "endOffset": 12160
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 252,
+                        "startColumn": 4,
+                        "startOffset": 10128,
+                        "endColumn": 63,
+                        "endOffset": 10187
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 12165,
+                    "endColumn": 78,
+                    "endOffset": 12239
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 253,
+                        "startColumn": 4,
+                        "startOffset": 10192,
+                        "endColumn": 78,
+                        "endOffset": 10266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 12244,
+                    "endColumn": 64,
+                    "endOffset": 12304
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 254,
+                        "startColumn": 4,
+                        "startOffset": 10271,
+                        "endColumn": 64,
+                        "endOffset": 10331
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 12309,
+                    "endColumn": 71,
+                    "endOffset": 12376
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 255,
+                        "startColumn": 4,
+                        "startOffset": 10336,
+                        "endColumn": 71,
+                        "endOffset": 10403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 12381,
+                    "endColumn": 85,
+                    "endOffset": 12462
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 256,
+                        "startColumn": 4,
+                        "startOffset": 10408,
+                        "endColumn": 85,
+                        "endOffset": 10489
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 12467,
+                    "endLine": 278,
+                    "endColumn": 13,
+                    "endOffset": 12721
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 257,
+                        "startColumn": 4,
+                        "startOffset": 10494,
+                        "endLine": 259,
+                        "endColumn": 13,
+                        "endOffset": 10748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 12726,
+                    "endLine": 281,
+                    "endColumn": 13,
+                    "endOffset": 13058
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 260,
+                        "startColumn": 4,
+                        "startOffset": 10753,
+                        "endLine": 262,
+                        "endColumn": 13,
+                        "endOffset": 11085
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 13063,
+                    "endLine": 284,
+                    "endColumn": 13,
+                    "endOffset": 13456
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 263,
+                        "startColumn": 4,
+                        "startOffset": 11090,
+                        "endLine": 265,
+                        "endColumn": 13,
+                        "endOffset": 11483
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 13461,
+                    "endColumn": 83,
+                    "endOffset": 13540
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 266,
+                        "startColumn": 4,
+                        "startOffset": 11488,
+                        "endColumn": 83,
+                        "endOffset": 11567
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 13545,
+                    "endColumn": 78,
+                    "endOffset": 13619
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 267,
+                        "startColumn": 4,
+                        "startOffset": 11572,
+                        "endColumn": 78,
+                        "endOffset": 11646
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 13624,
+                    "endColumn": 100,
+                    "endOffset": 13720
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 268,
+                        "startColumn": 4,
+                        "startOffset": 11651,
+                        "endColumn": 100,
+                        "endOffset": 11747
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 13725,
+                    "endColumn": 78,
+                    "endOffset": 13799
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 269,
+                        "startColumn": 4,
+                        "startOffset": 11752,
+                        "endColumn": 78,
+                        "endOffset": 11826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 13804,
+                    "endColumn": 91,
+                    "endOffset": 13891
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 270,
+                        "startColumn": 4,
+                        "startOffset": 11831,
+                        "endColumn": 91,
+                        "endOffset": 11918
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 290,
+                    "startColumn": 4,
+                    "startOffset": 13896,
+                    "endLine": 292,
+                    "endColumn": 13,
+                    "endOffset": 14206
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 271,
+                        "startColumn": 4,
+                        "startOffset": 11923,
+                        "endLine": 273,
+                        "endColumn": 13,
+                        "endOffset": 12233
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 14211,
+                    "endColumn": 83,
+                    "endOffset": 14290
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 274,
+                        "startColumn": 4,
+                        "startOffset": 12238,
+                        "endColumn": 83,
+                        "endOffset": 12317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 294,
+                    "startColumn": 4,
+                    "startOffset": 14295,
+                    "endColumn": 85,
+                    "endOffset": 14376
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 12322,
+                        "endColumn": 85,
+                        "endOffset": 12403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 295,
+                    "startColumn": 4,
+                    "startOffset": 14381,
+                    "endColumn": 131,
+                    "endOffset": 14508
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 12408,
+                        "endColumn": 131,
+                        "endOffset": 12535
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 296,
+                    "startColumn": 4,
+                    "startOffset": 14513,
+                    "endColumn": 83,
+                    "endOffset": 14592
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 277,
+                        "startColumn": 4,
+                        "startOffset": 12540,
+                        "endColumn": 83,
+                        "endOffset": 12619
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 14597,
+                    "endColumn": 92,
+                    "endOffset": 14685
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 278,
+                        "startColumn": 4,
+                        "startOffset": 12624,
+                        "endColumn": 92,
+                        "endOffset": 12712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 14690,
+                    "endColumn": 75,
+                    "endOffset": 14761
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 12717,
+                        "endColumn": 75,
+                        "endOffset": 12788
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 299,
+                    "startColumn": 4,
+                    "startOffset": 14766,
+                    "endColumn": 92,
+                    "endOffset": 14854
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 280,
+                        "startColumn": 4,
+                        "startOffset": 12793,
+                        "endColumn": 92,
+                        "endOffset": 12881
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 14859,
+                    "endLine": 302,
+                    "endColumn": 13,
+                    "endOffset": 15219
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 281,
+                        "startColumn": 4,
+                        "startOffset": 12886,
+                        "endLine": 283,
+                        "endColumn": 13,
+                        "endOffset": 13246
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 15224,
+                    "endColumn": 84,
+                    "endOffset": 15304
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 284,
+                        "startColumn": 4,
+                        "startOffset": 13251,
+                        "endColumn": 84,
+                        "endOffset": 13331
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 304,
+                    "startColumn": 4,
+                    "startOffset": 15309,
+                    "endColumn": 99,
+                    "endOffset": 15404
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 285,
+                        "startColumn": 4,
+                        "startOffset": 13336,
+                        "endColumn": 99,
+                        "endOffset": 13431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 15409,
+                    "endColumn": 88,
+                    "endOffset": 15493
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 286,
+                        "startColumn": 4,
+                        "startOffset": 13436,
+                        "endColumn": 88,
+                        "endOffset": 13520
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 306,
+                    "startColumn": 4,
+                    "startOffset": 15498,
+                    "endColumn": 113,
+                    "endOffset": 15607
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 287,
+                        "startColumn": 4,
+                        "startOffset": 13525,
+                        "endColumn": 113,
+                        "endOffset": 13634
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 15612,
+                    "endColumn": 75,
+                    "endOffset": 15683
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 288,
+                        "startColumn": 4,
+                        "startOffset": 13639,
+                        "endColumn": 75,
+                        "endOffset": 13710
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 308,
+                    "startColumn": 4,
+                    "startOffset": 15688,
+                    "endColumn": 62,
+                    "endOffset": 15746
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 289,
+                        "startColumn": 4,
+                        "startOffset": 13715,
+                        "endColumn": 62,
+                        "endOffset": 13773
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 309,
+                    "startColumn": 4,
+                    "startOffset": 15751,
+                    "endColumn": 64,
+                    "endOffset": 15811
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 290,
+                        "startColumn": 4,
+                        "startOffset": 13778,
+                        "endColumn": 64,
+                        "endOffset": 13838
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 310,
+                    "startColumn": 4,
+                    "startOffset": 15816,
+                    "endColumn": 83,
+                    "endOffset": 15895
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 291,
+                        "startColumn": 4,
+                        "startOffset": 13843,
+                        "endColumn": 83,
+                        "endOffset": 13922
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 311,
+                    "startColumn": 4,
+                    "startOffset": 15900,
+                    "endLine": 313,
+                    "endColumn": 13,
+                    "endOffset": 16034
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 292,
+                        "startColumn": 4,
+                        "startOffset": 13927,
+                        "endLine": 294,
+                        "endColumn": 13,
+                        "endOffset": 14061
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 314,
+                    "startColumn": 4,
+                    "startOffset": 16039,
+                    "endColumn": 74,
+                    "endOffset": 16109
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 295,
+                        "startColumn": 4,
+                        "startOffset": 14066,
+                        "endColumn": 74,
+                        "endOffset": 14136
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 315,
+                    "startColumn": 4,
+                    "startOffset": 16114,
+                    "endColumn": 162,
+                    "endOffset": 16272
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 162,
+                        "endOffset": 213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 316,
+                    "startColumn": 4,
+                    "startOffset": 16277,
+                    "endColumn": 130,
+                    "endOffset": 16403
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 218,
+                        "endColumn": 130,
+                        "endOffset": 344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 317,
+                    "startColumn": 4,
+                    "startOffset": 16408,
+                    "endColumn": 135,
+                    "endOffset": 16539
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 349,
+                        "endColumn": 135,
+                        "endOffset": 480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 318,
+                    "startColumn": 4,
+                    "startOffset": 16544,
+                    "endColumn": 106,
+                    "endOffset": 16646
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 485,
+                        "endColumn": 106,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 319,
+                    "startColumn": 4,
+                    "startOffset": 16651,
+                    "endColumn": 84,
+                    "endOffset": 16731
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 592,
+                        "endColumn": 84,
+                        "endOffset": 672
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 320,
+                    "startColumn": 4,
+                    "startOffset": 16736,
+                    "endColumn": 74,
+                    "endOffset": 16806
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 677,
+                        "endColumn": 74,
+                        "endOffset": 747
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 321,
+                    "startColumn": 4,
+                    "startOffset": 16811,
+                    "endColumn": 69,
+                    "endOffset": 16876
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 752,
+                        "endColumn": 69,
+                        "endOffset": 817
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 322,
+                    "startColumn": 4,
+                    "startOffset": 16881,
+                    "endColumn": 73,
+                    "endOffset": 16950
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 822,
+                        "endColumn": 73,
+                        "endOffset": 891
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 323,
+                    "startColumn": 4,
+                    "startOffset": 16955,
+                    "endColumn": 75,
+                    "endOffset": 17026
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 896,
+                        "endColumn": 75,
+                        "endOffset": 967
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 324,
+                    "startColumn": 4,
+                    "startOffset": 17031,
+                    "endColumn": 93,
+                    "endOffset": 17120
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 972,
+                        "endColumn": 93,
+                        "endOffset": 1061
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 325,
+                    "startColumn": 4,
+                    "startOffset": 17125,
+                    "endColumn": 75,
+                    "endOffset": 17196
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1066,
+                        "endColumn": 75,
+                        "endOffset": 1137
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 326,
+                    "startColumn": 4,
+                    "startOffset": 17201,
+                    "endColumn": 75,
+                    "endOffset": 17272
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1142,
+                        "endColumn": 75,
+                        "endOffset": 1213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 327,
+                    "startColumn": 4,
+                    "startOffset": 17277,
+                    "endColumn": 84,
+                    "endOffset": 17357
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1218,
+                        "endColumn": 84,
+                        "endOffset": 1298
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 328,
+                    "startColumn": 4,
+                    "startOffset": 17362,
+                    "endColumn": 102,
+                    "endOffset": 17460
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1303,
+                        "endColumn": 102,
+                        "endOffset": 1401
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 329,
+                    "startColumn": 4,
+                    "startOffset": 17465,
+                    "endColumn": 65,
+                    "endOffset": 17526
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1406,
+                        "endColumn": 65,
+                        "endOffset": 1467
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 330,
+                    "startColumn": 4,
+                    "startOffset": 17531,
+                    "endColumn": 65,
+                    "endOffset": 17592
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1472,
+                        "endColumn": 65,
+                        "endOffset": 1533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 331,
+                    "startColumn": 4,
+                    "startOffset": 17597,
+                    "endColumn": 139,
+                    "endOffset": 17732
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1538,
+                        "endColumn": 139,
+                        "endOffset": 1673
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 332,
+                    "startColumn": 4,
+                    "startOffset": 17737,
+                    "endColumn": 88,
+                    "endOffset": 17821
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2028,
+                        "endColumn": 88,
+                        "endOffset": 2112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 333,
+                    "startColumn": 4,
+                    "startOffset": 17826,
+                    "endColumn": 100,
+                    "endOffset": 17922
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-hr\\values-hr.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2117,
+                        "endColumn": 100,
+                        "endOffset": 2213
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,1313 @@
+[
+    {
+        "outputFile": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\res\\merged\\debug\\values-in\\values-in.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 238,
+                    "endColumn": 19,
+                    "endOffset": 9006
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 238,
+                        "endColumn": 19,
+                        "endOffset": 9006
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 9011,
+                    "endColumn": 109,
+                    "endOffset": 9116
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 109,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 9121,
+                    "endColumn": 107,
+                    "endOffset": 9224
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 165,
+                        "endColumn": 107,
+                        "endOffset": 268
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 9229,
+                    "endColumn": 122,
+                    "endOffset": 9347
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 273,
+                        "endColumn": 122,
+                        "endOffset": 391
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 9352,
+                    "endColumn": 101,
+                    "endOffset": 9449
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 396,
+                        "endColumn": 101,
+                        "endOffset": 493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 9454,
+                    "endColumn": 104,
+                    "endOffset": 9554
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 498,
+                        "endColumn": 104,
+                        "endOffset": 598
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 9559,
+                    "endColumn": 86,
+                    "endOffset": 9641
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 603,
+                        "endColumn": 86,
+                        "endOffset": 685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 9646,
+                    "endColumn": 103,
+                    "endOffset": 9745
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 690,
+                        "endColumn": 103,
+                        "endOffset": 789
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 9750,
+                    "endColumn": 115,
+                    "endOffset": 9861
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 794,
+                        "endColumn": 115,
+                        "endOffset": 905
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 9866,
+                    "endColumn": 81,
+                    "endOffset": 9943
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 910,
+                        "endColumn": 81,
+                        "endOffset": 987
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 9948,
+                    "endColumn": 78,
+                    "endOffset": 10022
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 992,
+                        "endColumn": 78,
+                        "endOffset": 1066
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 10027,
+                    "endColumn": 85,
+                    "endOffset": 10108
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1071,
+                        "endColumn": 85,
+                        "endOffset": 1152
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 10113,
+                    "endColumn": 102,
+                    "endOffset": 10211
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1157,
+                        "endColumn": 102,
+                        "endOffset": 1255
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 10216,
+                    "endColumn": 108,
+                    "endOffset": 10320
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1260,
+                        "endColumn": 108,
+                        "endOffset": 1364
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 10325,
+                    "endColumn": 100,
+                    "endOffset": 10421
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1369,
+                        "endColumn": 100,
+                        "endOffset": 1465
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 10426,
+                    "endColumn": 103,
+                    "endOffset": 10525
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1470,
+                        "endColumn": 103,
+                        "endOffset": 1569
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 10530,
+                    "endColumn": 107,
+                    "endOffset": 10633
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1574,
+                        "endColumn": 107,
+                        "endOffset": 1677
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 10638,
+                    "endColumn": 107,
+                    "endOffset": 10741
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1682,
+                        "endColumn": 107,
+                        "endOffset": 1785
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 10746,
+                    "endColumn": 122,
+                    "endOffset": 10864
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1790,
+                        "endColumn": 122,
+                        "endOffset": 1908
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 10869,
+                    "endColumn": 98,
+                    "endOffset": 10963
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1913,
+                        "endColumn": 98,
+                        "endOffset": 2007
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 258,
+                    "startColumn": 4,
+                    "startOffset": 10968,
+                    "endColumn": 61,
+                    "endOffset": 11025
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 9011,
+                        "endColumn": 61,
+                        "endOffset": 9068
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 11030,
+                    "endColumn": 65,
+                    "endOffset": 11091
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 240,
+                        "startColumn": 4,
+                        "startOffset": 9073,
+                        "endColumn": 65,
+                        "endOffset": 9134
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 11096,
+                    "endColumn": 68,
+                    "endOffset": 11160
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 241,
+                        "startColumn": 4,
+                        "startOffset": 9139,
+                        "endColumn": 68,
+                        "endOffset": 9203
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 11165,
+                    "endColumn": 68,
+                    "endOffset": 11229
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 242,
+                        "startColumn": 4,
+                        "startOffset": 9208,
+                        "endColumn": 68,
+                        "endOffset": 9272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 11234,
+                    "endColumn": 62,
+                    "endOffset": 11292
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 243,
+                        "startColumn": 4,
+                        "startOffset": 9277,
+                        "endColumn": 62,
+                        "endOffset": 9335
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 11297,
+                    "endColumn": 62,
+                    "endOffset": 11355
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 244,
+                        "startColumn": 4,
+                        "startOffset": 9340,
+                        "endColumn": 62,
+                        "endOffset": 9398
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 11360,
+                    "endColumn": 65,
+                    "endOffset": 11421
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 245,
+                        "startColumn": 4,
+                        "startOffset": 9403,
+                        "endColumn": 65,
+                        "endOffset": 9464
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 11426,
+                    "endColumn": 55,
+                    "endOffset": 11477
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 246,
+                        "startColumn": 4,
+                        "startOffset": 9469,
+                        "endColumn": 55,
+                        "endOffset": 9520
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 11482,
+                    "endColumn": 92,
+                    "endOffset": 11570
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 247,
+                        "startColumn": 4,
+                        "startOffset": 9525,
+                        "endColumn": 92,
+                        "endOffset": 9613
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 11575,
+                    "endColumn": 77,
+                    "endOffset": 11648
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 248,
+                        "startColumn": 4,
+                        "startOffset": 9618,
+                        "endColumn": 77,
+                        "endOffset": 9691
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 11653,
+                    "endColumn": 60,
+                    "endOffset": 11709
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 249,
+                        "startColumn": 4,
+                        "startOffset": 9696,
+                        "endColumn": 60,
+                        "endOffset": 9752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 11714,
+                    "endColumn": 88,
+                    "endOffset": 11798
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 250,
+                        "startColumn": 4,
+                        "startOffset": 9757,
+                        "endColumn": 88,
+                        "endOffset": 9841
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 11803,
+                    "endColumn": 210,
+                    "endOffset": 12009
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 251,
+                        "startColumn": 4,
+                        "startOffset": 9846,
+                        "endColumn": 210,
+                        "endOffset": 10052
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 12014,
+                    "endColumn": 61,
+                    "endOffset": 12071
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 252,
+                        "startColumn": 4,
+                        "startOffset": 10057,
+                        "endColumn": 61,
+                        "endOffset": 10114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 12076,
+                    "endColumn": 70,
+                    "endOffset": 12142
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 253,
+                        "startColumn": 4,
+                        "startOffset": 10119,
+                        "endColumn": 70,
+                        "endOffset": 10185
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 12147,
+                    "endColumn": 63,
+                    "endOffset": 12206
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 254,
+                        "startColumn": 4,
+                        "startOffset": 10190,
+                        "endColumn": 63,
+                        "endOffset": 10249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 12211,
+                    "endColumn": 70,
+                    "endOffset": 12277
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 255,
+                        "startColumn": 4,
+                        "startOffset": 10254,
+                        "endColumn": 70,
+                        "endOffset": 10320
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 12282,
+                    "endColumn": 86,
+                    "endOffset": 12364
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 256,
+                        "startColumn": 4,
+                        "startOffset": 10325,
+                        "endColumn": 86,
+                        "endOffset": 10407
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 12369,
+                    "endLine": 278,
+                    "endColumn": 13,
+                    "endOffset": 12607
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 257,
+                        "startColumn": 4,
+                        "startOffset": 10412,
+                        "endLine": 259,
+                        "endColumn": 13,
+                        "endOffset": 10650
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 12612,
+                    "endLine": 281,
+                    "endColumn": 13,
+                    "endOffset": 12926
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 260,
+                        "startColumn": 4,
+                        "startOffset": 10655,
+                        "endLine": 262,
+                        "endColumn": 13,
+                        "endOffset": 10969
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 12931,
+                    "endLine": 284,
+                    "endColumn": 13,
+                    "endOffset": 13304
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 263,
+                        "startColumn": 4,
+                        "startOffset": 10974,
+                        "endLine": 265,
+                        "endColumn": 13,
+                        "endOffset": 11347
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 13309,
+                    "endColumn": 89,
+                    "endOffset": 13394
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 266,
+                        "startColumn": 4,
+                        "startOffset": 11352,
+                        "endColumn": 89,
+                        "endOffset": 11437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 13399,
+                    "endColumn": 85,
+                    "endOffset": 13480
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 267,
+                        "startColumn": 4,
+                        "startOffset": 11442,
+                        "endColumn": 85,
+                        "endOffset": 11523
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 13485,
+                    "endColumn": 92,
+                    "endOffset": 13573
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 268,
+                        "startColumn": 4,
+                        "startOffset": 11528,
+                        "endColumn": 92,
+                        "endOffset": 11616
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 13578,
+                    "endColumn": 81,
+                    "endOffset": 13655
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 269,
+                        "startColumn": 4,
+                        "startOffset": 11621,
+                        "endColumn": 81,
+                        "endOffset": 11698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 13660,
+                    "endColumn": 88,
+                    "endOffset": 13744
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 270,
+                        "startColumn": 4,
+                        "startOffset": 11703,
+                        "endColumn": 88,
+                        "endOffset": 11787
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 290,
+                    "startColumn": 4,
+                    "startOffset": 13749,
+                    "endLine": 292,
+                    "endColumn": 13,
+                    "endOffset": 14067
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 271,
+                        "startColumn": 4,
+                        "startOffset": 11792,
+                        "endLine": 273,
+                        "endColumn": 13,
+                        "endOffset": 12110
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 14072,
+                    "endColumn": 87,
+                    "endOffset": 14155
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 274,
+                        "startColumn": 4,
+                        "startOffset": 12115,
+                        "endColumn": 87,
+                        "endOffset": 12198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 294,
+                    "startColumn": 4,
+                    "startOffset": 14160,
+                    "endColumn": 79,
+                    "endOffset": 14235
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 12203,
+                        "endColumn": 79,
+                        "endOffset": 12278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 295,
+                    "startColumn": 4,
+                    "startOffset": 14240,
+                    "endColumn": 121,
+                    "endOffset": 14357
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 12283,
+                        "endColumn": 121,
+                        "endOffset": 12400
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 296,
+                    "startColumn": 4,
+                    "startOffset": 14362,
+                    "endColumn": 79,
+                    "endOffset": 14437
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 277,
+                        "startColumn": 4,
+                        "startOffset": 12405,
+                        "endColumn": 79,
+                        "endOffset": 12480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 14442,
+                    "endColumn": 101,
+                    "endOffset": 14539
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 278,
+                        "startColumn": 4,
+                        "startOffset": 12485,
+                        "endColumn": 101,
+                        "endOffset": 12582
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 14544,
+                    "endColumn": 85,
+                    "endOffset": 14625
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 12587,
+                        "endColumn": 85,
+                        "endOffset": 12668
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 299,
+                    "startColumn": 4,
+                    "startOffset": 14630,
+                    "endColumn": 99,
+                    "endOffset": 14725
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 280,
+                        "startColumn": 4,
+                        "startOffset": 12673,
+                        "endColumn": 99,
+                        "endOffset": 12768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 14730,
+                    "endLine": 302,
+                    "endColumn": 13,
+                    "endOffset": 15095
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 281,
+                        "startColumn": 4,
+                        "startOffset": 12773,
+                        "endLine": 283,
+                        "endColumn": 13,
+                        "endOffset": 13138
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 15100,
+                    "endColumn": 88,
+                    "endOffset": 15184
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 284,
+                        "startColumn": 4,
+                        "startOffset": 13143,
+                        "endColumn": 88,
+                        "endOffset": 13227
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 304,
+                    "startColumn": 4,
+                    "startOffset": 15189,
+                    "endColumn": 104,
+                    "endOffset": 15289
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 285,
+                        "startColumn": 4,
+                        "startOffset": 13232,
+                        "endColumn": 104,
+                        "endOffset": 13332
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 15294,
+                    "endColumn": 77,
+                    "endOffset": 15367
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 286,
+                        "startColumn": 4,
+                        "startOffset": 13337,
+                        "endColumn": 77,
+                        "endOffset": 13410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 306,
+                    "startColumn": 4,
+                    "startOffset": 15372,
+                    "endColumn": 105,
+                    "endOffset": 15473
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 287,
+                        "startColumn": 4,
+                        "startOffset": 13415,
+                        "endColumn": 105,
+                        "endOffset": 13516
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 15478,
+                    "endColumn": 83,
+                    "endOffset": 15557
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 288,
+                        "startColumn": 4,
+                        "startOffset": 13521,
+                        "endColumn": 83,
+                        "endOffset": 13600
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 308,
+                    "startColumn": 4,
+                    "startOffset": 15562,
+                    "endColumn": 62,
+                    "endOffset": 15620
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 289,
+                        "startColumn": 4,
+                        "startOffset": 13605,
+                        "endColumn": 62,
+                        "endOffset": 13663
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 309,
+                    "startColumn": 4,
+                    "startOffset": 15625,
+                    "endColumn": 65,
+                    "endOffset": 15686
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 290,
+                        "startColumn": 4,
+                        "startOffset": 13668,
+                        "endColumn": 65,
+                        "endOffset": 13729
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 310,
+                    "startColumn": 4,
+                    "startOffset": 15691,
+                    "endColumn": 70,
+                    "endOffset": 15757
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 291,
+                        "startColumn": 4,
+                        "startOffset": 13734,
+                        "endColumn": 70,
+                        "endOffset": 13800
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 311,
+                    "startColumn": 4,
+                    "startOffset": 15762,
+                    "endLine": 313,
+                    "endColumn": 13,
+                    "endOffset": 15905
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 292,
+                        "startColumn": 4,
+                        "startOffset": 13805,
+                        "endLine": 294,
+                        "endColumn": 13,
+                        "endOffset": 13948
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 314,
+                    "startColumn": 4,
+                    "startOffset": 15910,
+                    "endColumn": 80,
+                    "endOffset": 15986
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 295,
+                        "startColumn": 4,
+                        "startOffset": 13953,
+                        "endColumn": 80,
+                        "endOffset": 14029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 315,
+                    "startColumn": 4,
+                    "startOffset": 15991,
+                    "endColumn": 60,
+                    "endOffset": 16047
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 60,
+                        "endOffset": 111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 316,
+                    "startColumn": 4,
+                    "startOffset": 16052,
+                    "endColumn": 83,
+                    "endOffset": 16131
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2012,
+                        "endColumn": 83,
+                        "endOffset": 2091
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 317,
+                    "startColumn": 4,
+                    "startOffset": 16136,
+                    "endColumn": 100,
+                    "endOffset": 16232
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-in\\values-in.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2096,
+                        "endColumn": 100,
+                        "endOffset": 2192
+                    }
+                }
+            }
+        ]
+    }
+]

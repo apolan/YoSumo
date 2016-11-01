@@ -6,7 +6,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+
+import yosumo.src.R;
 
 /**
  * Created by a-pol_000 on 10/29/2016.
@@ -30,8 +33,8 @@ public class Circle extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(strokeWidth);
         //Circle color
-        paint.setColor(Color.RED);
-
+       //paint.setColor(Color.parseColor(R.color.palette1_orange+""));
+       paint.setColor(Color.RED);
         //size 200x200 example
         rect = new RectF(strokeWidth, strokeWidth, 200 + strokeWidth, 200 + strokeWidth);
 
@@ -43,6 +46,22 @@ public class Circle extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawArc(rect, START_ANGLE_POINT, angle, false, paint);
+    }
+
+    /**
+     *
+     * @param tag
+     */
+    public void setColor(String tag){
+        if(tag.equalsIgnoreCase("orange")){
+            //paint.setColor(Color.parseColor(R.color.palette1_orange+""));
+            paint.setColor(Color.RED);
+        }else if(tag.equalsIgnoreCase("blue")){
+            //paint.setColor(Color.parseColor(R.color.palette1_blue+"")); // revisar el azul en illustrator
+            paint.setColor(Color.BLUE);
+        }else{
+            Log.d("Not find ", tag);
+        }
     }
 
     public float getAngle() {

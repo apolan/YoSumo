@@ -1,0 +1,1237 @@
+[
+    {
+        "outputFile": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\res\\merged\\debug\\values-es-rES\\values-es-rES.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 238,
+                    "endColumn": 19,
+                    "endOffset": 9052
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 238,
+                        "endColumn": 19,
+                        "endOffset": 9052
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 9057,
+                    "endColumn": 63,
+                    "endOffset": 9116
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 9057,
+                        "endColumn": 63,
+                        "endOffset": 9116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 9121,
+                    "endColumn": 65,
+                    "endOffset": 9182
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 240,
+                        "startColumn": 4,
+                        "startOffset": 9121,
+                        "endColumn": 65,
+                        "endOffset": 9182
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 241,
+                    "startColumn": 4,
+                    "startOffset": 9187,
+                    "endColumn": 67,
+                    "endOffset": 9250
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 241,
+                        "startColumn": 4,
+                        "startOffset": 9187,
+                        "endColumn": 67,
+                        "endOffset": 9250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 242,
+                    "startColumn": 4,
+                    "startOffset": 9255,
+                    "endColumn": 68,
+                    "endOffset": 9319
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 242,
+                        "startColumn": 4,
+                        "startOffset": 9255,
+                        "endColumn": 68,
+                        "endOffset": 9319
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 243,
+                    "startColumn": 4,
+                    "startOffset": 9324,
+                    "endColumn": 61,
+                    "endOffset": 9381
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 243,
+                        "startColumn": 4,
+                        "startOffset": 9324,
+                        "endColumn": 61,
+                        "endOffset": 9381
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 9386,
+                    "endColumn": 71,
+                    "endOffset": 9453
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 244,
+                        "startColumn": 4,
+                        "startOffset": 9386,
+                        "endColumn": 71,
+                        "endOffset": 9453
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 245,
+                    "startColumn": 4,
+                    "startOffset": 9458,
+                    "endColumn": 64,
+                    "endOffset": 9518
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 245,
+                        "startColumn": 4,
+                        "startOffset": 9458,
+                        "endColumn": 64,
+                        "endOffset": 9518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 246,
+                    "startColumn": 4,
+                    "startOffset": 9523,
+                    "endColumn": 60,
+                    "endOffset": 9579
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 246,
+                        "startColumn": 4,
+                        "startOffset": 9523,
+                        "endColumn": 60,
+                        "endOffset": 9579
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 9584,
+                    "endColumn": 98,
+                    "endOffset": 9678
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 247,
+                        "startColumn": 4,
+                        "startOffset": 9584,
+                        "endColumn": 98,
+                        "endOffset": 9678
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 9683,
+                    "endColumn": 86,
+                    "endOffset": 9765
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 248,
+                        "startColumn": 4,
+                        "startOffset": 9683,
+                        "endColumn": 86,
+                        "endOffset": 9765
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 9770,
+                    "endColumn": 61,
+                    "endOffset": 9827
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 249,
+                        "startColumn": 4,
+                        "startOffset": 9770,
+                        "endColumn": 61,
+                        "endOffset": 9827
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 9832,
+                    "endColumn": 91,
+                    "endOffset": 9919
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 250,
+                        "startColumn": 4,
+                        "startOffset": 9832,
+                        "endColumn": 91,
+                        "endOffset": 9919
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 251,
+                    "startColumn": 4,
+                    "startOffset": 9924,
+                    "endColumn": 213,
+                    "endOffset": 10133
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 251,
+                        "startColumn": 4,
+                        "startOffset": 9924,
+                        "endColumn": 213,
+                        "endOffset": 10133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 252,
+                    "startColumn": 4,
+                    "startOffset": 10138,
+                    "endColumn": 64,
+                    "endOffset": 10198
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 252,
+                        "startColumn": 4,
+                        "startOffset": 10138,
+                        "endColumn": 64,
+                        "endOffset": 10198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 253,
+                    "startColumn": 4,
+                    "startOffset": 10203,
+                    "endColumn": 80,
+                    "endOffset": 10279
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 253,
+                        "startColumn": 4,
+                        "startOffset": 10203,
+                        "endColumn": 80,
+                        "endOffset": 10279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 254,
+                    "startColumn": 4,
+                    "startOffset": 10284,
+                    "endColumn": 63,
+                    "endOffset": 10343
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 254,
+                        "startColumn": 4,
+                        "startOffset": 10284,
+                        "endColumn": 63,
+                        "endOffset": 10343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 255,
+                    "startColumn": 4,
+                    "startOffset": 10348,
+                    "endColumn": 81,
+                    "endOffset": 10425
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 255,
+                        "startColumn": 4,
+                        "startOffset": 10348,
+                        "endColumn": 81,
+                        "endOffset": 10425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 256,
+                    "startColumn": 4,
+                    "startOffset": 10430,
+                    "endColumn": 87,
+                    "endOffset": 10513
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 256,
+                        "startColumn": 4,
+                        "startOffset": 10430,
+                        "endColumn": 87,
+                        "endOffset": 10513
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 257,
+                    "startColumn": 4,
+                    "startOffset": 10518,
+                    "endLine": 259,
+                    "endColumn": 13,
+                    "endOffset": 10767
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 257,
+                        "startColumn": 4,
+                        "startOffset": 10518,
+                        "endLine": 259,
+                        "endColumn": 13,
+                        "endOffset": 10767
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 10772,
+                    "endLine": 262,
+                    "endColumn": 13,
+                    "endOffset": 11102
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 260,
+                        "startColumn": 4,
+                        "startOffset": 10772,
+                        "endLine": 262,
+                        "endColumn": 13,
+                        "endOffset": 11102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 11107,
+                    "endLine": 265,
+                    "endColumn": 13,
+                    "endOffset": 11502
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 263,
+                        "startColumn": 4,
+                        "startOffset": 11107,
+                        "endLine": 265,
+                        "endColumn": 13,
+                        "endOffset": 11502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 11507,
+                    "endColumn": 91,
+                    "endOffset": 11594
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 266,
+                        "startColumn": 4,
+                        "startOffset": 11507,
+                        "endColumn": 91,
+                        "endOffset": 11594
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 11599,
+                    "endColumn": 86,
+                    "endOffset": 11681
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 267,
+                        "startColumn": 4,
+                        "startOffset": 11599,
+                        "endColumn": 86,
+                        "endOffset": 11681
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 11686,
+                    "endColumn": 128,
+                    "endOffset": 11810
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 268,
+                        "startColumn": 4,
+                        "startOffset": 11686,
+                        "endColumn": 128,
+                        "endOffset": 11810
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 11815,
+                    "endColumn": 91,
+                    "endOffset": 11902
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 269,
+                        "startColumn": 4,
+                        "startOffset": 11815,
+                        "endColumn": 91,
+                        "endOffset": 11902
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 11907,
+                    "endColumn": 97,
+                    "endOffset": 12000
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 270,
+                        "startColumn": 4,
+                        "startOffset": 11907,
+                        "endColumn": 97,
+                        "endOffset": 12000
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 12005,
+                    "endLine": 273,
+                    "endColumn": 13,
+                    "endOffset": 12337
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 271,
+                        "startColumn": 4,
+                        "startOffset": 12005,
+                        "endLine": 273,
+                        "endColumn": 13,
+                        "endOffset": 12337
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 12342,
+                    "endColumn": 103,
+                    "endOffset": 12441
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 274,
+                        "startColumn": 4,
+                        "startOffset": 12342,
+                        "endColumn": 103,
+                        "endOffset": 12441
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 12446,
+                    "endColumn": 88,
+                    "endOffset": 12530
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 12446,
+                        "endColumn": 88,
+                        "endOffset": 12530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 276,
+                    "startColumn": 4,
+                    "startOffset": 12535,
+                    "endColumn": 133,
+                    "endOffset": 12664
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 12535,
+                        "endColumn": 133,
+                        "endOffset": 12664
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 277,
+                    "startColumn": 4,
+                    "startOffset": 12669,
+                    "endColumn": 80,
+                    "endOffset": 12745
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 277,
+                        "startColumn": 4,
+                        "startOffset": 12669,
+                        "endColumn": 80,
+                        "endOffset": 12745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 278,
+                    "startColumn": 4,
+                    "startOffset": 12750,
+                    "endColumn": 100,
+                    "endOffset": 12846
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 278,
+                        "startColumn": 4,
+                        "startOffset": 12750,
+                        "endColumn": 100,
+                        "endOffset": 12846
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 12851,
+                    "endColumn": 82,
+                    "endOffset": 12929
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 12851,
+                        "endColumn": 82,
+                        "endOffset": 12929
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 280,
+                    "startColumn": 4,
+                    "startOffset": 12934,
+                    "endColumn": 97,
+                    "endOffset": 13027
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 280,
+                        "startColumn": 4,
+                        "startOffset": 12934,
+                        "endColumn": 97,
+                        "endOffset": 13027
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 281,
+                    "startColumn": 4,
+                    "startOffset": 13032,
+                    "endLine": 283,
+                    "endColumn": 13,
+                    "endOffset": 13396
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 281,
+                        "startColumn": 4,
+                        "startOffset": 13032,
+                        "endLine": 283,
+                        "endColumn": 13,
+                        "endOffset": 13396
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 284,
+                    "startColumn": 4,
+                    "startOffset": 13401,
+                    "endColumn": 90,
+                    "endOffset": 13487
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 284,
+                        "startColumn": 4,
+                        "startOffset": 13401,
+                        "endColumn": 90,
+                        "endOffset": 13487
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 13492,
+                    "endColumn": 111,
+                    "endOffset": 13599
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 285,
+                        "startColumn": 4,
+                        "startOffset": 13492,
+                        "endColumn": 111,
+                        "endOffset": 13599
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 13604,
+                    "endColumn": 95,
+                    "endOffset": 13695
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 286,
+                        "startColumn": 4,
+                        "startOffset": 13604,
+                        "endColumn": 95,
+                        "endOffset": 13695
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 13700,
+                    "endColumn": 116,
+                    "endOffset": 13812
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 287,
+                        "startColumn": 4,
+                        "startOffset": 13700,
+                        "endColumn": 116,
+                        "endOffset": 13812
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 13817,
+                    "endColumn": 87,
+                    "endOffset": 13900
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 288,
+                        "startColumn": 4,
+                        "startOffset": 13817,
+                        "endColumn": 87,
+                        "endOffset": 13900
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 13905,
+                    "endColumn": 63,
+                    "endOffset": 13964
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 289,
+                        "startColumn": 4,
+                        "startOffset": 13905,
+                        "endColumn": 63,
+                        "endOffset": 13964
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 290,
+                    "startColumn": 4,
+                    "startOffset": 13969,
+                    "endColumn": 64,
+                    "endOffset": 14029
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 290,
+                        "startColumn": 4,
+                        "startOffset": 13969,
+                        "endColumn": 64,
+                        "endOffset": 14029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 291,
+                    "startColumn": 4,
+                    "startOffset": 14034,
+                    "endColumn": 79,
+                    "endOffset": 14109
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 291,
+                        "startColumn": 4,
+                        "startOffset": 14034,
+                        "endColumn": 79,
+                        "endOffset": 14109
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 292,
+                    "startColumn": 4,
+                    "startOffset": 14114,
+                    "endLine": 294,
+                    "endColumn": 13,
+                    "endOffset": 14255
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 292,
+                        "startColumn": 4,
+                        "startOffset": 14114,
+                        "endLine": 294,
+                        "endColumn": 13,
+                        "endOffset": 14255
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 295,
+                    "startColumn": 4,
+                    "startOffset": 14260,
+                    "endColumn": 78,
+                    "endOffset": 14334
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 295,
+                        "startColumn": 4,
+                        "startOffset": 14260,
+                        "endColumn": 78,
+                        "endOffset": 14334
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 296,
+                    "startColumn": 4,
+                    "startOffset": 14339,
+                    "endColumn": 159,
+                    "endOffset": 14494
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 159,
+                        "endOffset": 210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 14499,
+                    "endColumn": 111,
+                    "endOffset": 14606
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 215,
+                        "endColumn": 111,
+                        "endOffset": 322
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 14611,
+                    "endColumn": 136,
+                    "endOffset": 14743
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 327,
+                        "endColumn": 136,
+                        "endOffset": 459
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 299,
+                    "startColumn": 4,
+                    "startOffset": 14748,
+                    "endColumn": 97,
+                    "endOffset": 14841
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 464,
+                        "endColumn": 97,
+                        "endOffset": 557
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 300,
+                    "startColumn": 4,
+                    "startOffset": 14846,
+                    "endColumn": 67,
+                    "endOffset": 14909
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 562,
+                        "endColumn": 67,
+                        "endOffset": 625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 301,
+                    "startColumn": 4,
+                    "startOffset": 14914,
+                    "endColumn": 71,
+                    "endOffset": 14981
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 630,
+                        "endColumn": 71,
+                        "endOffset": 697
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 302,
+                    "startColumn": 4,
+                    "startOffset": 14986,
+                    "endColumn": 60,
+                    "endOffset": 15042
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 702,
+                        "endColumn": 60,
+                        "endOffset": 758
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 15047,
+                    "endColumn": 73,
+                    "endOffset": 15116
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 763,
+                        "endColumn": 73,
+                        "endOffset": 832
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 304,
+                    "startColumn": 4,
+                    "startOffset": 15121,
+                    "endColumn": 81,
+                    "endOffset": 15198
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 837,
+                        "endColumn": 81,
+                        "endOffset": 914
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 15203,
+                    "endColumn": 97,
+                    "endOffset": 15296
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 919,
+                        "endColumn": 97,
+                        "endOffset": 1012
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 306,
+                    "startColumn": 4,
+                    "startOffset": 15301,
+                    "endColumn": 71,
+                    "endOffset": 15368
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1017,
+                        "endColumn": 71,
+                        "endOffset": 1084
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 15373,
+                    "endColumn": 71,
+                    "endOffset": 15440
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1089,
+                        "endColumn": 71,
+                        "endOffset": 1156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 308,
+                    "startColumn": 4,
+                    "startOffset": 15445,
+                    "endColumn": 90,
+                    "endOffset": 15531
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1161,
+                        "endColumn": 90,
+                        "endOffset": 1247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 309,
+                    "startColumn": 4,
+                    "startOffset": 15536,
+                    "endColumn": 104,
+                    "endOffset": 15636
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1252,
+                        "endColumn": 104,
+                        "endOffset": 1352
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 310,
+                    "startColumn": 4,
+                    "startOffset": 15641,
+                    "endColumn": 64,
+                    "endOffset": 15701
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1357,
+                        "endColumn": 64,
+                        "endOffset": 1417
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 311,
+                    "startColumn": 4,
+                    "startOffset": 15706,
+                    "endColumn": 68,
+                    "endOffset": 15770
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1422,
+                        "endColumn": 68,
+                        "endOffset": 1486
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 312,
+                    "startColumn": 4,
+                    "startOffset": 15775,
+                    "endColumn": 155,
+                    "endOffset": 15926
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1491,
+                        "endColumn": 155,
+                        "endOffset": 1642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 313,
+                    "startColumn": 4,
+                    "startOffset": 15931,
+                    "endColumn": 61,
+                    "endOffset": 15988
+                },
+                "from": {
+                    "file": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\LoginSample\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\values-es-rES\\values-es-rES.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1647,
+                        "endColumn": 61,
+                        "endOffset": 1704
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -3,6 +3,8 @@ import android.graphics.Bitmap;
 
 import java.util.Date;
 
+import yosumo.src.commons.ManagerFormat;
+
 
 /**
  * Clase que representa la base de datos y maneja sus operaciones
@@ -31,9 +33,15 @@ public class Factura {
     public int id;
     public String tag;
 
-    public Factura (){
+    public Factura(  Comercio comercio, String usuario, double valor_total, String fechaCaptura, String fechaCompra, String path, int id ){
+        this.comercio = comercio;
+        this.usuario = usuario;
+        this.path = path;
+        this.valor_total = valor_total;
+        this.fechaCompra = ManagerFormat.formatTimestamp(fechaCompra);
+        this.fechaCaptura = ManagerFormat.formatTimestamp(fechaCaptura);
+        this.id = id;
     }
-
     /**
      *
      * @param impuesto
@@ -73,13 +81,13 @@ public class Factura {
         return comercio;
     }
 
-// AFP - 20160919 - I
+   // AFP - 20160919 - I
     /**
      * Metodo llamado por las diferntes listas Este es importatne!!
      * @return
      */
     public String toString(){
-        return "Factura. Valor: "+ ManagerFormat.formatMoneyK(this.valor_total ,0) + "  Nit: " + ManagerFormat.formatNIT( this.comercio.nit) + "  Fecha: " + ManagerFormat.formatDate(fechaCompra);
+        return "Lugar: "+ comercio.getNombre_Label() +" Valor: "+ ManagerFormat.formatMoneyK(this.valor_total ,0)  + "  Fecha: " + ManagerFormat.formatDate(fechaCompra);
     }
     // AFP - 20160919 - F
 }

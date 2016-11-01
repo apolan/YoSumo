@@ -9,8 +9,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.util.Date;
-import server.entity.Denuncia;
 import server.entity.ManagerFormat;
 
 /**
@@ -56,7 +54,7 @@ public class Managerdb {
             CallableStatement cStmt = null;
             cStmt = getConnectionJDBC().prepareCall(" select "
                     + " REPLACE(GROUP_CONCAT( "
-                    + " cm.nit,'|',cm.nombre,'|',cm.nombre_legal,'|',cm.regimen,'|',cm.direccion,'|',cm.ciudad,'|',cm.estado,'|',cm.dt_creacion,'$'  "
+                    + " cm.id,'|',cm.nit,'|',cm.nombre,'|',cm.nombre_legal,'|',cm.regimen,'|',cm.direccion,'|',cm.ciudad,'|',cm.estado,'|',cm.dt_creacion,'$'  "
                     + " ),'$,','$') "
                     + " from yosumo.comercio cm "
             );
@@ -86,7 +84,7 @@ public class Managerdb {
                     + " dn.username,'|',dn.nombre_comercio,'|',dn.direccion_comercio,'|',dn.comentario,'|',dn.latitud,'|',dn.longitud,'|',dn.dt_denuncia,'|', dn.dt_creacion,'|',dn.estado,'|','$'  "
                     + " ),'$,','$') "
                     + " from yosumo.denuncia dn "
-                    + " where dn.username = ? ); " //???
+                    + " where dn.username = ? " //???
             );
             cStmt.setString(1, username);
             System.out.println("cStmt: " + cStmt);
@@ -97,7 +95,74 @@ public class Managerdb {
             }
             getConnectionJDBC().close();
         } catch (Exception w) {
-            System.out.println("Error Asociando " + w.getMessage());
+            System.out.println("Error getDenuncias " + w.getMessage());
+        }
+        return "";
+    }
+
+    /**
+     * Retorna en un string todos los comercios
+     *
+     * @return
+     */
+    public String getFacturas(String username) {
+        try {
+            CallableStatement cStmt = null;
+            cStmt = getConnectionJDBC().prepareCall(" select "
+                    + " REPLACE(GROUP_CONCAT( "
+                    + " nk_consecutivo,'|',dt_compra,'|',dt_captura,'|',"
+                    + " CASE WHEN pathfactura IS NULL THEN 'null' ELSE pathfactura END,'|',"
+                    + " fk_comercio,'|',"
+             //       + " CASE WHEN nombre_lugar IS NULL THEN 'null' ELSE nombre_lugar END,'|'"
+                    + " fk_usuario,'|',valor_total,'|',tag,'|','$'  "
+                    + " ),'$,','$') "
+                    + " from yosumo.factura "
+                    + " where fk_usuario = ? " //???
+            );
+
+            cStmt.setString(1, username);
+            System.out.println("cStmt: " + cStmt);
+
+            ResultSet rs = cStmt.executeQuery();
+            while (rs.next()) {
+                return rs.getString(1);
+            }
+            getConnectionJDBC().close();
+        } catch (Exception w) {
+            System.out.println("Error getFacturas " + w.getMessage());
+        }
+        return "";
+    }
+
+    /**
+     * Retorna en un string todos los comercios
+     *
+     * @return
+     */
+    public String getImpuestos(String username) {
+        try {
+            CallableStatement cStmt = null;
+            cStmt = getConnectionJDBC().prepareCall(" select "
+                    + " REPLACE(GROUP_CONCAT( "
+                    + " id,'|',porcentaje_iva,'|',valor_iva,'|',porcentaje_ico,'|',valor_ico,'|',valor_total,'|',fk_factura,'|','$'  "
+                    + " ),'$,','$') "
+                    + " from yosumo.impuesto "
+                    + " where fk_factura "
+                    + " IN  ( SELECT ID "
+                    + " FROM FACTURA  "
+                    + " WHERE FK_USUARIO = ? )"
+            );
+
+            cStmt.setString(1, username);
+            System.out.println("cStmt: " + cStmt);
+
+            ResultSet rs = cStmt.executeQuery();
+            while (rs.next()) {
+                return rs.getString(1);
+            }
+            getConnectionJDBC().close();
+        } catch (Exception w) {
+            System.out.println("Error getImpuestos " + w.toString());
         }
         return "";
     }
@@ -120,7 +185,7 @@ public class Managerdb {
      * @return
      */
     public void registrarDenuncia(String denuncia) {
-        System.out.println("denuncia 1: " + denuncia); 
+        System.out.println("denuncia registro: " + denuncia);
         try {
             CallableStatement stmt = null;
             stmt = getConnectionJDBC().prepareCall(
@@ -138,9 +203,9 @@ public class Managerdb {
             stmt.setFloat(6, Float.parseFloat(denuncia.split("\\|")[5]));
             //stmt.setString(7, denuncia.split("\\|")[6]);
             stmt.setString(7, "enviado");
-            stmt.setDate(8, new java.sql.Date(ManagerFormat.formatDate(denuncia.split("\\|")[7]).getTime()));
-            stmt.setDate(9, new java.sql.Date(ManagerFormat.formatDate(denuncia.split("\\|")[8]).getTime()));
-
+            stmt.setString(8, denuncia.split("\\|")[7]);
+            //stmt.setDate(9, new java.sql.Date(ManagerFormat.formatDate(denuncia.split("\\|")[8]).getTime()));
+            stmt.setString(9, denuncia.split("\\|")[8]);
             /*
             System.out.println(""+ Integer.parseInt(denuncia.split("\\|")[0]));
             System.out.println(""+ denuncia.split("\\|")[1]);
@@ -151,12 +216,35 @@ public class Managerdb {
             System.out.println(""+ denuncia.split("\\|")[6]);
             System.out.println(""+ new java.sql.Date(ManagerFormat.formatDate(denuncia.split("\\|")[7].replaceAll("-", "")).getTime()));
             System.out.println(""+ new java.sql.Date(ManagerFormat.formatDate(denuncia.split("\\|")[8]).getTime()));
-            */
-            stmt.execute();
+             */
+            stmt.executeUpdate();
         } catch (Exception a) {
             System.out.println("Error: " + a.getMessage() + a.toString());
         } finally {
         }
+    }
+
+    /**
+     *
+     * @param tag
+     * @return
+     */
+    public String testQuery(String tag) {
+        String resultado = "";
+        if (tag.equalsIgnoreCase("all")) {
+
+            System.out.println("Result Comercios: " + getComercios());
+            System.out.println("Result Denuncias: " + getDenuncias("apolan"));
+            System.out.println("Result Facturas: " + getFacturas("apolan"));
+            System.out.println("Result Impuestos: " + getImpuestos("apolan"));
+
+            resultado = "";
+        } else if (tag.equalsIgnoreCase("")) {
+            resultado = "";
+        } else {
+            resultado = "Not find " + tag;
+        }
+        return resultado;
     }
 
     public Connection getConnectionJDBC() {

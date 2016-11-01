@@ -5,10 +5,6 @@
  */
 package server;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 /**
@@ -22,6 +18,7 @@ public class Server {
         int id = 0;
         Managerdb db = new Managerdb();
        
+        //db.testQuery("all");
                 
         while (true) {
             Socket clientSocket = m_ServerSocket.accept();
@@ -30,5 +27,4 @@ public class Server {
             cliThread.start();
         }
     }
-    
 }

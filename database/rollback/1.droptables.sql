@@ -1,12 +1,12 @@
 
-DROP TABLE `yosumo`.`usuario`;
+DROP TABLE IF EXISTS `yosumo`.`usuario`;
 
-DROP TABLE `yosumo`.`amigo`;
+DROP TABLE IF EXISTS `yosumo`.`amigo`;
 
-DROP TABLE `yosumo`.`comercio`;
+DROP TABLE IF EXISTS `yosumo`.`comercio`;
 
-DROP TABLE `yosumo`.`factura`;
+DROP TABLE IF EXISTS `yosumo`.`factura`;
 
-DROP TABLE `yosumo`.`impuesto`;
+DROP TABLE IF EXISTS `yosumo`.`impuesto`;
 
-DROP TABLE `yosumo`.`denuncia`;
+DROP TABLE IF EXISTS `yosumo`.`denuncia`;

@@ -1,0 +1,266 @@
+[
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_placepickerfragment.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_placepickerfragment.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_friendpickerfragment.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_friendpickerfragment.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_image.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_image.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\title_bar.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\title_bar.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_title_bar.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_title_bar.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_checkbox.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_checkbox.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_placepickerfragment_list_row.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_placepickerfragment_list_row.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_search_box.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_search_box.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_list_section_header.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_list_section_header.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_title_bar_stub.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_title_bar_stub.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\usersettings_fragment.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\usersettings_fragment.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\selection.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\selection.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_activity_circle_row.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_activity_circle_row.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_list_row.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_list_row.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\picker_search_bar_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\picker_search_bar_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\pickers.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\pickers.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook\\4.16.1\\res\\layout\\com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\listitem.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\res\\layout\\listitem.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\desarrollo\\workspace\\YoSumo\\android\\samples\\Scrumptious\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+    }
+]

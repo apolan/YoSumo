@@ -7,4 +7,5 @@
         <item name="android:textColor">@color/palette1_black</item>
         <item name="android:textSize">15sp</item>
     </style>
+
 </resources>

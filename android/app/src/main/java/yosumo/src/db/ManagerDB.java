@@ -10,12 +10,12 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Random;
 
-import yosumo.src.debug.Debugger;
+import yosumo.src.commons.Debugger;
 import yosumo.src.logic.Comercio;
 import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Factura;
 import yosumo.src.logic.Impuesto;
-import yosumo.src.logic.ManagerFormat;
+import yosumo.src.commons.ManagerFormat;
 import yosumo.src.logic.Usuario;
 
 /**
@@ -45,16 +45,7 @@ public class ManagerDB extends SQLiteOpenHelper {
         this.context = context;
         debug = new Debugger(context);
         //Insert impuesto
-        Impuesto impuesto = new Impuesto(10, 0, 8, 0, getFacturaMaxID());
-        Factura factura = new Factura(impuesto,
-                getComercioByNIT("1202200000"),
-                "Apolan",
-                (new Random().nextInt(99000 - 10000 + 1) + 10000),
-                "20160915",
-                "20160915",
-                "path"
-        );
-        insertFactura(factura);
+
     }
 
     /**
@@ -91,9 +82,10 @@ public class ManagerDB extends SQLiteOpenHelper {
         Cursor cursorFactura = db.query(
                 ConstantesDB.TABLE_FACTURA,                      /* table */
                 new String[]{
-                        ConstantesDB.TABLE_FACTURA_FK_IMPUESTO,
-                        ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT,
-                        ConstantesDB.TABLE_FACTURA_FK_USUARIO_USUARIO,
+            //            ConstantesDB.TABLE_FACTURA_FK_IMPUESTO,
+            //            ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT,
+                        ConstantesDB.TABLE_FACTURA_FK_COMERCIO_ID,
+                        ConstantesDB.TABLE_FACTURA_FK_USUARIO,
                         ConstantesDB.TABLE_FACTURA_VALOR_TOTAL,
                         ConstantesDB.TABLE_FACTURA_FECHA_COMPRA,
                         ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA,
@@ -110,21 +102,22 @@ public class ManagerDB extends SQLiteOpenHelper {
         if (cursorFactura.moveToFirst()) {
             do {
 
-                Factura factura = new Factura(getImpuestoByID(cursorFactura.getInt(0)),
-                        getComercioByNIT(cursorFactura.getInt(1) + ""),
-                        cursorFactura.getString(2),
-                        cursorFactura.getInt(3),
+                Factura factura = new Factura(
+                        //getImpuestoByFacturaID(cursorFactura.getInt(0)),
+                        getComercioByID(cursorFactura.getInt(0)),
+                        cursorFactura.getString(1),
+                        cursorFactura.getDouble(2),
+                        cursorFactura.getString(3),
                         cursorFactura.getString(4),
                         cursorFactura.getString(5),
-                        cursorFactura.getString(6),
-                        cursorFactura.getInt(7)
+                        cursorFactura.getInt(6)
                 );
 
+                //  Comercio comercio, String usuario, double valor_total, String fechaCaptura, String fechaCompra, String path, int id ){
                 facturas.add(factura);
 
             } while (cursorFactura.moveToNext());
         }
-
         db.close();
         return facturas;
     }
@@ -162,8 +155,8 @@ public class ManagerDB extends SQLiteOpenHelper {
         if (cursorDenuncia.moveToFirst()) {
             do {
 
-                Log.d("date1", cursorDenuncia.getString(7));
-                Log.d("date2", cursorDenuncia.getString(8));
+               // Log.d("date1", cursorDenuncia.getString(7));
+                // Log.d("date2", cursorDenuncia.getString(8));
 
                 Denuncia denuncia = new Denuncia(
                         cursorDenuncia.getString(0), // int fk_usuario
@@ -173,8 +166,8 @@ public class ManagerDB extends SQLiteOpenHelper {
                         cursorDenuncia.getDouble(4),  // float latitud
                         cursorDenuncia.getDouble(5), // float longitud
                         cursorDenuncia.getString(6), //String estado
-                        ManagerFormat.formatDate(cursorDenuncia.getString(7)), // Date fechaDenuncia
-                        ManagerFormat.formatDate(cursorDenuncia.getString(8)) // Date fechaCaptura
+                        ManagerFormat.formatTimestamp(cursorDenuncia.getString(7)), // Date fechaDenuncia
+                        ManagerFormat.formatTimestamp(cursorDenuncia.getString(8)) // Date fechaCaptura
                 );
 
                 denuncias.add(denuncia);
@@ -218,7 +211,7 @@ public class ManagerDB extends SQLiteOpenHelper {
         Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_ALL_COMERCIOS, null);
 
         while (cursor.moveToNext()) {
-            Comercio comercioActual = new Comercio(cursor.getString(0));
+            Comercio comercioActual = new Comercio(cursor.getString(0),cursor.getString(1));
             comercios.add(comercioActual);
         }
 
@@ -244,6 +237,7 @@ public class ManagerDB extends SQLiteOpenHelper {
         return monto;
     }
 
+
     /**
      * @return
      */
@@ -260,19 +254,6 @@ public class ManagerDB extends SQLiteOpenHelper {
         return id + 1;
     }
 
-    /**
-     * Metodo que es llamado por cliente socket
-     *
-     * @param
-     * @return
-     */
-    public String getDenunciasPendientesToString() {
-
-        String denuncias = "";
-
-
-        return denuncias;
-    }
 
 
     /***
@@ -280,14 +261,19 @@ public class ManagerDB extends SQLiteOpenHelper {
      * @return
      */
     public double getImpuestosByType(String tipoImpuesto) {
-
         double monto = 0;
+        debug.debugConsole("qry" + " :" + ConstantesDB.QUERY_GET_IMPUESTOS_BYTYPE);
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_IMPUESTOS_BYTYPE, new String[]{tipoImpuesto});
+        Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_IMPUESTOS_BYTYPE, null);
 
         cursor.moveToFirst();
-        monto = cursor.getDouble(0);
+        if(tipoImpuesto.equalsIgnoreCase("valor_iva")){
+            monto = cursor.getDouble(0);
+        }else {
+            monto = cursor.getDouble(1);
+        }
+        debug.debugConsole(monto + " ");
         db.close();
 
         return monto;
@@ -297,7 +283,7 @@ public class ManagerDB extends SQLiteOpenHelper {
      * @param id
      * @return
      */
-    public Impuesto getImpuestoByID(int id) {
+    public Impuesto getImpuestoByFacturaID(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_IMPUESTO_BYTID_FACTURA, new String[]{id + ""});
 
@@ -316,18 +302,23 @@ public class ManagerDB extends SQLiteOpenHelper {
     }
 
 
-    public Comercio getComercioByNIT(String nit) {
+
+
+
+    public Comercio getComercioByID(int id) {
+        //Log.d("getComercioByID: ", id+"" );
+
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_COMERCIO_BYNIT, new String[]{nit, "activo"});
+        Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_COMERCIO_BY_ID, new String[]{id+"", "activo"});
 
         if (cursor.getCount() == 0) {
-            insertComercio(new Comercio(nit));
+           // insertComercio(new Comercio(id));
             db.close();
-            return getComercioByNIT(nit);
+           // return getComercioByID(id);
         }
 
         cursor.moveToFirst();
-        Comercio comercio = new Comercio(cursor.getString(0));
+        Comercio comercio = new Comercio(cursor.getString(0),cursor.getString(2));
         db.close();
 
         return comercio;
@@ -371,9 +362,9 @@ public class ManagerDB extends SQLiteOpenHelper {
         contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, ManagerFormat.formatDate(factura.fechaCompra));
         contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, ManagerFormat.formatDate(factura.fechaCaptura));
         contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.path);
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO_USUARIO, factura.usuario);
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT, factura.getComercio().nit);
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_IMPUESTO, insertImpuesto(factura.getImpuesto()));
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.usuario);
+      //  contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT, factura.getComercio().nit);
+      //  contentValues.put(ConstantesDB.TABLE_FACTURA_FK_IMPUESTO, insertImpuesto(factura.getImpuesto()));
         contentValues.put(ConstantesDB.TABLE_FACTURA_VALOR_TOTAL, factura.valor_total);
 
         if (!db.isOpen()) {
@@ -444,18 +435,101 @@ public class ManagerDB extends SQLiteOpenHelper {
             Log.d("Comercio details: 6 : ", comercio.split("\\|")[6]);*/
 
                 ContentValues contentValues = new ContentValues();
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_NIT, comercio.split("\\|")[0]);
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_NOMBRE, comercio.split("\\|")[1]);
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_NOMBRE_LEGAL, comercio.split("\\|")[2]);
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_REGIMEN, comercio.split("\\|")[3]);
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_DIRECCION, comercio.split("\\|")[4]);
-                contentValues.put(ConstantesDB.TABLE_COMERCIO_ESTADO, comercio.split("\\|")[6]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_ID, comercio.split("\\|")[0]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_NIT, comercio.split("\\|")[1]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_NOMBRE, comercio.split("\\|")[2]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_NOMBRE_LEGAL, comercio.split("\\|")[3]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_REGIMEN, comercio.split("\\|")[4]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_DIRECCION, comercio.split("\\|")[5]);
+                contentValues.put(ConstantesDB.TABLE_COMERCIO_ESTADO, comercio.split("\\|")[7]);
 
                 //db.insert(ConstantesDB.TABLE_COMERCIO, null, contentValues);
                 db.insertWithOnConflict(ConstantesDB.TABLE_COMERCIO, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
 
             }
 
+            db.close();
+        } catch (Exception a) {
+            System.out.println("Error: " + a.getMessage());
+        } finally {
+        }
+
+        return 0;
+    }
+
+
+    /**
+     * Es lo que el servidor manda para que el cliente actualice
+     *
+     * @param
+     * @return
+     */
+    public int insertFacturaBulk(String facturas) {
+        try {
+            SQLiteDatabase db = this.getWritableDatabase();
+
+            facturas = facturas.split("_:_")[1];
+            // Log.d("Line comercios 0 : ", comercios);
+
+            for (String factura : facturas.split("\\$")) {
+            //Log.d("Line factura: ", factura);
+
+                ContentValues contentValues = new ContentValues();
+                contentValues.put(ConstantesDB.TABLE_FACTURA_NK_CONSECUTIVO, factura.split("\\|")[0]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, factura.split("\\|")[1]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, factura.split("\\|")[2]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.split("\\|")[3]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_ID, factura.split("\\|")[4]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.split("\\|")[5]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_VALOR_TOTAL, factura.split("\\|")[6]);
+                contentValues.put(ConstantesDB.TABLE_FACTURA_TAG, factura.split("\\|")[7]);
+
+                db.insertWithOnConflict(ConstantesDB.TABLE_FACTURA, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+            }
+            db.close();
+        } catch (Exception a) {
+            System.out.println("Error insertFacturaBulk: " + a.getMessage());
+        } finally {
+        }
+
+        return 0;
+    }
+
+
+    /**
+     * Es lo que el servidor manda para que el cliente actualice
+     *
+     * @param
+     * @return
+     */
+    public int insertImpuestoBulk(String impuestos) {
+        try {
+            SQLiteDatabase db = this.getWritableDatabase();
+
+            impuestos = impuestos.split("_:_")[1];
+            // Log.d("Line comercios 0 : ", comercios);
+
+            for (String impuesto : impuestos.split("\\$")) {
+                Log.d("Line impuesto: ", impuesto);
+         /*   Log.d("Comercio details: 1 : ", comercio.split("\\|")[0]);
+            Log.d("Comercio details: 2 : ", comercio.split("\\|")[1]);
+            Log.d("Comercio details: 3 : ", comercio.split("\\|")[2]);
+            Log.d("Comercio details: 4 : ", comercio.split("\\|")[3]);
+            Log.d("Comercio details: 5 : ", comercio.split("\\|")[4]);
+            Log.d("Comercio details: 6 : ", comercio.split("\\|")[6]);*/
+
+                ContentValues contentValues = new ContentValues();
+
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_ID, impuesto.split("\\|")[0]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_IVA, impuesto.split("\\|")[1]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_IVA, impuesto.split("\\|")[2]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_ICO, impuesto.split("\\|")[3]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_ICO, impuesto.split("\\|")[4]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_TOTAL, impuesto.split("\\|")[5]);
+                contentValues.put(ConstantesDB.TABLE_IMPUESTO_FK_FACTURA_ID, impuesto.split("\\|")[6]);
+
+                db.insertWithOnConflict(ConstantesDB.TABLE_IMPUESTO, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+            }
             db.close();
         } catch (Exception a) {
             System.out.println("Error: " + a.getMessage());
@@ -575,10 +649,66 @@ public class ManagerDB extends SQLiteOpenHelper {
             query = ConstantesDB.DROP_TABLE_USUARIO;
         } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_IMPUESTO)) {
             query = ConstantesDB.DROP_TABLE_IMPUESTO;
+        } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_DENUNCIA)) {
+            query = ConstantesDB.DROP_TABLE_DENUNCIA;
         }
 
         db.execSQL(query);
         db.close();
+    }
+
+
+    /**
+     * Metodo que hace el drop de una tabla definida
+     *
+     * @param table Nombre de la tabla
+     */
+    public void deleteTable(String table) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "";
+
+        if (table.equalsIgnoreCase(ConstantesDB.TABLE_FACTURA)) {
+            query = ConstantesDB.DELETE_TABLE_FACTURA;
+        } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_COMERCIO)) {
+            //query = ConstantesDB.DELETE_TABLE_COMERCIO;
+        } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_USUARIO)) {
+            //query = ConstantesDB.DELETE_TABLE_USUARIO;
+        } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_IMPUESTO)) {
+            query = ConstantesDB.DELETE_TABLE_IMPUESTO;
+        } else if (table.equalsIgnoreCase(ConstantesDB.TABLE_DENUNCIA)) {
+            query = ConstantesDB.DELETE_TABLE_DENUNCIA;
+        }
+
+        db.execSQL(query);
+        db.close();
+    }
+
+
+    /**
+     *
+     * @param tag
+     */
+    public void generarEntity(String tag) {
+        String resultado ="";
+        if(tag.equalsIgnoreCase("factura")){
+
+            Impuesto impuesto = new Impuesto(10, 0, 8, 0, getFacturaMaxID());
+            /*Factura factura = new Factura(impuesto,
+                    getComercioByNIT("1202200000"),
+                    "Apolan",
+                    (new Random().nextInt(99000 - 10000 + 1) + 10000),
+                    "20160915",
+                    "20160915",
+                    "path"
+            );*/
+           // insertFactura(factura);
+
+        }else if(tag.equalsIgnoreCase("")){
+            resultado ="";
+        }else{
+            resultado ="Not find "+ tag;
+        }
+        Log.d("Tag not find", tag);
     }
 
 }

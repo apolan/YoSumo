@@ -28,14 +28,67 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <GridLayout
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/txt_contador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_row="0"
+                android:singleLine="false"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/palette1_blue"
+                android:textSize="130dp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:id="@+id/animacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_gravity="center|right">
 
                 <TextView
-                    android:id="@+id/txt_contador"
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Tus compras por impuestos"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/palette1_black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/menuImpuesto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_row="0"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/impuestos"
+                        android:layout_width="283dp"
+                        android:layout_height="30dp"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/AlertDialogOrange"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_gray" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_impuesto"
+                    android:layout_width="127dp"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
                     android:layout_gravity="center"
@@ -43,68 +96,28 @@
                     android:singleLine="false"
                     android:text="$"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/palette1_blue"
-                    android:textSize="130dp"
-                    android:textStyle="bold" />
-
-            </GridLayout>
-
-            <LinearLayout
-                android:id="@+id/menuImpuesto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_gravity="center_horizontal"
-                android:layout_row="0"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/chkBoxIva"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="40dp"
-                    android:text="IVA"
-                    android:textColor="@color/palette1_blue" />
-
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="40dp"
-                    android:text="ICO"
-                    android:textColor="@color/palette1_blue" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/menuTags"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="New CheckBox" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/animacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                    android:textColor="@color/palette1_orange"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center" />
 
                 <yosumo.src.animation.Circle
                     android:id="@+id/circle"
+                    android:layout_width="147dp"
+                    android:layout_height="152dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
                     android:layout_width="300dp"
-                    android:layout_height="300dp" />
+                    android:layout_height="40dp"
+                    android:text="Compartir mi impuesto"
+                    android:id="@+id/button5"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_orange"
+                    android:layout_marginTop="30dp"
+                    android:onClick="ShareImpuesto"
+                    android:layout_marginBottom="20dp" />
 
             </LinearLayout>
         </LinearLayout>

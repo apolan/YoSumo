@@ -15,7 +15,7 @@
     <string name="tab_debug">Debug</string>
 
     <string name="portSocket">12111</string>
-    <string name="ipServerSocket">192.168.0.5</string>
+    <string name="ipServerSocket">157.253.211.138</string>
 
 
 
@@ -51,5 +51,9 @@
 
     <string name="cancel">CANCEL</string>
 
+    <string-array name="impuestos">
+        <item>Iva</item>
+        <item>Ico</item>
+    </string-array>
 
 </resources>

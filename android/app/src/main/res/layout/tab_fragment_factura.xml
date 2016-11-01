@@ -8,7 +8,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
         <Button
             android:layout_width="300dp"
@@ -18,8 +19,7 @@
             android:onClick="goImgProcessing"
             android:textSize="15dp"
             android:textAllCaps="false"
-            android:typeface="sans"
-            android:background="@drawable/btn"
+            android:background="@drawable/btn_orange"
             android:layout_below="@+id/editTextPassword"
             android:layout_alignEnd="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
@@ -32,33 +32,42 @@
             android:layout_height="wrap_content"
             android:background="@color/palette1_blue"
             android:layout_marginTop="20dp"
-            android:elevation="5dp">
+            android:elevation="5dp"
+            android:gravity="center_horizontal" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Buscar:"
-                android:id="@+id/textView13"
+                android:text="Mis Facturas"
+                android:id="@+id/textView16"
                 android:textColor="@color/palette1_white"
                 android:textSize="15dp"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp" />
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical|center|start|fill_vertical|end|center_horizontal|right"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center" />
 
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText"
-                android:text="Buscar"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Actualizar"
+                android:id="@+id/button4"
+                android:textAllCaps="false"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/btn_gray"
+                android:onClick="pushFactura"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="1dp" />
         </LinearLayout>
 
         <ListView
             android:layout_width="fill_parent"
-            android:layout_height="250dp"
+            android:layout_height="match_parent"
             android:id="@+id/lst_facturas"
             android:background="@color/palette1_white"
-            android:textColor="#000000"/>
+            android:textColor="#000000" />
 
     </LinearLayout>
 

@@ -4,12 +4,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="denuncias"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/palette1_black">
 
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Menu solo para desarroladores:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/palette1_white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=" Borrar Facturas"
+            android:id="@+id/button8"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_orange"
+            android:layout_marginTop="30dp"
+            android:onClick="dropTableFactura" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Borrar Denuncias"
+            android:id="@+id/button9"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_orange"
+            android:layout_marginTop="30dp"
+            android:onClick="dropTableDenuncia" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Borrar Impuestos"
+            android:id="@+id/button11"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_orange"
+            android:layout_marginTop="30dp"
+            android:onClick="dropTableImpuesto" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Set ip and port"
+            android:id="@+id/button10"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_orange"
+            android:layout_marginTop="30dp"
+            android:onClick="setPortAndIp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
 </RelativeLayout>

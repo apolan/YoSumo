@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccent">#3b5998</color>
     <color name="Bk_white">#ffffff</color>
     <color name="Bar_Black">#383838</color>
 
@@ -11,4 +11,5 @@
     <color name="palette1_black">#414042</color>
     <color name="palette1_gray">#a1a1a1</color>
     <color name="palette1_orange">#e74c13</color>
+    <color name="palette_facebook">#3b5998</color>
 </resources>

@@ -21,10 +21,11 @@ public final class ConstantesDB {
     public static final String TABLE_FACTURA_FECHA_COMPRA = "fecha_compra";
     public static final String TABLE_FACTURA_FECHA_CAPTURA = "fecha_captura";
     public static final String TABLE_FACTURA_PATH = "path_factura";
-    public static final String TABLE_FACTURA_FK_COMERCIO_NIT = "fk_comercio_nit";
-    public static final String TABLE_FACTURA_NOMBRE = "nombre_lugar";
-    public static final String TABLE_FACTURA_FK_USUARIO_USUARIO = "fk_usuario";
-    public static final String TABLE_FACTURA_FK_IMPUESTO = "fk_impuesto_id";
+    public static final String TABLE_FACTURA_FK_COMERCIO_ID = "fk_comercio";
+    // public static final String TABLE_FACTURA_FK_COMERCIO_NIT = "fk_comercio_nit";
+//    public static final String TABLE_FACTURA_NOMBRE = "nombre_lugar";
+    public static final String TABLE_FACTURA_FK_USUARIO = "fk_usuario";
+    //  public static final String TABLE_FACTURA_FK_IMPUESTO = "fk_impuesto_id";
     public static final String TABLE_FACTURA_VALOR_TOTAL = "valor_total";
     public static final String TABLE_FACTURA_TAG = "tag";
 
@@ -60,6 +61,7 @@ public final class ConstantesDB {
     public static final String TABLE_IMPUESTO_VALOR_IVA = "valor_iva";
     public static final String TABLE_IMPUESTO_VALOR_ICO = "valor_ico";
     public static final String TABLE_IMPUESTO_FK_FACTURA_ID = "fk_factura_id";
+    public static final String TABLE_IMPUESTO_VALOR_TOTAL = "valor_total";
     public static final String TABLE_FK_COMERCIO_ID = "fk_comercio_nit";
 
     //  - - - - - - - - - - - ATTRIBUTES DENUNCIA  - - - - - - - - - - - - - - -
@@ -82,16 +84,17 @@ public final class ConstantesDB {
             TABLE_FACTURA_NK_CONSECUTIVO + " TEXT," +
             TABLE_FACTURA_FECHA_COMPRA + " TEXT  NOT NULL," +
             TABLE_FACTURA_FECHA_CAPTURA + " TEXT ," +
-            TABLE_FACTURA_FK_USUARIO_USUARIO + " TEXT NOT NULL," +
-            TABLE_FACTURA_FK_COMERCIO_NIT + " INTEGER  NOT NULL," +
-            TABLE_FACTURA_NOMBRE + " TEXT," +
-            TABLE_FACTURA_FK_IMPUESTO + " INTEGER NOT NULL," +
+            TABLE_FACTURA_FK_USUARIO + " TEXT NOT NULL," +
+            TABLE_FACTURA_FK_COMERCIO_ID + " INTEGER  NOT NULL," +
+            //        TABLE_FACTURA_NOMBRE + " TEXT," +
+            //      TABLE_FACTURA_FK_IMPUESTO + " INTEGER NOT NULL," +
             TABLE_FACTURA_VALOR_TOTAL + " INTEGER NOT NULL," +
             TABLE_FACTURA_PATH + " BLOB NOT NULL," +
             TABLE_FACTURA_TAG + " TEXT" +
             ")";
 
     public static final String DROP_TABLE_FACTURA = "DROP TABLE " + TABLE_FACTURA;
+    public static final String DELETE_TABLE_FACTURA = "DELETE FROM TABLE " + TABLE_FACTURA;
 
     public static final String QUERY_FACTURA_MAX_ID = "SELECT MAX(" + TABLE_FACTURA_ID + ") FROM " + TABLE_FACTURA;
 
@@ -121,42 +124,50 @@ public final class ConstantesDB {
 
     // - - - - - - - - - - - TABLE COMERCIO - - - - - - - - - - - - - - -
     public static final String CREATE_TABLE_COMERCIO = "CREATE TABLE IF NOT EXISTS " + TABLE_COMERCIO + "( " +
-          //  TABLE_COMERCIO_ID + " INTEGER AUTOINCREMENT," +
+            TABLE_COMERCIO_ID + " ," +
             TABLE_COMERCIO_NIT + " TEXT," +
             TABLE_COMERCIO_NOMBRE + " TEXT," +
             TABLE_COMERCIO_NOMBRE_LEGAL + " TEXT," +
             TABLE_COMERCIO_REGIMEN + " TEXT," +
             TABLE_COMERCIO_DIRECCION + " TEXT," +
             TABLE_COMERCIO_ESTADO + " TEXT," +
-            "  PRIMARY KEY ("+TABLE_COMERCIO_NIT+","+TABLE_COMERCIO_NOMBRE+","+TABLE_COMERCIO_DIRECCION+") )";
+           // "  PRIMARY KEY (" + TABLE_COMERCIO_NIT + "," + TABLE_COMERCIO_NOMBRE + "," + TABLE_COMERCIO_DIRECCION + ") )";
+            "  PRIMARY KEY (" + TABLE_COMERCIO_ID + ") )";
 
     public static final String DROP_TABLE_COMERCIO = "DROP TABLE " + TABLE_COMERCIO;
 
     public static final String QUERY_GET_ALL_COMERCIOS = "SELECT * FROM " + TABLE_COMERCIO;
 
-    public static final String QUERY_GET_COMERCIO_BYNIT = "SELECT " +
+    public static final String QUERY_GET_COMERCIO_BY_ID = "SELECT " +
             TABLE_COMERCIO_NIT + "," +
-            TABLE_COMERCIO_NOMBRE +
+            TABLE_COMERCIO_DIRECCION + "," +
+            TABLE_COMERCIO_NOMBRE + "," +
+            TABLE_COMERCIO_NOMBRE_LEGAL + "," +
+            TABLE_COMERCIO_REGIMEN +
             " FROM " + TABLE_COMERCIO +
-            " WHERE " + TABLE_COMERCIO_NIT + " = ? AND " +
+            " WHERE " + TABLE_COMERCIO_ID + " = ? AND " +
             TABLE_COMERCIO_ESTADO + " = ?";
 
     // - - - - - - - - - - - TABLE IMPUESTO - - - - - - - - - - - - - - -
     public static final String CREATE_TABLE_IMPUESTO = "CREATE TABLE IF NOT EXISTS " + TABLE_IMPUESTO + "( " +
-            TABLE_IMPUESTO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            TABLE_IMPUESTO_ID + " INTEGER PRIMARY KEY ," +
             TABLE_IMPUESTO_PORCEN_IVA + " INTEGER," +
             TABLE_IMPUESTO_VALOR_IVA + " INTEGER," +
             TABLE_IMPUESTO_PORCEN_ICO + " INTEGER," +
             TABLE_IMPUESTO_VALOR_ICO + " INTEGER," +
+            TABLE_IMPUESTO_VALOR_TOTAL + " INTEGER," +
             TABLE_IMPUESTO_FK_FACTURA_ID + " INTEGER NOT NULL" +
             ")";
 
+    public static final String DELETE_TABLE_IMPUESTO= "DELETE FROM TABLE " + TABLE_IMPUESTO;
+
     public static final String DROP_TABLE_IMPUESTO = "DROP TABLE " + TABLE_IMPUESTO;
 
-    public static final String QUERY_GET_ALL_IMPUESTOS = "SELECT SUM(" + TABLE_IMPUESTO_VALOR_IVA + "+" + TABLE_IMPUESTO_VALOR_IVA + ") " +
+    public static final String QUERY_GET_ALL_IMPUESTOS = "SELECT SUM(" + TABLE_IMPUESTO_VALOR_IVA + "+" + TABLE_IMPUESTO_VALOR_ICO + ") " +
             " FROM " + TABLE_IMPUESTO;
 
-    public static final String QUERY_GET_IMPUESTOS_BYTYPE = "SELECT SUM(" + 0 + ") AS IVA FROM " + TABLE_IMPUESTO;
+    public static final String QUERY_GET_IMPUESTOS_BYTYPE = "SELECT SUM(" + TABLE_IMPUESTO_VALOR_IVA + ") AS valor_iva," +
+            " SUM(" + TABLE_IMPUESTO_VALOR_ICO + ") AS valor_ico  FROM " + TABLE_IMPUESTO;
 
     public static final String QUERY_GET_IMPUESTO_BYTID_FACTURA = "SELECT " + TABLE_IMPUESTO_ID + "," +
             TABLE_IMPUESTO_PORCEN_IVA + "," +
@@ -181,9 +192,9 @@ public final class ConstantesDB {
             TABLE_DENUNCIA_DTDENUNCIA + " TEXT," +
             TABLE_DENUNCIA_DTCREACION + " TEXT," +
             TABLE_DENUNCIA_ESTADO + " TEXT," +
-            "  PRIMARY KEY ("+TABLE_DENUNCIA_FK_USUARIO+","+TABLE_DENUNCIA_NOMBRECOMERCIO+","+TABLE_DENUNCIA_DTDENUNCIA+","+TABLE_DENUNCIA_DIRECCIONCOMERCIO+","+TABLE_DENUNCIA_LATITUD+","+TABLE_DENUNCIA_LONGITUD+") )";
+            "  PRIMARY KEY (" + TABLE_DENUNCIA_FK_USUARIO + "," + TABLE_DENUNCIA_NOMBRECOMERCIO + "," + TABLE_DENUNCIA_DTDENUNCIA + "," + TABLE_DENUNCIA_DIRECCIONCOMERCIO + "," + TABLE_DENUNCIA_LATITUD + "," + TABLE_DENUNCIA_LONGITUD + ") )";
 
     public static final String DROP_TABLE_DENUNCIA = "DROP TABLE " + TABLE_DENUNCIA;
 
-
+    public static final String DELETE_TABLE_DENUNCIA = "DELETE FROM TABLE " + TABLE_DENUNCIA;
 }

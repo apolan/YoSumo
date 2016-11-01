@@ -1,6 +1,5 @@
 package yosumo.src.activity;
 
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,15 +7,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.hardware.Sensor;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +36,8 @@ import android.widget.Toast;
 
 import yosumo.src.R;
 import yosumo.src.db.ManagerDB;
+import yosumo.src.fragment.TabFragmentDenuncia;
+import yosumo.src.fragment.TabFragmentFactura;
 import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Usuario;
 import yosumo.src.sensor.GPSTracker;
@@ -46,7 +47,7 @@ import yosumo.src.sensor.GPSTracker;
  * MOD 20161030 - AFP - Adicion conexion servidor
  * TASK asincronica para abrir socket
  */
-public class HomeActivity extends AppCompatActivity implements  LocationListener {
+public class HomeActivity extends AppCompatActivity implements LocationListener {
 
     private Usuario user;
     public String nombre;
@@ -60,6 +61,11 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
     private String nm_comercio = "";
     private String nm_comentario = "";
     GPSTracker gps;
+    // AFP -  20161030 -  F
+
+    // AFP -  20161030 -  I | TASK: SOCKETPORT AND IP
+    String SOCKET_IP;
+    String SOCKET_PORT;
     // AFP -  20161030 -  F
 
     TextView txtUser;
@@ -81,7 +87,7 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_contador));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_factura));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_denuncias));
-        //tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
         // tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_facebook));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -108,7 +114,6 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         });
 
         Intent myIntent = getIntent(); // gets the previously created intent
-
         usuario = myIntent.getStringExtra("usuario");
 
         imageUser = (ImageView) findViewById(R.id.img_user);
@@ -123,7 +128,7 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
 
         // AFP -  20161030 -  I | TASK: GPSTRACKER
         Criteria cri = new Criteria();
-        locationmanager=(LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        locationmanager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         String provider = locationmanager.getBestProvider(cri, false);
 
         if (provider != null & !provider.equals("")) {
@@ -132,15 +137,20 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
             }
             Location location = locationmanager.getLastKnownLocation(provider);
             locationmanager.requestLocationUpdates(provider, 2000, 0.2f, this);
-            if (location != null){
+            if (location != null) {
                 onLocationChanged(location);
             } else {
-              //  Toast.makeText(getApplicationContext(), "location not found", Toast.LENGTH_LONG).show();
+                //  Toast.makeText(getApplicationContext(), "location not found", Toast.LENGTH_LONG).show();
             }
         } else {
             //Toast.makeText(getApplicationContext(), "Provider is null", Toast.LENGTH_LONG).show();
         }
         // AFP -  20161030 -  F
+
+        // AFP -  20161101 -  I | TASK: sockets
+        SOCKET_PORT = this.getResources().getString(R.string.portSocket);
+        SOCKET_IP = this.getResources().getString(R.string.ipServerSocket);
+        // AFP -  20161101 -  F
     }
 
     /**
@@ -189,12 +199,10 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         // check if GPS enabled
         if (gps.canGetLocation()) {
 
-             latitude = gps.getLatitude();
-             longitude = gps.getLongitude();
+            latitude = gps.getLatitude();
+            longitude = gps.getLongitude();
 
             Log.d("coordeantes: ", latitude + ":" + longitude);
-            // \n is for new line
-           // Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
         } else {
             gps.showSettingsAlert();
         }
@@ -203,8 +211,6 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         AlertDialog.Builder alert = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogOrange));
 
         alert.setTitle("Nueva denuncia");
-        // alert.setMessage("Message");
-
         Context context = this.getApplicationContext();
         // Este el grande
 
@@ -235,22 +241,12 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         layout_1.addView(lbl_lugar);
         layout_1.addView(lugar);
 
-        /*final EditText direccion = new EditText(this);
-        final TextView lbl_direccion = new TextView(this);
-        lbl_direccion.setTextColor(Color.BLACK);
-        lbl_direccion.setText("Dirección:");
-        direccion.setInputType(InputType.TYPE_CLASS_TEXT);
-        direccion.setTextColor(Color.BLACK);*/
-
-
         final TextView lbl_latitud = new TextView(this);
         final TextView lbl_longitud = new TextView(this);
         lbl_latitud.setTextColor(Color.BLACK);
         lbl_longitud.setTextColor(Color.BLACK);
         lbl_latitud.setText("Latitud: " + latitude);
         lbl_longitud.setText("Longitud: " + longitude);
-
-
 
         LinearLayout layout_LA = new LinearLayout(context);
         layout_LA.setOrientation(LinearLayout.HORIZONTAL);
@@ -259,7 +255,6 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         LinearLayout layout_LO = new LinearLayout(context);
         layout_LO.setOrientation(LinearLayout.HORIZONTAL);
         layout_LO.setLayoutParams(lp);
-
 
         layout_LA.addView(lbl_latitud);
         layout_LO.addView(lbl_longitud);
@@ -270,7 +265,6 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         lbl_comentario.setText("Comentario:");
         comentario.setInputType(InputType.TYPE_CLASS_TEXT);
         comentario.setTextColor(Color.BLACK);
-
 
         layout_3.addView(lbl_comentario);
         layout_3.addView(comentario);
@@ -289,7 +283,9 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
                 //nm_comercio = direccion.getText().toString();
                 nm_comentario = comentario.getText().toString();
                 ManagerDB db = new ManagerDB(getApplicationContext());
-                db.insertDenuncia(new Denuncia(user.getUsuario(),nm_comercio,nm_comentario,latitude, longitude));
+                db.insertDenuncia(new Denuncia(user.getUsuario(), nm_comercio, nm_comentario, latitude, longitude));
+                Toast.makeText(getApplicationContext(), "Se ha creado la denuncia", Toast.LENGTH_LONG).show();
+                connectAndPush("denuncia");
             }
         });
 
@@ -310,34 +306,32 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
      * Conecta el cliente socket
      */
     public void connectAndPull(String tag) {
-        Log.d("Connect and pull", " ");
+        Log.d("Connect and pull :tag ", tag);
 
 
         if (tag.equalsIgnoreCase("comercio")) {
             tag = "update:comercio";
         } else if (tag.equalsIgnoreCase("denuncia")) {
             tag = "update:denuncia";
+        } else if (tag.equalsIgnoreCase("factura")) {
+            tag = "update:factura";
+        } else if (tag.equalsIgnoreCase("impuesto")) {
+            tag = "update:impuesto";
         } else {
             tag = "Not find " + tag;
             Log.d("Not find ", " ");
             return;
         }
 
-
-        Client myClient = new Client(this.getResources().getString(R.string.ipServerSocket),
-                Integer.parseInt(this.getResources().getString(R.string.portSocket)),
-                tag,
-                user,
-                new ManagerDB(getApplicationContext())
-        );
-        myClient.execute();
+        ClientSocket myClientSocket = new ClientSocket(SOCKET_IP, Integer.parseInt(SOCKET_PORT), tag, user, new ManagerDB(getApplicationContext()));
+        myClientSocket.execute();
     }
 
     /**
      * Conecta el cliente socket
      */
     public void connectAndPush(String tag) {
-        Log.d("Connect and push", " ");
+        Log.d("Connect and push tag: ", tag);
         ManagerDB db = new ManagerDB(getApplicationContext());
 
         if (tag.equalsIgnoreCase("denuncia")) {
@@ -349,16 +343,11 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
         }
 
         try {
-            for (Denuncia denuncia : db.getAllDenuncias()) {
+            for (Denuncia denuncia : db.getAllDenuncias()) { // Por cada denuncia en estado pendiente
                 if (denuncia.getEstado().equalsIgnoreCase("pendiente")) {
-                    Client myClient = new Client(this.getResources().getString(R.string.ipServerSocket),
-                            Integer.parseInt(this.getResources().getString(R.string.portSocket)),
-                            tag,
-                            user,
-                            db
-                    );
-                    myClient.setDenuncia(denuncia.toSocket());
-                    myClient.execute();
+                    ClientSocket myClientSocket = new ClientSocket(SOCKET_IP, Integer.parseInt(SOCKET_PORT), tag, user, db);
+                    myClientSocket.setDenuncia(denuncia.toSocket());
+                    myClientSocket.execute();
                 }
             }
 
@@ -373,13 +362,95 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
      * @param v
      */
     public void pushDenuncia(View v) {
-        connectAndPull("comercio");
-        //connectAndPull("denuncia");
-
+        //connectAndPull("comercio");
+        connectAndPull("denuncia");
         connectAndPush("denuncia");
         ManagerDB db = new ManagerDB(getApplicationContext());
-        db.updateDenuncia();
+        db.updateDenuncia(); // Pasa las denuncias a estado enviado
+
     }
+
+    /**
+     * @param v
+     */
+    public void pushFactura(View v) {
+        connectAndPull("comercio");
+        connectAndPull("factura");
+        connectAndPull("impuesto");
+
+        //ManagerDB db = new ManagerDB(getApplicationContext());
+        //db.updateDenuncia();
+       // TabFragmentFactura fragment = (TabFragmentFactura) getFragmentManager().findFragmentById(R.id.example_fragment);
+       // fragment.<specific_function_name>();
+    }
+
+
+    public void setPortAndIp(View v) {
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AlertDialogOrange));
+
+        alert.setTitle("[Servidor] Ingrese el puerto y su IP");
+        Context context = this.getApplicationContext();
+        // Este el grande
+
+        LinearLayout layout = new LinearLayout(context);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(25, 0, 0, 0);
+
+        LinearLayout layout_1 = new LinearLayout(context);
+        layout_1.setOrientation(LinearLayout.HORIZONTAL);
+        layout_1.setLayoutParams(lp);
+
+        LinearLayout layout_2 = new LinearLayout(context);
+        layout_2.setOrientation(LinearLayout.HORIZONTAL);
+        layout_2.setLayoutParams(lp);
+
+        final EditText IP = new EditText(this);
+        IP.setText(SOCKET_IP);
+        final TextView lbl_lugar = new TextView(this);
+        lbl_lugar.setTextColor(Color.BLACK);
+        lbl_lugar.setText("IP:");
+        IP.setInputType(InputType.TYPE_CLASS_TEXT);
+        IP.setTextColor(Color.BLACK);
+
+        layout_1.addView(lbl_lugar);
+        layout_1.addView(IP);
+
+        final EditText PORT = new EditText(this);
+        PORT.setText(SOCKET_PORT);
+        final TextView lbl_comentario = new TextView(this);
+        lbl_comentario.setTextColor(Color.BLACK);
+        lbl_comentario.setText("PORT:");
+        PORT.setInputType(InputType.TYPE_CLASS_TEXT);
+        PORT.setTextColor(Color.BLACK);
+
+        layout_2.addView(lbl_comentario);
+        layout_2.addView(PORT);
+
+        layout.addView(layout_1);
+        layout.addView(layout_2);
+        alert.setView(layout);
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                SOCKET_IP = IP.getText().toString();
+                SOCKET_PORT = PORT.getText().toString();
+                Toast.makeText(getApplicationContext(), "Se ha actualizado la inforamcion", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        alert.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.cancel();
+                    }
+                });
+
+        alert.show();
+    }
+
+
     // AFP -  20161029 -  F
 
     // AFP -  20161030 -  I | TASK: GPS TRACKER
@@ -387,7 +458,7 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
     public void onLocationChanged(Location location) {
         latitude = location.getLatitude();
         longitude = location.getLongitude();
-        Log.d("GPS CHANGED", latitude + "|"+longitude);
+        Log.d("GPS CHANGED", latitude + "|" + longitude);
     }
 
 
@@ -403,4 +474,35 @@ public class HomeActivity extends AppCompatActivity implements  LocationListener
     public void onProviderDisabled(String s) {
     }
     // AFP -  20161030 -  F
+
+    // AFP -  20161101 -  I | TASK: debug
+
+    /**
+     * @param v
+     */
+    public void dropTableDenuncia(View v) {
+        ManagerDB db = new ManagerDB(getApplicationContext());
+        db.dropTable("denuncia");
+        Toast.makeText(getApplicationContext(), "Se ha hecho drop de la tabla", Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * @param v
+     */
+    public void dropTableFactura(View v) {
+        ManagerDB db = new ManagerDB(getApplicationContext());
+        db.dropTable("factura");
+        db.deleteTable("factura");
+        Toast.makeText(getApplicationContext(), "Se ha hecho drop de la factura", Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * @param v
+     */
+    public void dropTableImpuesto(View v) {
+        ManagerDB db = new ManagerDB(getApplicationContext());
+        db.dropTable("impuesto");
+        Toast.makeText(getApplicationContext(), "Se ha hecho drop de la tabla", Toast.LENGTH_LONG).show();
+    }
+    // AFP -  20161101 -  F
 }

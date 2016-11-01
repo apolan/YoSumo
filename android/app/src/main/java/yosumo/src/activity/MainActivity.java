@@ -4,9 +4,6 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
@@ -25,20 +22,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import yosumo.src.R;
 import yosumo.src.db.ManagerDB;
-import yosumo.src.debug.Debugger;
+import yosumo.src.commons.Debugger;
 import yosumo.src.logic.Usuario;
 
 
 import com.facebook.FacebookSdk;
 
 import com.facebook.appevents.AppEventsLogger;
-
-import com.facebook.share.widget.ShareDialog;
 
 /**
  * Created by a-pol_000 on 9/7/2016.

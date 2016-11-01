@@ -1,0 +1,506 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:22:1-116:12
+	package
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:24:5-47
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:23:5-51
+	xmlns:android
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:22:11-69
+	android:versionCode
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:26:22-64
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:27:5-75
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:27:22-72
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:28:5-70
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:28:22-67
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:29:5-71
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:29:22-68
+application
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:31:5-114:19
+MERGED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:28:5-38:19
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:customtabs:23.4.0] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:28:5-39:19
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:35:9-41
+	android:supportsRtl
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:36:9-35
+	android:allowBackup
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:33:9-35
+	android:icon
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:34:9-43
+	android:theme
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:37:9-40
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:32:9-47
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:39:9-41:54
+	android:value
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:41:13-52
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:40:13-58
+activity#com.facebook.samples.loginsample.MainActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:43:9-49:20
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:43:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:44:13-48:29
+action#android.intent.action.MAIN
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:45:17-69
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:45:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:47:17-77
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:47:27-74
+activity#com.facebook.samples.loginsample.facebook.FacebookLoginActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:51:9-52:61
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:51:19-63
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:52:13-59
+activity#com.facebook.samples.loginsample.facebook.PermissionSelectActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:54:9-70
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:54:19-68
+activity#com.facebook.samples.loginsample.accountkit.AccountKitLoginActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:56:9-57:65
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:56:19-66
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:57:13-63
+activity#com.facebook.samples.loginsample.accountkit.ErrorActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:59:9-61:62
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:61:13-59
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:60:13-53
+activity#com.facebook.samples.loginsample.accountkit.CodeActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:63:9-65:62
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:65:13-59
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:64:13-52
+activity#com.facebook.samples.loginsample.accountkit.TokenActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:67:9-69:62
+	android:label
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:69:13-59
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:68:13-53
+activity#com.facebook.CustomTabActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:73:9-82:20
+MERGED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:33:9-36:20
+	android:exported
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:75:13-36
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:74:13-58
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:76:13-81:29
+action#android.intent.action.VIEW
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:77:17-69
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:77:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:78:17-76
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:78:27-73
+category#android.intent.category.BROWSABLE
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:79:17-78
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:79:27-75
+data
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:80:17-75
+	android:scheme
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:80:23-72
+meta-data#com.facebook.accountkit.ApplicationName
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:84:9-85:48
+	android:value
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:85:13-45
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:84:20-74
+meta-data#com.facebook.accountkit.ClientToken
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:88:9-89:64
+	android:value
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:89:13-61
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:88:20-70
+activity#com.facebook.accountkit.ui.AccountKitActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:91:9-101:20
+MERGED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:29:9-34:58
+	android:label
+		ADDED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:31:13-65
+	android:launchMode
+		ADDED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:32:13-43
+	android:windowSoftInputMode
+		ADDED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:34:13-55
+	android:theme
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:93:13-49
+		REJECTED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:33:13-52
+	tools:replace
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:94:13-42
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:92:13-73
+activity#com.facebook.accountkit.ui.AccountKitEmailRedirectActivity
+ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:103:9-112:20
+MERGED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:35:9-38:40
+	android:exported
+		ADDED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:37:13-36
+	android:noHistory
+		ADDED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml:103:19-92
+uses-sdk
+INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:customtabs:23.4.0] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.facebook.android:account-kit-sdk:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\account-kit-sdk\4.16.1\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:design:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\design\24.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:24.2.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+		INJECTED from C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\src\main\AndroidManifest.xml
+activity#com.facebook.FacebookActivity
+ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:29:9-32:66
+	android:configChanges
+		ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:31:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:30:13-57
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:37:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook:4.16.1] C:\desarrollo\workspace\YoSumo\android\samples\LoginSample\build\intermediates\exploded-aar\com.facebook.android\facebook\4.16.1\AndroidManifest.xml:37:19-68

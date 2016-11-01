@@ -17,7 +17,7 @@
             android:id="@+id/button7"
             android:textAllCaps="false"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn"
+            android:background="@drawable/btn_orange"
             android:layout_marginTop="30dp"
             android:onClick="goCreateDenuncia"/>
 

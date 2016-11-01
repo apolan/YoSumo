@@ -1,7 +1,11 @@
 package yosumo.src.animation;
 
+import android.graphics.Color;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+
+import yosumo.src.R;
 
 /**
  * Created by a-pol_000 on 10/29/2016.
@@ -17,6 +21,7 @@ public class CircleAngleAnimation extends Animation {
         this.oldAngle = circle.getAngle();
         this.newAngle = newAngle;
         this.circle = circle;
+
     }
 
     @Override
@@ -26,4 +31,13 @@ public class CircleAngleAnimation extends Animation {
         circle.setAngle(angle);
         circle.requestLayout();
     }
+
+    /**
+     *
+     * @param tag
+     */
+    public void setColor(String tag){
+        circle.setColor(tag);
+    }
+
 }

@@ -34,7 +34,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import yosumo.src.R;
-import yosumo.src.debug.Debugger;
+import yosumo.src.commons.Debugger;
 import yosumo.src.logic.FacturaVirtual;
 import yosumo.src.logic.Impuesto;
 
