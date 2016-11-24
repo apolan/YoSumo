@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 /**
  *  MOD 20161029 - AFP - Adicion  tab debuug
  *  MOD 20161029 - AFP - Adicion  tab facebook
+ *  MOD 20161124 - AFP - Adicion  tab vis
  */
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
@@ -32,6 +33,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 3:
                 TabFragmentDebug tab3 = new TabFragmentDebug();
                 return tab3;
+            case 4:
+                TabFragmentVis tab4 = new TabFragmentVis();
+                return tab4;
             default:
                 return null;
         }

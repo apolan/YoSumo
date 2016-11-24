@@ -91,6 +91,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_factura));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_denuncias));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_vis));
         // tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_facebook));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);

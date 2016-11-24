@@ -11,9 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
-
 import java.text.NumberFormat;
-
 import yosumo.src.R;
 import yosumo.src.animation.Circle;
 import yosumo.src.animation.CircleAngleAnimation;
