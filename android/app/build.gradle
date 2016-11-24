@@ -17,12 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-/*
-    productFlavors {
-        defaultFlavor {
-            proguardFile 'proguard-rules.txt'
-        }
-    }*/
+
 
     dependencies {
         compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -34,17 +29,7 @@ android {
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
-
-
 dependencies {
     compile 'com.android.support:design:24.1.1'
-    //   compile 'com.android.support:support-v4:24.1.1'
-    // compile project(':facebook')
-    // compile 'com.facebook.android:account-kit-sdk:4.+'
-//    compile 'com.android.support:appcompat-v7:24.1.1'
-    //  compile project(':facebook')
-    // compile 'com.facebook.android:account-kit-sdk:4.+'
-    //    compile 'com.android.support:appcompat-v7:24.1.1'
-    // compile project(':facebook-sdk-4.16.1')
     compile 'com.facebook.android:facebook-android-sdk:4.16.1'
 }

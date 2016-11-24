@@ -3,7 +3,6 @@ package yosumo.src.fragment;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +17,8 @@ import java.text.NumberFormat;
 import yosumo.src.R;
 import yosumo.src.animation.Circle;
 import yosumo.src.animation.CircleAngleAnimation;
+import yosumo.src.commons.Dummy;
 import yosumo.src.db.ManagerDB;
-import yosumo.src.commons.ManagerFormat;
 
 /**
  * Created by a-pol_000 on 9/7/2016.
@@ -67,9 +66,9 @@ public class TabFragmentContador extends Fragment {
                     valorimp = db.getImpuestosByType("valor_ico");
                     circle.setColor("red");
                 }
-                //counterImp.setText("$"+ManagerFormat.formatMoneyK( (int)(valorimp), (int) 0));
+                //counterImp.setText("$"+Dummy.formatMoneyK( (int)(valorimp), (int) 0));
                 updateCounterImpuestos(counterImp,valorimp);
-                animation = new CircleAngleAnimation(circle, (int)ManagerFormat.reglaTres(360,valortotal,valorimp));
+                animation = new CircleAngleAnimation(circle, (int) Dummy.reglaTres(360,valortotal,valorimp));
                 animation.setDuration(1000);
                 circle.startAnimation(animation);
             }
@@ -85,14 +84,14 @@ public class TabFragmentContador extends Fragment {
         counter.setTextSize(sizeCounter);
         valortotal = db.getAllImpuestos();
         valorimp = db.getImpuestosByType("valor_iva");
-        counterImp.setText("$"+ManagerFormat.formatMoneyK( (int)(valorimp), (int) 2));
+        counterImp.setText("$"+ Dummy.formatMoneyK( (int)(valorimp), (int) 2));
 
         updateCounter(valortotal);
 
         // Animacion del circulo
 
         circle = (Circle)rootView.findViewById(R.id.circle);
-        animation = new CircleAngleAnimation(circle, (int)ManagerFormat.reglaTres(360,valortotal,valorimp));
+        animation = new CircleAngleAnimation(circle, (int) Dummy.reglaTres(360,valortotal,valorimp));
         animation.setDuration(1000);
         circle.startAnimation(animation);
 
@@ -129,7 +128,7 @@ public class TabFragmentContador extends Fragment {
 
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                counter1.setText("$"+ManagerFormat.formatMoneyK( (int)(valueAnimator.getAnimatedValue()), (int) 0));
+                counter1.setText("$"+ Dummy.formatMoneyK( (int)(valueAnimator.getAnimatedValue()), (int) 0));
             }
         });
         valueAnimator.start();

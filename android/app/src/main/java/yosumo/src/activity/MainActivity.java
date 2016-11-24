@@ -47,13 +47,11 @@ import com.facebook.appevents.AppEventsLogger;
  * Check user adicion de usuario
  * MOD 20161022 - AFP - Arreglo de la conexion con el modulo img processing
  * MOD 20161029 - AFP - Adicion  tab debuug
- * MOD 20161029 - DRM - facebook init button
- *
+ * MOD 20161029 - DRM - facebook login
  */
 
 
 public class MainActivity extends AppCompatActivity {
-
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -61,14 +59,20 @@ public class MainActivity extends AppCompatActivity {
     private Debugger debugger;
     private ManagerDB db;
 
-    boolean check = false;
+    /**
+     * Variable que hace check de login de un usuario
+     */
+    boolean checkLogin = false;
+
+    /**
+     * Variables del layout
+     */
     TextView tv_Password;
     TextView tv_user;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -81,16 +85,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         List<String> resultados = new ArrayList<String>();
 
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
-        initFacebookLogin();
 
         try {
             resultados.add(launchDebbuger());
             resultados.add(checkPermissions());
             resultados.add(checkFilesAndFolder());
             resultados.add(checkdb());
-            // AFP -  20161029 -  I | TASK: Facebook conection
+            // AFP -  20161029 -  I | TASK: facebook login check
             resultados.add(checkFacebook());
             // AFP -  20161029 -  F
 
@@ -98,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Error init ", e.getMessage());
         }
         debugger.debugConsole(TAG, resultados);
-
 
     }
 
@@ -162,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 resultado = "Directorio ya creado";
                 ;
             }
-
         }
         debugger.debugConsole(TAG, resultado);
 
@@ -180,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
             final String[] permissions = new String[]{
                     Manifest.permission.WRITE_EXTERNAL_STORAGE
                     , Manifest.permission.READ_EXTERNAL_STORAGE
-                    //, Manifest.permission.SEND_SMS
+                    , Manifest.permission.SEND_SMS
                     , Manifest.permission.READ_SMS
                     , Manifest.permission.CAMERA
                     , Manifest.permission.ACCESS_FINE_LOCATION
@@ -194,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     permissionsTo.add(permision);
                 }
             }
-            //todo: modificar para que solo se soliciten los que no se encontraron .. // Solicitud de permisos al usuario
+
             ActivityCompat.requestPermissions(this, permissionsTo.toArray(new String[0]), 0);
             resultado = this.getResources().getString(R.string.OK_CODE_PERMISSON_100);
         } catch (Exception e) {
@@ -231,6 +230,28 @@ public class MainActivity extends AppCompatActivity {
         }
         return resultado;
     }
+
+
+    // DMR -  20161101 -  I | TASK: facebook login
+
+    /**
+     * Metodo qu realiza la validacion de facebook
+     *
+     * @return
+     */
+    public String checkFacebook() {
+        String resultado = "";
+        try {
+            FacebookSdk.sdkInitialize(getApplicationContext());
+            AppEventsLogger.activateApp(this);
+            //initFacebookLogin();
+            resultado = this.getResources().getString(R.string.OK_CODE_FB_100);
+        } catch (Exception e) {
+            Log.d("--- Error fb", " ");
+        }
+        return resultado;
+    }
+    // DMR -  20161101 -  F
 
 
     /**
@@ -278,8 +299,7 @@ public class MainActivity extends AppCompatActivity {
         tv_user = (TextView) findViewById(R.id.editTextUsuario);
         tv_Password = (TextView) findViewById(R.id.editTextPassword);
 
-        if (!check) {
-            // Revision sin checkeo de usuario
+        if (!checkLogin) {
             Intent intent = new Intent(this, HomeActivity.class);
             intent.putExtra("nombre", "none");
             intent.putExtra("id", "2");
@@ -296,8 +316,6 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             } else {
-                // El usuario siempre sera unico
-
                 Usuario usuario = db.getUserByUser(tv_user.getText().toString());
 
                 if (usuario != null) {
@@ -353,48 +371,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    // AFP -  20161029 -  I | TASK: Facebook
-
+    // DMR -  20161101 -  I | TASK: facebook login
     /**
-     * Metodo qu realiza la validacion de facebook
      *
-     * @return
+     * @param v
      */
-    public String checkFacebook() {
-        String resultado = "";
-        try {
-            //       FacebookSdk.sdkInitialize(MainActivity.this.getApplicationContext());
-            //      AppEventsLogger.activateApp(this);
-
-            resultado = this.getResources().getString(R.string.OK_CODE_DB_100);
-        } catch (Exception e) {
-            Log.d("--- Error fb", " ");
-        }
-        return resultado;
+    public void goFacebook(View v) {
+        Intent intent = new Intent(this, FacebookLoginActivity.class);
+        startActivity(intent);
     }
-    // DRM -  20161029 -  F
-
-    /**
-     * Metodo que activa el boton para iniciar sesión en Facebook
-     */
-
-    private void initFacebookLogin() {
-
-        final Button fbLoginButton = (Button) findViewById(R.id.fb_login_button);
-        fbLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, FacebookLoginActivity.class));
-
-            }
-        });
-    }
-
-
-
-
-
-
+    // DMR -  20161101 -  F
 
 }

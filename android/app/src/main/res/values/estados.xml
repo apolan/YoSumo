@@ -10,7 +10,7 @@
     <string name="OK_CODE_MODANIM_100">Modulo animacion.....load</string>
 
     <!-- Lista de estados ERROR-->
-    <string name="ERROR_CODE_LIB_100">Libreria openCV.....error</string>
+    <string name="ERROR_CODE_LIB_100">Permisos.....error</string>
     <string name="ERROR_CODE_IMG_100">Error en la escritura de archivo, por favor verificar los permisos de la aplicación</string>
     <string name="ERROR_CODE_DEBUG_100">Clase debbug .....error</string>
     <string name="ERROR_DB_100">Base de datos.....error</string>

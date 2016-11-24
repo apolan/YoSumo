@@ -3,7 +3,7 @@ import android.graphics.Bitmap;
 
 import java.util.Date;
 
-import yosumo.src.commons.ManagerFormat;
+import yosumo.src.commons.Dummy;
 
 
 /**
@@ -38,8 +38,8 @@ public class Factura {
         this.usuario = usuario;
         this.path = path;
         this.valor_total = valor_total;
-        this.fechaCompra = ManagerFormat.formatTimestamp(fechaCompra);
-        this.fechaCaptura = ManagerFormat.formatTimestamp(fechaCaptura);
+        this.fechaCompra = Dummy.formatTimestamp(fechaCompra);
+        this.fechaCaptura = Dummy.formatTimestamp(fechaCaptura);
         this.id = id;
     }
     /**
@@ -58,8 +58,8 @@ public class Factura {
         this.usuario = usuario;
         this.path = path;
         this.valor_total = valor_total;
-        this.fechaCompra = ManagerFormat.formatDate(fechaCompra);
-        this.fechaCaptura = ManagerFormat.formatDate(fechaCaptura);
+        this.fechaCompra = Dummy.formatDate(fechaCompra);
+        this.fechaCaptura = Dummy.formatDate(fechaCaptura);
         this.id = id;
     }
 
@@ -69,8 +69,8 @@ public class Factura {
         this.usuario = usuario;
         this.path = path;
         this.valor_total = valor_total;
-        this.fechaCompra = ManagerFormat.formatDate(fechaCompra);
-        this.fechaCaptura = ManagerFormat.formatDate(fechaCaptura);
+        this.fechaCompra = Dummy.formatDate(fechaCompra);
+        this.fechaCaptura = Dummy.formatDate(fechaCaptura);
     }
 
     public Impuesto getImpuesto() {
@@ -87,7 +87,7 @@ public class Factura {
      * @return
      */
     public String toString(){
-        return "Lugar: "+ comercio.getNombre_Label() +" Valor: "+ ManagerFormat.formatMoneyK(this.valor_total ,0)  + "  Fecha: " + ManagerFormat.formatDate(fechaCompra);
+        return "Lugar: "+ comercio.getNombre_Label() +" Valor: "+ Dummy.formatMoneyK(this.valor_total ,0)  + "  Fecha: " + Dummy.formatDate(fechaCompra);
     }
     // AFP - 20160919 - F
 }

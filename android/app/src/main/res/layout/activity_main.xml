@@ -127,15 +127,6 @@
             android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal" />
 
-        <!--com.facebook.login.widget.LoginButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center_horizontal"
-            facebook:com_facebook_confirm_logout="false"
-            facebook:com_facebook_tooltip_mode="never_display"
-            /-->
-
         <Button
             android:id="@+id/fb_login_button"
             android:text="Iniciar sesión con Facebook"
@@ -145,7 +136,8 @@
             android:textSize="15dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_facebook"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:onClick="goFacebook" />
 
         <TextView
             android:layout_width="wrap_content"

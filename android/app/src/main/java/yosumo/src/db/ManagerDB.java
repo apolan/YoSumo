@@ -8,14 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import yosumo.src.commons.Debugger;
+import yosumo.src.commons.Dummy;
 import yosumo.src.logic.Comercio;
 import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Factura;
 import yosumo.src.logic.Impuesto;
-import yosumo.src.commons.ManagerFormat;
 import yosumo.src.logic.Usuario;
 
 /**
@@ -166,8 +165,8 @@ public class ManagerDB extends SQLiteOpenHelper {
                         cursorDenuncia.getDouble(4),  // float latitud
                         cursorDenuncia.getDouble(5), // float longitud
                         cursorDenuncia.getString(6), //String estado
-                        ManagerFormat.formatTimestamp(cursorDenuncia.getString(7)), // Date fechaDenuncia
-                        ManagerFormat.formatTimestamp(cursorDenuncia.getString(8)) // Date fechaCaptura
+                        Dummy.formatTimestamp(cursorDenuncia.getString(7)), // Date fechaDenuncia
+                        Dummy.formatTimestamp(cursorDenuncia.getString(8)) // Date fechaCaptura
                 );
 
                 denuncias.add(denuncia);
@@ -338,8 +337,8 @@ public class ManagerDB extends SQLiteOpenHelper {
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_NOMBRECOMERCIO, denuncia.getNombre_comercio());
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_DIRECCIONCOMERCIO, denuncia.getDireccion_comercio());
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_COMENTARIO, denuncia.getComentario());
-        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTDENUNCIA, ManagerFormat.formatDate(denuncia.getFechaDenuncia()));
-        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTCREACION, ManagerFormat.formatDate(denuncia.getFechaCaptura()));
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTDENUNCIA, Dummy.formatDate(denuncia.getFechaDenuncia()));
+        contentValues.put(ConstantesDB.TABLE_DENUNCIA_DTCREACION, Dummy.formatDate(denuncia.getFechaCaptura()));
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_LATITUD, denuncia.getLatitud());
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_LONGITUD, denuncia.getLongitud());
         contentValues.put(ConstantesDB.TABLE_DENUNCIA_ESTADO, denuncia.getEstado());
@@ -359,8 +358,8 @@ public class ManagerDB extends SQLiteOpenHelper {
         factura.getImpuesto().calcularICO(factura.valor_total);
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, ManagerFormat.formatDate(factura.fechaCompra));
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, ManagerFormat.formatDate(factura.fechaCaptura));
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, Dummy.formatDate(factura.fechaCompra));
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, Dummy.formatDate(factura.fechaCaptura));
         contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.path);
         contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.usuario);
       //  contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT, factura.getComercio().nit);

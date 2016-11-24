@@ -34,6 +34,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.login.widget.ProfilePictureView;
+
 import yosumo.src.R;
 import yosumo.src.db.ManagerDB;
 import yosumo.src.fragment.TabFragmentDenuncia;
@@ -70,6 +72,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
 
     TextView txtUser;
     ImageView imageUser;
+    ProfilePictureView profilePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,15 +119,17 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         Intent myIntent = getIntent(); // gets the previously created intent
         usuario = myIntent.getStringExtra("usuario");
 
-        imageUser = (ImageView) findViewById(R.id.img_user);
+        //imageUser = (ImageView) findViewById(R.id.img_user);
         txtUser = (TextView) findViewById(R.id.txtview_user);
+
+        // Hace el login
         user = getUser(usuario);
-
         txtUser.setText(user.getNombre());
+        //usuario = myIntent.get("usuario");
 
-        // AFP -  20161029 -  I | TASK: Conexion cliente socket
-        // connectAndPush();
-        // AFP -  20161029 -  F
+        profilePic =(ProfilePictureView) findViewById(R.id.profile_picture);
+
+
 
         // AFP -  20161030 -  I | TASK: GPSTRACKER
         Criteria cri = new Criteria();

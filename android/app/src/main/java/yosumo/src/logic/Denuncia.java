@@ -4,7 +4,7 @@ import android.util.Log;
 
 import java.util.Date;
 
-import yosumo.src.commons.ManagerFormat;
+import yosumo.src.commons.Dummy;
 
 /**
  * Created by a-pol_000 on 10/29/2016.
@@ -80,7 +80,7 @@ public class Denuncia {
     }
 
     public String toSocket() {
-        String str = username+"|"+nombre_comercio+"|"+direccion_comercio+"|"+comentario+"|"+latitud+"|"+longitud+"|"+estado+"|"+ ManagerFormat.formatTimestamp(fechaDenuncia)+"|"+ManagerFormat.formatTimestamp(fechaCaptura);
+        String str = username+"|"+nombre_comercio+"|"+direccion_comercio+"|"+comentario+"|"+latitud+"|"+longitud+"|"+estado+"|"+ Dummy.formatTimestamp(fechaDenuncia)+"|"+ Dummy.formatTimestamp(fechaCaptura);
         Log.d("to socket: ", str);
         return str;
     }
@@ -168,6 +168,6 @@ public class Denuncia {
 
 
     public String toString(){
-        return "Lugar: "+ nombre_comercio  + "  : " + ManagerFormat.formatDate(fechaDenuncia);
+        return "Lugar: "+ nombre_comercio  + "  : " + Dummy.formatDate(fechaDenuncia);
     }
 }
