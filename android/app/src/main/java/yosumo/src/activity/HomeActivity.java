@@ -511,4 +511,10 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         Toast.makeText(getApplicationContext(), "Se ha hecho drop de la tabla", Toast.LENGTH_LONG).show();
     }
     // AFP -  20161101 -  F
+
+
+    public void goQRProcessing (View v) {
+        Intent intent = new Intent(this, QRProcessingActivity.class);
+        startActivity(intent);
+    }
 }

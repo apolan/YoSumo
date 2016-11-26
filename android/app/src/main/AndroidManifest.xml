@@ -9,7 +9,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <!-- // AFP -  20161029 -  I | TASK: Sensores-->
+    <!-- // AFP -  20161029 -  I | TASK: Sensores -->
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
@@ -27,8 +27,6 @@
         android:name="android.permission.ACCESS_COARSE_LOCATION"
         android:required="true" />
     <!-- // AFP -  20161029 -  F -->
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/yosumo_100_192"
@@ -37,15 +35,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.HomeActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="sensor" />
+            <!-- "sensor"  o no poner nada -->
         <activity
             android:name=".activity.UserActivity"
             android:screenOrientation="portrait" />
@@ -78,5 +78,7 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".activity.QRProcessingActivity"></activity>
     </application>
+
 </manifest>
