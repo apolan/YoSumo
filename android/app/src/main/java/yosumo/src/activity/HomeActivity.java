@@ -18,6 +18,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.Profile;
@@ -44,6 +44,8 @@ import com.facebook.share.Sharer;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+
+import java.util.List;
 
 import yosumo.src.R;
 import yosumo.src.db.ManagerDB;
@@ -73,7 +75,6 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
     GPSTracker gps;
     // AFP -  20161030 -  F
 
-
     // AFP -  20161127 -  I | TASK: Light sensor
     SensorEventListener lightSensorEventListener;
     Sensor lightSensor;
@@ -81,16 +82,13 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
     int lightHigh = 60;
 
     float currentlight;
-    // AFP -  20161127 -  F
-
-    // Perfil de facebook
-    Profile profile;
 
     // AFP -  20161030 -  I | TASK: SOCKETPORT AND IP
     String SOCKET_IP;
     String SOCKET_PORT;
     // AFP -  20161030 -  F
 
+    Profile profile;
     TextView txtUser;
     ImageView imageUser;
     ProfilePictureView profilePic;
@@ -108,9 +106,10 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
 
         // AFP -  20161030 -  I | TASK: GPSTRACKER
         initSensor("GPS");
-        initSensor("LIGHT");
+        //initSensor("LIGHT");
         initSensor("SERVER");
         // AFP -  20161030 -  F
+
     }
 
     public void initGUI(String tag) {
@@ -122,7 +121,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
             tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_contador));
             tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_factura));
             tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_denuncias));
-           // tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
+            tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
             tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_vis));
 
             final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -133,6 +132,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
                     viewPager.setCurrentItem(tab.getPosition());
+                   //Log.d("Tag tab", (String)tab.getTag());
                 }
 
                 @Override
@@ -520,6 +520,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
     }
     // AFP -  20161101 -  F
 
+
     // AFP -  20161127 -  I | TASK: INIT SENSOR
 
     /**
@@ -588,7 +589,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
 
     @Override
     public final void onSensorChanged(SensorEvent event) {
-        //Log.d("evento sensor s", "" + event.sensor.getType());
+        Log.d("evento sensor s", "" + event.sensor.getType());
 
         if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             String modo = "";
@@ -601,7 +602,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
             } else if (currentlight > lightHigh) { // Light: High
                 modo = "high";
             }
-
+          //  Fragment currentFragment = getActivity().getFragmentManager().findFragmentById(R.id.fr);
             //Log.d("Modo: ", modo);
             // changeModeLight(modo)
         }

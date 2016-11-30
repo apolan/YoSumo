@@ -1,8 +1,22 @@
 package yosumo.src.fragment;
 
+import android.Manifest;
 import android.animation.ValueAnimator;
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +25,11 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import java.text.NumberFormat;
+
 import yosumo.src.R;
+import yosumo.src.activity.HomeActivity;
 import yosumo.src.animation.Circle;
 import yosumo.src.animation.CircleAngleAnimation;
 import yosumo.src.commons.Dummy;
@@ -25,13 +42,13 @@ import yosumo.src.db.ManagerDB;
  * MOD 20160910 - AFP - Adicion borrar facturas-se crean muchos archivos en cada test
  * MOD 20160917 - DM - Adición del botón mostrar base de datos
  * MOD 20160925 - AFP - Adicion modificacion del contador de tus impuestos
- *                      Animación del contador
+ * Animación del contador
  */
-public class TabFragmentContador extends Fragment {
-
-    private TextView counter   = null;
-    private TextView counterImp   = null;
-    CheckBox box ;
+public class TabFragmentContador extends Fragment implements SensorEventListener {
+    SensorManager sensorManager ;
+    private TextView counter = null;
+    private TextView counterImp = null;
+    CheckBox box;
     ManagerDB db = null;
     int imp_valor;
     String imp_tag;
@@ -41,10 +58,21 @@ public class TabFragmentContador extends Fragment {
     double valortotal;
     double valorimp;
 
+
+    // AFP -  20161127 -  I | TASK: Light sensor
+    SensorEventListener lightSensorEventListener;
+    Sensor lightSensor;
+    int lightLow = 10;
+    int lightHigh = 60;
+    float currentlight;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab_fragment_contador, container, false);
-
+        sensorManager = (SensorManager)((HomeActivity)getActivity()).getSystemService(Activity.SENSOR_SERVICE);
+        sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        Log.e("Sensor", sensorManager.toString());
+        circle = (Circle) rootView.findViewById(R.id.circle);
         counter = (TextView) rootView.findViewById(R.id.txt_contador);
         counterImp = (TextView) rootView.findViewById(R.id.txt_impuesto);
 
@@ -55,20 +83,21 @@ public class TabFragmentContador extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                if (pos == 0){
+                String color = "";
+                if (pos == 0) {
                     valortotal = db.getAllImpuestos();
                     valorimp = db.getImpuestosByType("valor_iva");
-                    circle.setColor("blue");
-                } else if (pos == 1){
+                    //circle.setColor("blue");
+                    color = "blue";
+                } else if (pos == 1) {
                     valortotal = db.getAllImpuestos();
                     valorimp = db.getImpuestosByType("valor_ico");
-                    circle.setColor("red");
+                    //circle.setColor("red");
+                    color = "red";
+
                 }
                 //counterImp.setText("$"+Dummy.formatMoneyK( (int)(valorimp), (int) 0));
-                updateCounterImpuestos(counterImp,valorimp);
-                animation = new CircleAngleAnimation(circle, (int) Dummy.reglaTres(360,valortotal,valorimp));
-                animation.setDuration(1000);
-                circle.startAnimation(animation);
+                circleAnimation(color);
             }
 
             @Override
@@ -78,45 +107,50 @@ public class TabFragmentContador extends Fragment {
         });
 
         db = new ManagerDB(rootView.getContext());
-        sizeCounter = (int)(counter.getTextSize()*0.5);
+        sizeCounter = (int) (counter.getTextSize() * 0.5);
         counter.setTextSize(sizeCounter);
         valortotal = db.getAllImpuestos();
         valorimp = db.getImpuestosByType("valor_iva");
-        counterImp.setText("$"+ Dummy.formatMoneyK( (int)(valorimp), (int) 2));
+        counterImp.setText("$" + Dummy.formatMoneyK((int) (valorimp), (int) 2));
 
         updateCounter(valortotal);
+        initSensor("LIGHT");
 
         // Animacion del circulo
-
-        circle = (Circle)rootView.findViewById(R.id.circle);
-        animation = new CircleAngleAnimation(circle, (int) Dummy.reglaTres(360,valortotal,valorimp));
-        animation.setDuration(1000);
-        circle.startAnimation(animation);
+        circleAnimation("blue");
 
         return rootView;
+    }
+
+
+    public void circleAnimation(String color) {
+        circle.setColor(color);
+        updateCounterImpuestos(counterImp, valorimp);
+        animation = new CircleAngleAnimation(circle, (int) Dummy.reglaTres(360, valortotal, valorimp));
+        animation.setDuration(1000);
+        circle.startAnimation(animation);
     }
 
     /**
      *
      */
-    public void updateCounter(double value){
+    public void updateCounter(double value) {
         updateCounterImpuestos(counter, valortotal);
     }
 
 
     /**
-     *
      * @param max
      */
-    public void updateCounterImpuestos ( TextView counter, double max) {
-        ValueAnimator valueAnimator = ValueAnimator.ofInt(0, (int)max);
+    public void updateCounterImpuestos(TextView counter, double max) {
+        ValueAnimator valueAnimator = ValueAnimator.ofInt(0, (int) max);
 
-        int value=0;
-        if(max < 10000){
+        int value = 0;
+        if (max < 10000) {
             value = 700;
-        }else if(max < 60000){
+        } else if (max < 60000) {
             value = 1200;
-        }else{
+        } else {
             value = 2000;
         }
         final TextView counter1 = counter;
@@ -126,10 +160,56 @@ public class TabFragmentContador extends Fragment {
 
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                counter1.setText("$"+ Dummy.formatMoneyK( (int)(valueAnimator.getAnimatedValue()), (int) 0));
+                counter1.setText("$" + Dummy.formatMoneyK((int) (valueAnimator.getAnimatedValue()), (int) 0));
             }
         });
         valueAnimator.start();
     }
 
+
+    @Override
+    public  void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // Do something here if sensor accuracy changes.
+    }
+
+    @Override
+    public  void onSensorChanged(SensorEvent event) {
+        Log.d("evento sensor s", "" + event.sensor.getType());
+
+        if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
+            String modo = "";
+            currentlight = event.values[0];
+            //Log.d("Cambio la luz: ", "" + currentlight);
+            circleAnimation("white");
+            if (currentlight < lightLow) { // Light: low
+                modo = "low";
+            } else if (currentlight >= lightLow && currentlight < lightHigh) { // Light: Medium
+                modo = "medium";
+            } else if (currentlight > lightHigh) { // Light: High
+                modo = "high";
+                circleAnimation("black");
+            }
+
+            //Log.d("Modo: ", modo);
+            // changeModeLight(modo)
+        }
+    }
+
+    // AFP -  20161127 -  F
+    public void initSensor(String sensor) {
+        Log.d("Fragmnet" , ""+sensor);
+
+        if (sensor.equalsIgnoreCase("LIGHT")) {
+            //SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+            //lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        } else {
+            Log.d("Not find", " ");
+        }
+    }
+
+
+    public void getFragment(){
+        TabFragmentContador myFragment = (TabFragmentContador)getFragmentManager().findFragmentByTag("MY_FRAGMENT");
+    }
 }

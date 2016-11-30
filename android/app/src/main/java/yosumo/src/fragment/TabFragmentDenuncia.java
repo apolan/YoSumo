@@ -1,6 +1,9 @@
 package yosumo.src.fragment;
 
 import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,10 +21,12 @@ import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Factura;
 
 
-public class TabFragmentDenuncia extends Fragment {
+public class TabFragmentDenuncia extends Fragment  {
 
     ListView listView;
     private ArrayList<Denuncia> lista = new ArrayList<Denuncia>();
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -45,4 +50,6 @@ public class TabFragmentDenuncia extends Fragment {
         listView.setAdapter(adap);
         return rootView;
     }
+
+
 }

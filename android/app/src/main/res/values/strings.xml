@@ -16,7 +16,7 @@
 
     <string name="tab_debug">Debug</string>
     <string name="portSocket">12111</string>
-    <string name="ipServerSocket">157.253.211.138</string>
+    <string name="ipServerSocket">157.253.133.53</string>
 
     <!-- facebook -->
     <string name="facebook_app_id">1214844975238717</string>
