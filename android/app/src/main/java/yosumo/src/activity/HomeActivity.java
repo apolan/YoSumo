@@ -629,4 +629,10 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
     }
 
 
+
+
+    public void goQRProcessing (View v) {
+        Intent intent = new Intent(this, QRProcessingActivity.class);
+        startActivity(intent);
+    }
 }
