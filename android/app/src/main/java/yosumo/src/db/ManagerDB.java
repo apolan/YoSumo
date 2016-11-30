@@ -8,7 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Date;
 
+import yosumo.src.R;
 import yosumo.src.commons.Debugger;
 import yosumo.src.commons.Dummy;
 import yosumo.src.logic.Comercio;
@@ -27,6 +29,7 @@ import yosumo.src.logic.Usuario;
  * Cambio de nombres y revalidación de tipos
  * Cambio de Convenciones
  * // AFP 20161030    Adicion de multas
+ * // DM 201161127 insertar factura desde QR
  */
 public class ManagerDB extends SQLiteOpenHelper {
 
@@ -378,13 +381,18 @@ public class ManagerDB extends SQLiteOpenHelper {
         factura.getImpuesto().calcularICO(factura.valor_total);
 
         ContentValues contentValues = new ContentValues();
+        //contentValues.put(ConstantesDB.TABLE_FACTURA_NK_CONSECUTIVO, nk); // todo de donde saco este numero?
         contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, Dummy.formatDate(factura.fechaCompra));
         contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, Dummy.formatDate(factura.fechaCaptura));
-        contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.path);
-        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.usuario);
+        contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.path); //no hay path
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_ID, factura.comercio.getNit());
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.usuario); //todo como saca el usuario actual?
       //  contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_NIT, factura.getComercio().nit);
       //  contentValues.put(ConstantesDB.TABLE_FACTURA_FK_IMPUESTO, insertImpuesto(factura.getImpuesto()));
         contentValues.put(ConstantesDB.TABLE_FACTURA_VALOR_TOTAL, factura.valor_total);
+        contentValues.put(ConstantesDB.TABLE_FACTURA_TAG, factura.tag);
+
+
 
         if (!db.isOpen()) {
             db = this.getWritableDatabase();
@@ -728,6 +736,69 @@ public class ManagerDB extends SQLiteOpenHelper {
             resultado ="Not find "+ tag;
         }
         Log.d("Tag not find", tag);
+    }
+
+
+    /**
+     * @param
+     */
+    public void insertFacturaQR(String comercio, String nit, String fecha, int valorTotal, String impuesto,
+                                int porcentaje, double valorImp, String tag ) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+
+
+        ContentValues contentValues = new ContentValues();
+
+        String idFactura = "";
+
+        //contentValues.put(ConstantesDB.TABLE_FACTURA_NK_CONSECUTIVO, idFactura); // todo de donde saco este numero?
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_COMPRA, fecha);
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FECHA_CAPTURA, fecha);
+        //contentValues.put(ConstantesDB.TABLE_FACTURA_PATH, factura.path); //no hay path
+        contentValues.put(ConstantesDB.TABLE_FACTURA_FK_COMERCIO_ID, nit);
+        //contentValues.put(ConstantesDB.TABLE_FACTURA_FK_USUARIO, factura.usuario); //todo como saca el usuario actual?
+        contentValues.put(ConstantesDB.TABLE_FACTURA_VALOR_TOTAL, valorTotal);
+        contentValues.put(ConstantesDB.TABLE_FACTURA_TAG, tag);
+
+        if (!db.isOpen()) {
+            db = this.getWritableDatabase();
+        }
+
+        db.insert(ConstantesDB.TABLE_FACTURA, null, contentValues);
+        debug.debugConsole("created factura");
+
+        //impuesto
+        contentValues = new ContentValues();
+
+        String id = "";
+
+        contentValues.put(ConstantesDB.TABLE_IMPUESTO_ID, id);  // todo de donde sale ese id, actualmente nulo
+
+        if(impuesto.equalsIgnoreCase("iva"))
+        {
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_IVA, porcentaje);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_IVA, valorImp);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_ICO, 0);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_ICO, 0);
+
+        }
+        else if(impuesto.equalsIgnoreCase("ico"))
+        {
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_IVA, 0);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_IVA, 0 );
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_PORCEN_ICO, porcentaje);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_ICO, valorImp);
+            contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_TOTAL, valorImp);
+        }
+
+        contentValues.put(ConstantesDB.TABLE_IMPUESTO_VALOR_TOTAL, valorImp);
+        contentValues.put(ConstantesDB.TABLE_IMPUESTO_FK_FACTURA_ID, idFactura);
+
+        db.insertWithOnConflict(ConstantesDB.TABLE_IMPUESTO, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+
+
+        db.close();
     }
 
 }

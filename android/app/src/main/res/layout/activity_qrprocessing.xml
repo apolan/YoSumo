@@ -7,6 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="yosumo.src.activity.QRProcessingActivity">
+    tools:context="yosumo.src.activity.QRProcessingActivity"
+    android:background="@color/palette1_white">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Capturar QR"
+        android:id="@+id/btnQR"
+        android:onClick="goQRProcessing"
+        android:textSize="15dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_orange"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Resultado"
+        android:id="@+id/textView20"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/btnQR"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textQRResult"
+        android:layout_below="@+id/textView20"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/abc_background_cache_hint_selector_material_dark" />
 
 </RelativeLayout>

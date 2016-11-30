@@ -50,15 +50,23 @@ public class TabFragmentVis extends Fragment {
                 loadPieChart();
             }
         });
-        webview.loadUrl("file:///android_asset/html/piechart.html");
+        webview.loadUrl("file:///android_asset/html/colision.html");
     }
 
     public void loadPieChart() {
+
         int dataset[] = new int[]{5, 10, 15, 20, 35};
+
+        //todo int dataset[] = {comercio:, valorAportado:}
+        /*var data = [{'name':'Corral','total':25}
+        ,{'name':'Leeds','total':50}
+        ];*/
+
         String text = Arrays.toString(dataset);
 
         // pass the array to the JavaScript function
-        webview.loadUrl("javascript:loadPieChart(" + text + ")");
+        //webview.loadUrl("javascript:loadPieChart(" + text + ")");
+        webview.loadUrl("javascript:loadColision(" + text + ")");
     }
 
 }
