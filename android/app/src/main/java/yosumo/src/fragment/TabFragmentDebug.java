@@ -31,14 +31,7 @@ public class TabFragmentDebug extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.tab_fragment_debug, container, false);
-        //listView = (ListView)rootView.findViewById(R.id.lst_facturas);
-     //    db = new ManagerDB(rootView.getContext());
-     //   cnt = rootView.getContext();
-        //ManagerDB db = new ManagerDB(rootView.getContext());
-       // lista = db.getAllFacturas();
 
-//        ArrayAdapter<Factura> adap = new ArrayAdapter<Factura>(rootView.getContext(), android.R.layout.simple_list_item_1, lista);
-  //      listView.setAdapter(adap);
 
         return rootView;
     }

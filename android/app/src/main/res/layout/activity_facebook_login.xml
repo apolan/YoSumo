@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_weight="0.23"
-            android:text="@string/welcome" />
+            android:text="Bienvenido" />
 
     </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:layout_height="30dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/btn_gray"
-            android:text="@string/de_authorize_app"
+            android:text="Autorizar"
             android:textAllCaps="false"
             android:textSize="12sp" />
 

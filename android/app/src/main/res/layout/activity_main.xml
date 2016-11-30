@@ -26,13 +26,14 @@
             android:src="@mipmap/yosumo_original_600_100"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:baselineAlignBottom="false" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bienvenido"
-            android:id="@+id/textView"
+            android:id="@+id/bienvenido"
             android:textColor="@color/palette1_black"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -45,16 +46,17 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:id="@+id/usuario_layout">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Usuario:"
                 android:id="@+id/txtUsuario"
-                android:layout_below="@+id/textView"
-                android:layout_toLeftOf="@+id/textView"
-                android:layout_toStartOf="@+id/textView"
+                android:layout_below="@+id/bienvenido"
+                android:layout_toLeftOf="@+id/bienvenido"
+                android:layout_toStartOf="@+id/bienvenido"
                 android:textColor="@color/palette1_black"
                 android:textSize="18dp"
                 android:layout_gravity="bottom"
@@ -81,7 +83,8 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:id="@+id/password_layout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,9 +92,9 @@
                 android:text="Password:"
                 android:id="@+id/txtPasword"
                 android:layout_marginTop="0dp"
-                android:layout_below="@+id/textView"
-                android:layout_toLeftOf="@+id/textView"
-                android:layout_toStartOf="@+id/textView"
+                android:layout_below="@+id/bienvenido"
+                android:layout_toLeftOf="@+id/bienvenido"
+                android:layout_toStartOf="@+id/bienvenido"
                 android:textColor="@color/palette1_black"
                 android:textSize="18dp"
                 android:layout_gravity="bottom|center_horizontal"

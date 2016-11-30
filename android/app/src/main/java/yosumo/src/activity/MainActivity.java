@@ -1,19 +1,24 @@
 package yosumo.src.activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.File;
@@ -21,6 +26,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,10 +36,10 @@ import yosumo.src.db.ManagerDB;
 import yosumo.src.commons.Debugger;
 import yosumo.src.logic.Usuario;
 
-
 import com.facebook.FacebookSdk;
-
+import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.widget.ProfilePictureView;
 
 /**
  * Created by a-pol_000 on 9/7/2016.
@@ -69,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
      */
     TextView tv_Password;
     TextView tv_user;
+    TextView bienvenido;
+
+    Button ingresar;
+    Button facebook;
+
+    LinearLayout usuarioLayout;
+    LinearLayout passwordLayout;
 
 
     @Override
@@ -115,6 +129,24 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception a) {
             resultado = this.getResources().getString(R.string.ERROR_CODE_DEBUG_100);
         }
+        return resultado;
+    }
+
+
+    public static String checkKeyHash(Context c) {
+        String resultado = "";
+
+        try {
+            /*PackageInfo info = getPackageInfo(c, PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }*/
+        } catch (Exception a) {
+            Log.d("Error packete", a.toString());
+        }
+
         return resultado;
     }
 
@@ -244,10 +276,22 @@ public class MainActivity extends AppCompatActivity {
         try {
             FacebookSdk.sdkInitialize(getApplicationContext());
             AppEventsLogger.activateApp(this);
+            Profile profile = Profile.getCurrentProfile();
+            Log.d("Profile", " " + profile.getName());
+            if (profile != null) {
+                facebook = (Button) findViewById(R.id.fb_login_button);
+                facebook.setVisibility(View.INVISIBLE);
+                usuarioLayout = (LinearLayout) findViewById(R.id.usuario_layout);
+                usuarioLayout.setVisibility(View.INVISIBLE);
+                passwordLayout = (LinearLayout) findViewById(R.id.password_layout);
+                passwordLayout.setVisibility(View.INVISIBLE);
+                bienvenido = (TextView) findViewById(R.id.bienvenido);
+                bienvenido.setText("Hola " + profile.getName());
+            }
             //initFacebookLogin();
             resultado = this.getResources().getString(R.string.OK_CODE_FB_100);
         } catch (Exception e) {
-            Log.d("--- Error fb", " ");
+            Log.d("--- Error fb", " " + e.toString());
         }
         return resultado;
     }
@@ -372,8 +416,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // DMR -  20161101 -  I | TASK: facebook login
+
     /**
-     *
      * @param v
      */
     public void goFacebook(View v) {

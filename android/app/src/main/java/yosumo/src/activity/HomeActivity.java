@@ -6,16 +6,18 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -34,22 +36,28 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.Profile;
 import com.facebook.login.widget.ProfilePictureView;
+import com.facebook.share.Sharer;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
 
 import yosumo.src.R;
 import yosumo.src.db.ManagerDB;
-import yosumo.src.fragment.TabFragmentDenuncia;
-import yosumo.src.fragment.TabFragmentFactura;
 import yosumo.src.logic.Denuncia;
 import yosumo.src.logic.Usuario;
 import yosumo.src.sensor.GPSTracker;
+import yosumo.src.sensor.MapsActivity;
 
 /**
  * Clase home de la aplicación: Contiene los tabs (fragments)
  * MOD 20161030 - AFP - Adicion conexion servidor
  * TASK asincronica para abrir socket
  */
-public class HomeActivity extends AppCompatActivity implements LocationListener {
+public class HomeActivity extends AppCompatActivity implements LocationListener, SensorEventListener {
 
     private Usuario user;
     public String nombre;
@@ -65,6 +73,19 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
     GPSTracker gps;
     // AFP -  20161030 -  F
 
+
+    // AFP -  20161127 -  I | TASK: Light sensor
+    SensorEventListener lightSensorEventListener;
+    Sensor lightSensor;
+    int lightLow = 10;
+    int lightHigh = 60;
+
+    float currentlight;
+    // AFP -  20161127 -  F
+
+    // Perfil de facebook
+    Profile profile;
+
     // AFP -  20161030 -  I | TASK: SOCKETPORT AND IP
     String SOCKET_IP;
     String SOCKET_PORT;
@@ -74,104 +95,85 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
     ImageView imageUser;
     ProfilePictureView profilePic;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Window window = this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.Bar_Black));
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-
-        // Se modifican add tabs
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_contador));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_factura));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_denuncias));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_vis));
-        // tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_facebook));
-
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        final PagerAdapter adapter = new yosumo.src.fragment.PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        Intent myIntent = getIntent(); // gets the previously created intent
-        usuario = myIntent.getStringExtra("usuario");
-
-        //imageUser = (ImageView) findViewById(R.id.img_user);
-        txtUser = (TextView) findViewById(R.id.txtview_user);
-
-        // Hace el login
-        user = getUser(usuario);
-        txtUser.setText(user.getNombre());
-        //usuario = myIntent.get("usuario");
-
-        profilePic =(ProfilePictureView) findViewById(R.id.profile_picture);
-
-
+        initGUI("WINDOW");
+        initGUI("TABS");
+        initGUI("FACEBOOK");
+        initGUI("USER");
 
         // AFP -  20161030 -  I | TASK: GPSTRACKER
-        Criteria cri = new Criteria();
-        locationmanager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        String provider = locationmanager.getBestProvider(cri, false);
-
-        if (provider != null & !provider.equals("")) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                return;
-            }
-            Location location = locationmanager.getLastKnownLocation(provider);
-            locationmanager.requestLocationUpdates(provider, 2000, 0.2f, this);
-            if (location != null) {
-                onLocationChanged(location);
-            } else {
-                //  Toast.makeText(getApplicationContext(), "location not found", Toast.LENGTH_LONG).show();
-            }
-        } else {
-            //Toast.makeText(getApplicationContext(), "Provider is null", Toast.LENGTH_LONG).show();
-        }
+        initSensor("GPS");
+        initSensor("LIGHT");
+        initSensor("SERVER");
         // AFP -  20161030 -  F
-
-        // AFP -  20161101 -  I | TASK: sockets
-        SOCKET_PORT = this.getResources().getString(R.string.portSocket);
-        SOCKET_IP = this.getResources().getString(R.string.ipServerSocket);
-        // AFP -  20161101 -  F
     }
 
-    /**
-     * @param usario
-     * @return
-     */
-    public Usuario getUser(String usario) {
-        ManagerDB db = new ManagerDB(getBaseContext());
-        if (db.getUserByUser(usario) != null) {
-            return db.getUserByUser(usario);
+    public void initGUI(String tag) {
+        if (tag.equalsIgnoreCase("TABS")) {
+            TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+            tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+            // Se modifican add tabs
+            tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_contador));
+            tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_factura));
+            tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_denuncias));
+           // tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_debug));
+            tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_vis));
+
+            final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+            final PagerAdapter adapter = new yosumo.src.fragment.PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+            viewPager.setAdapter(adapter);
+            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+            tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    viewPager.setCurrentItem(tab.getPosition());
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+                }
+            });
+
+        } else if (tag.equalsIgnoreCase("WINDOW")) {
+
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.Bar_Black));
+
+        } else if (tag.equalsIgnoreCase("FACEBOOK")) {
+            profile = Profile.getCurrentProfile();
+            Log.d("Profie ", " " +profile.getName());
+        } else if (tag.equalsIgnoreCase("USER")) {
+            //Intent myIntent = getIntent(); // gets the previously created intent
+            //usuario = myIntent.getStringExtra("usuario");
+
+            txtUser = (TextView) findViewById(R.id.txtview_user);
+            txtUser.setText(profile.getName());
+            profilePic = (ProfilePictureView) findViewById(R.id.profile_picture);
+            profilePic.setProfileId(profile.getId());
+
+            ManagerDB db = new ManagerDB(getBaseContext());
+            if (db.getUserById(profile.getId()) != null) {
+                //user = db.getUserByUser(profile.getId());
+            }
+            user = new Usuario("apolan", "Andres", "apolan89@gmail.com", "123");
+
+        } else {
+            Log.e("Not find tag", " ");
         }
-
-        return new Usuario("apolan", "Andres", "apolan89@gmail.com", "123");
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -194,6 +196,14 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         startActivity(intent);
     }
 
+    /**
+     * Realiza el intent de la app de mapas
+     * @param v
+     */
+    public void goCreateDenunciaMapa(View v){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
 
     /**
      * @param v
@@ -386,8 +396,8 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
 
         //ManagerDB db = new ManagerDB(getApplicationContext());
         //db.updateDenuncia();
-       // TabFragmentFactura fragment = (TabFragmentFactura) getFragmentManager().findFragmentById(R.id.example_fragment);
-       // fragment.<specific_function_name>();
+        // TabFragmentFactura fragment = (TabFragmentFactura) getFragmentManager().findFragmentById(R.id.example_fragment);
+        // fragment.<specific_function_name>();
     }
 
 
@@ -455,8 +465,6 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
 
         alert.show();
     }
-
-
     // AFP -  20161029 -  F
 
     // AFP -  20161030 -  I | TASK: GPS TRACKER
@@ -511,4 +519,114 @@ public class HomeActivity extends AppCompatActivity implements LocationListener 
         Toast.makeText(getApplicationContext(), "Se ha hecho drop de la tabla", Toast.LENGTH_LONG).show();
     }
     // AFP -  20161101 -  F
+
+    // AFP -  20161127 -  I | TASK: INIT SENSOR
+
+    /**
+     * Inicializa los sensores
+     *
+     * @param sensor tipo de sensor que se quiere inicializar
+     */
+    public void initSensor(String sensor) {
+        if (sensor.equalsIgnoreCase("GPS")) {
+            Criteria cri = new Criteria();
+            locationmanager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            String provider = locationmanager.getBestProvider(cri, false);
+
+            if (provider != null & !provider.equals("")) {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                Location location = locationmanager.getLastKnownLocation(provider);
+                locationmanager.requestLocationUpdates(provider, 2000, 0.2f, this);
+                if (location != null) {
+                    onLocationChanged(location);
+                }
+            }
+        } else if (sensor.equalsIgnoreCase("LIGHT")) {
+            SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+            lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+            sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        } else if (sensor.equalsIgnoreCase("SERVER")) {
+            SOCKET_PORT = this.getResources().getString(R.string.portSocket);
+            SOCKET_IP = this.getResources().getString(R.string.ipServerSocket);
+        } else {
+            Log.d("Not find sensor", sensor);
+        }
+    }
+
+
+    public void getLightSensor(View v) {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(getBaseContext());
+        builder1.setMessage("Valores de luz. " + currentlight);
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+    }
+
+    @Override
+    public final void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // Do something here if sensor accuracy changes.
+    }
+
+    @Override
+    public final void onSensorChanged(SensorEvent event) {
+        //Log.d("evento sensor s", "" + event.sensor.getType());
+
+        if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
+            String modo = "";
+            currentlight = event.values[0];
+            //Log.d("Cambio la luz: ", "" + currentlight);
+            if (currentlight < lightLow) { // Light: low
+                modo = "low";
+            } else if (currentlight >= lightLow && currentlight < lightHigh) { // Light: Medium
+                modo = "medium";
+            } else if (currentlight > lightHigh) { // Light: High
+                modo = "high";
+            }
+
+            //Log.d("Modo: ", modo);
+            // changeModeLight(modo)
+        }
+    }
+    // AFP -  20161127 -  F
+
+
+
+    public void shareit(){
+        CallbackManager callbackManager;
+        ShareDialog shareDialog;
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+        // this part is optional
+//        shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() { ... });
+
+
+        Bitmap image = null;
+        SharePhoto photo = new SharePhoto.Builder()
+                .setBitmap(image)
+                .build();
+        SharePhotoContent content = new SharePhotoContent.Builder()
+                .addPhoto(photo)
+                .build();
+    }
+
+
 }

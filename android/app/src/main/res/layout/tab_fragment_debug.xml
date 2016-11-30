@@ -68,5 +68,17 @@
             android:onClick="setPortAndIp"
             android:nestedScrollingEnabled="false" />
 
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="Get Light sensor"
+            android:id="@+id/button12"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_orange"
+            android:layout_marginTop="30dp"
+            android:onClick="getLightSensor"
+            android:nestedScrollingEnabled="false" />
+
     </LinearLayout>
 </RelativeLayout>

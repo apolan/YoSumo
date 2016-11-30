@@ -5,64 +5,64 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/palette1_white">
+        android:background="@color/palette1_white"
+        android:orientation="vertical">
 
         <Button
+            android:id="@+id/button7"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:text="Crear denuncia"
-            android:id="@+id/button7"
-            android:textAllCaps="false"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_orange"
             android:layout_marginTop="30dp"
+            android:background="@drawable/btn_orange"
             android:onClick="goCreateDenuncia"
+            android:text="Crear denuncia"
+            android:textAllCaps="false"
             android:textSize="15dp" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/palette1_blue"
             android:layout_marginTop="20dp"
+            android:background="@color/palette1_blue"
             android:elevation="5dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|center|start|fill_vertical|end|center_horizontal|right"
                 android:text="Mis denuncias"
-                android:id="@+id/textView12"
                 android:textColor="@color/palette1_white"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="center_vertical|center|start|fill_vertical|end|center_horizontal|right"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
 
             <Button
+                android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:text="Actualizar"
-                android:id="@+id/button6"
-                android:textAllCaps="false"
                 android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="1dp"
                 android:background="@drawable/btn_gray"
                 android:onClick="pushDenuncia"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="1dp" />
+                android:text="Actualizar"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 
         <ListView
+            android:id="@+id/lst_denuncias"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lst_denuncias"
             android:background="@color/palette1_white"
             android:textColor="#000000" />
 

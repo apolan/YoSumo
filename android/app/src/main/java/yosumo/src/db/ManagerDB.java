@@ -199,6 +199,26 @@ public class ManagerDB extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * @param id
+     * @return
+     */
+    public Usuario getUserById(String id) {
+        try {
+            SQLiteDatabase db = this.getWritableDatabase();
+            Cursor cursor = getReadableDatabase().rawQuery(ConstantesDB.QUERY_GET_USER_BYID, new String[]{id});
+
+            cursor.moveToFirst();
+            debug.debugConsole(TAG, "Rows count: " + cursor.getCount() + "");
+            Usuario usuario = new Usuario(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+
+            return usuario;
+        } catch (Exception e) {
+            debug.debugConsole(TAG, e.getMessage());
+            return null;
+        }
+    }
+
 
     /**
      * @return

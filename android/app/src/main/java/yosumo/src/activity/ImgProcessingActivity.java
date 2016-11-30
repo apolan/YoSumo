@@ -16,12 +16,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.googlecode.tesseract.android.TessBaseAPI;
 import java.io.File;
@@ -89,67 +87,97 @@ public class ImgProcessingActivity extends AppCompatActivity {
     TextView tv_PORCENTAJE;
     TextView tv_NOMBRE;
 
+    //
+    String pathHead = "";
+    String pathBody= "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_imgprocessing);
 
         btnAction = (Button) findViewById(R.id.btnAction);
         imageView = (ImageView) findViewById(R.id.imageView);
-        textView = (TextView) findViewById(R.id.textView);
+        textView = (TextView) findViewById(R.id.bienvenido);
 
         debug = new Debugger(this.getBaseContext());
-
-        debug.debugConsole(TAG,"create activivty");
-        debug.debugConsole(TAG + ":", folder_path.getAbsolutePath());
-        //ACTION = "INIT";
+        debug.debugConsole(TAG, "create activity");
+        //debug.debugConsole(TAG + ":", folder_path.getAbsolutePath());
         btnAction.setText("Empezar");
 
-        debug.addResultado(initModuleAnimation());
+        //debug.addResultado(initModuleAnimation());
     }
 
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        pathHead = savedInstanceState.getString("head");
+        pathBody = savedInstanceState.getString("body");
+        status_process = savedInstanceState.getString("status_process");
+        ACTION = savedInstanceState.getString("action");
+
+
+        Log.d("Restore head", pathHead);
+        Log.d("Restore body", pathBody);
+        Log.d("Restore status", status_process);
+        Log.d("Restore action", ACTION);
+
+        if(ACTION.equalsIgnoreCase("TOMAR_FOTO:body")){
+            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+            bmpFacturaHead = BitmapFactory.decodeFile(Uri.fromFile(new File(pathHead)).getPath(), bmOptions);
+            bmpFacturaHead = Bitmap.createScaledBitmap(bmpFacturaHead,
+                    (int) (bmpFacturaHead.getWidth() * rateProportion),
+                    (int) (bmpFacturaHead.getHeight() * rateProportion),
+                    true);
+
+            bmpFacturaBody = BitmapFactory.decodeFile(Uri.fromFile(new File(pathHead)).getPath(), bmOptions);
+            bmpFacturaBody = Bitmap.createScaledBitmap(bmpFacturaBody,
+                    (int) (bmpFacturaBody.getWidth() * rateProportion),
+                    (int) (bmpFacturaBody.getHeight() * rateProportion),
+                    true);
+        }
+
+
+
+        Log.d("Restore path", pathHead);
+        Log.d("Restore path", pathBody);
+
+        Log.d("Restore instance", " ");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putString("head", pathHead);
+        savedInstanceState.putString("body", pathBody);
+        savedInstanceState.putString("status_process", status_process);
+        savedInstanceState.putString("action", ACTION);
+        Log.d("Save instance", " ");
+
+    }
+
+    @Override
     public void onResume() {
-        debug.debugConsole(TAG,"Resume activivty");
+        debug.debugConsole(TAG, "Resume activity");
         super.onResume();  // Always call the superclass method first
     }
 
 
     @Override
     public void onPause() {
-        debug.debugConsole(TAG,"Pause activivty");
-      //  debug.debugConsole("onActivityResult", " ACTION:" + ACTION + " URI" + file.getPath() );
+        debug.debugConsole(TAG, "Pause activivty");
+        //  debug.debugConsole("onActivityResult", " ACTION:" + ACTION + " URI" + file.getPath() );
         super.onPause();  // Always call the superclass method first
     }
 
     @Override
     public void onDestroy() {
-       debug.debugConsole(TAG,"Destroy activivty");
+        debug.debugConsole(TAG, "Destroy activivty");
         super.onDestroy();
     }
-    /**
-     * Metodo que inicializa el modulo de animacion
-     *
-     * @return
-     */
-    public String initModuleAnimation() {
-        RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.relative);
-        View itemView = LayoutInflater.from(getBaseContext()).inflate(R.layout.activity_imgprocessing, null, false);
 
-        animationDraw = new ImageView(this);
-        bitmapAnimation = Bitmap.createBitmap((int) getWindowManager()
-                .getDefaultDisplay().getWidth(), (int) getWindowManager()
-                .getDefaultDisplay().getHeight(), Bitmap.Config.ARGB_8888);
-        canvas = new Canvas(bitmapAnimation);
-        animationDraw.setBackgroundColor(255);
-        animationDraw.setImageBitmap(bitmapAnimation);
-        myLayout.addView(animationDraw);
-
-        return this.getResources().getString(R.string.OK_CODE_MODANIM_100);
-    }
 
     public String initModuleEditFactura() {
         setContentView(R.layout.activity_editfactura);
@@ -180,15 +208,16 @@ public class ImgProcessingActivity extends AppCompatActivity {
      * @param data
      */
     @Override
-    protected  void onActivityResult(int requestCode, int resultCode, Intent data) {
-        debug.debugConsole("onActivityResult", " ACTION:" + ACTION + " " + requestCode + " " + resultCode );
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        debug.debugConsole("onActivityResult", " ACTION:" + ACTION + " " + requestCode + " " + resultCode);
 
         if (ACTION.contains("TOMAR_FOTO")) {
-            if (requestCode == 100 && file != null) {
+            if (requestCode == 100) {
                 if (resultCode == RESULT_OK) {
                     //Se reduce el tamano de la imagen porque no es posible hacerle render
                     BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                     if (ACTION.contains("head")) {
+                        file = Uri.fromFile(new File(pathHead));
                         bmpFacturaHead = BitmapFactory.decodeFile(file.getPath(), bmOptions);
                         bmpFacturaHead = Bitmap.createScaledBitmap(bmpFacturaHead,
                                 (int) (bmpFacturaHead.getWidth() * rateProportion),
@@ -198,6 +227,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
                         debug.addResultado("SizePicHead:" + bmpFacturaHead.getByteCount());
                         imageView.setImageBitmap(bmpFacturaHead);
                     } else if (ACTION.contains("body")) {
+                        file = Uri.fromFile(new File(pathBody));
                         bmpFacturaBody = BitmapFactory.decodeFile(file.getPath(), bmOptions);
                         bmpFacturaBody = Bitmap.createScaledBitmap(bmpFacturaBody,
                                 (int) (bmpFacturaBody.getWidth() * rateProportion),
@@ -268,35 +298,27 @@ public class ImgProcessingActivity extends AppCompatActivity {
             Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-            if (fotoParte.equalsIgnoreCase("head")){
+            if (fotoParte.equalsIgnoreCase("head")) {
                 // factura = new FacturaVirtual(mediaStorageDir.getPath(), this.getResources().getString(R.string.sufijo_factura) + timeStamp + ".jpg");
                 factura = new FacturaVirtual(mediaStorageDir.getPath(), "");
-                factura.setPath_head(mediaStorageDir.getPath() + "/" + this.getResources().getString(R.string.sufijo_factura_encabezado) + timeStamp + ".jpg");
+                pathHead = mediaStorageDir.getPath() + "/" + this.getResources().getString(R.string.sufijo_factura_encabezado) + timeStamp + ".jpg";
 
                 debug.addResultado("Head PicFolder:" + mediaStorageDir.getAbsolutePath());
                 status_process = "head";
-                mediaStorageDir = new File(factura.getPath_head());
-
+//                mediaStorageDir = new File(factura.getPath_head());
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(pathHead)));
 
             } else if (fotoParte.equalsIgnoreCase("body")) {
-                //factura = new FacturaVirtual(mediaStorageDir.getPath(), this.getResources().getString(R.string.sufijo_factura_impuesto) + timeStamp + ".jpg");
-                factura.setPath_body(mediaStorageDir.getPath() + "/" + this.getResources().getString(R.string.sufijo_factura_impuesto) + timeStamp + ".jpg");
+                factura = new FacturaVirtual(mediaStorageDir.getPath(), "");
+                pathBody = mediaStorageDir.getPath() + "/" + this.getResources().getString(R.string.sufijo_factura_impuesto) + timeStamp + ".jpg";
+                factura.setPath_body(pathBody);
                 debug.addResultado("Body PicFolder:" + mediaStorageDir.getAbsolutePath());
-                mediaStorageDir = new File(factura.getPath_body());
+       //         mediaStorageDir = new File(factura.getPath_body());
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(pathBody)));
             }
-           // debug.debugConsole(TAG, "File PATH: " + mediaStorageDir.getPath());
+            // debug.debugConsole(TAG, "File PATH: " + mediaStorageDir.getPath());
             debug.showResultado();
             debug.debugConsole(TAG + ":Folder_media", mediaStorageDir.getAbsolutePath());
-            //mediaStorageDir  = new File(factura.getPath_head());
-            file = Uri.fromFile(mediaStorageDir);
-            //file = Uri.fromFile(new File(mediaStorageDir.getAbsolutePath()));
-           // intent.putExtra(MediaStore.EXTRA_OUTPUT,  Uri.fromFile(new File(factura.getPath_head()))); // AQUI
-            intent.putExtra(MediaStore.EXTRA_OUTPUT,  Uri.fromFile(new File(factura.getPath_head())));
-            if (new File(factura.getPath_head()).exists()){
-                debug.debugConsole("Existe");
-            }else{
-                debug.debugConsole(" -- No Existe");
-            }
             this.startActivityForResult(intent, 100);
         }
     }
@@ -467,7 +489,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
      * @param filename
      * @return
      */
-    public String saveFacturaSnapchot(Bitmap img, String filename) {
+    public String saveFacturaSnapshot(Bitmap img, String filename) {
         String resultado = "";
         FileOutputStream out = null;
         try {
@@ -514,10 +536,10 @@ public class ImgProcessingActivity extends AppCompatActivity {
         } else if (ACTION.contains("EDIT_CONFIRM")) {
             controladorProcesoFactura("NEXT");
             debug.clearResultados();
-        }  else if (ACTION.contains("none")) {
+        } else if (ACTION.contains("none")) {
             ACTION = "INIT";
             action(view);
-        } else{
+        } else {
             debug.debugConsole("Not find" + ACTION);
         }
 
@@ -632,6 +654,7 @@ public class ImgProcessingActivity extends AppCompatActivity {
                 tessBaseApi.init(folder_path.getPath() + "/YoSumo/", "spa");
 
                 //bmpFacturaHead = convertBW(bmpFacturaHead);
+
                 tessBaseApi.setImage(bmpFacturaHead);
                 tessBaseApi.setDebug(true);
                 extractedTextHead = tessBaseApi.getUTF8Text();

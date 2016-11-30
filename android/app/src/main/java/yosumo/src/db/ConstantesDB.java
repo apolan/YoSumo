@@ -120,7 +120,13 @@ public final class ConstantesDB {
             + " FROM " + TABLE_USUARIO +
             " WHERE " + TABLE_USUARIO_USUARIO + " = ?";
 
-    public static final String QUERY_GET_USER_BYID = "SELECT * FROM " + TABLE_USUARIO + " WHERE " + TABLE_USUARIO_USUARIO + " = ?";
+    public static final String QUERY_GET_USER_BYID = "SELECT "
+            + TABLE_USUARIO_USUARIO + ","
+            + TABLE_USUARIO_NOMBRE + ","
+            + TABLE_USUARIO_MAIL + ","
+            + TABLE_USUARIO_PASSWORD
+            + " FROM " + TABLE_USUARIO
+            + " WHERE " + TABLE_USUARIO_ID + " = ?";
 
     // - - - - - - - - - - - TABLE COMERCIO - - - - - - - - - - - - - - -
     public static final String CREATE_TABLE_COMERCIO = "CREATE TABLE IF NOT EXISTS " + TABLE_COMERCIO + "( " +
@@ -131,7 +137,7 @@ public final class ConstantesDB {
             TABLE_COMERCIO_REGIMEN + " TEXT," +
             TABLE_COMERCIO_DIRECCION + " TEXT," +
             TABLE_COMERCIO_ESTADO + " TEXT," +
-           // "  PRIMARY KEY (" + TABLE_COMERCIO_NIT + "," + TABLE_COMERCIO_NOMBRE + "," + TABLE_COMERCIO_DIRECCION + ") )";
+            // "  PRIMARY KEY (" + TABLE_COMERCIO_NIT + "," + TABLE_COMERCIO_NOMBRE + "," + TABLE_COMERCIO_DIRECCION + ") )";
             "  PRIMARY KEY (" + TABLE_COMERCIO_ID + ") )";
 
     public static final String DROP_TABLE_COMERCIO = "DROP TABLE " + TABLE_COMERCIO;
@@ -159,7 +165,7 @@ public final class ConstantesDB {
             TABLE_IMPUESTO_FK_FACTURA_ID + " INTEGER NOT NULL" +
             ")";
 
-    public static final String DELETE_TABLE_IMPUESTO= "DELETE FROM TABLE " + TABLE_IMPUESTO;
+    public static final String DELETE_TABLE_IMPUESTO = "DELETE FROM TABLE " + TABLE_IMPUESTO;
 
     public static final String DROP_TABLE_IMPUESTO = "DROP TABLE " + TABLE_IMPUESTO;
 
